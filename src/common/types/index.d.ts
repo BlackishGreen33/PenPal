@@ -50,11 +50,6 @@ declare type ShareDocumentDialogProps = {
   currentUserType: UserType;
 };
 
-declare type HeaderProps = {
-  children: React.ReactNode;
-  className?: string;
-};
-
 declare type CollaboratorProps = {
   roomId: string;
   email: string;

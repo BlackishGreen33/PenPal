@@ -19,9 +19,9 @@ import {
 import FloatingToolbarPlugin from './plugins/FloatingToolbarPlugin';
 import Theme from './plugins/Theme';
 import ToolbarPlugin from './plugins/ToolbarPlugin';
-import Comments from '../Comments';
-import { DeleteModal } from '../DeleteModal';
-import Loader from '../Loader';
+// import Comments from '../Comments';
+// import { DeleteModal } from '../DeleteModal';
+// import Loader from '../Loader';
 
 // Catch any errors that occur during Lexical updates and log them
 // or throw them as needed. If you don't throw them, Lexical will
@@ -57,12 +57,13 @@ export function Editor({
       <div className="editor-container size-full">
         <div className="toolbar-wrapper flex min-w-full justify-between">
           <ToolbarPlugin />
-          {currentUserType === 'editor' && <DeleteModal roomId={roomId} />}
+          {/* {currentUserType === 'editor' && <DeleteModal roomId={roomId} />} */}
         </div>
 
         <div className="editor-wrapper flex flex-col items-center justify-start">
           {status === 'not-loaded' || status === 'loading' ? (
-            <Loader />
+            // <Loader />
+            <></>
           ) : (
             <div className="editor-inner relative mb-5 h-fit min-h-[1100px] w-full max-w-[800px] shadow-md lg:mb-10">
               <RichTextPlugin
@@ -81,7 +82,7 @@ export function Editor({
           <LiveblocksPlugin>
             <FloatingComposer className="w-[350px]" />
             <FloatingThreads threads={threads} />
-            <Comments />
+            {/* <Comments /> */}
           </LiveblocksPlugin>
         </div>
       </div>
