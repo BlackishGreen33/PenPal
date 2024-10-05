@@ -2,10 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
-// @import '@liveblocks/react-ui/styles.css';
-// @import '@liveblocks/react-lexical/styles.css';
+// @import '@liveblocks/react-ui/styles.scss';
+// @import '@liveblocks/react-lexical/styles.scss';
 
-// @import '../styles/dark-theme.css';
+@import './dark-theme.scss';
 
 @layer base {
   :root {
@@ -50,7 +50,7 @@
   }
 
   .shad-dialog {
-    @apply bg-doc w-full max-w-[400px] rounded-xl border-none bg-cover px-5 py-7 shadow-xl sm:min-w-[500px] !important;
+    @apply w-full max-w-[400px] rounded-xl border-none bg-doc bg-cover px-5 py-7 shadow-xl sm:min-w-[500px] !important;
   }
 
   .shad-dialog button {
@@ -66,15 +66,15 @@
   }
 
   .shad-select-item {
-    @apply bg-dark-200 focus:bg-dark-300 hover:bg-dark-300 cursor-pointer text-blue-100 focus:text-blue-100 !important;
+    @apply cursor-pointer bg-dark-200 text-blue-100 hover:bg-dark-300 focus:bg-dark-300 focus:text-blue-100 !important;
   }
 
   .shad-popover {
-    @apply bg-dark-200 w-[460px] border-none shadow-lg !important;
+    @apply w-[460px] border-none bg-dark-200 shadow-lg !important;
   }
 
   .floating-toolbar {
-    @apply bg-dark-350 flex w-full min-w-max items-center justify-center gap-2 rounded-lg p-1.5 shadow-xl;
+    @apply flex w-full min-w-max items-center justify-center gap-2 rounded-lg bg-dark-350 p-1.5 shadow-xl;
   }
 
   .floating-toolbar-btn {
@@ -82,7 +82,7 @@
   }
 
   .toolbar-wrapper {
-    @apply custom-scrollbar border-dark-300 bg-dark-100 z-50 w-screen overflow-auto border-y pl-3 pr-4 shadow-sm;
+    @apply custom-scrollbar z-50 w-screen overflow-auto border-y border-dark-300 bg-dark-100 pl-3 pr-4 shadow-sm;
   }
 
   .editor-wrapper {
@@ -90,7 +90,7 @@
   }
 
   .header {
-    @apply bg-dark-100 flex min-h-[92px] w-full min-w-full flex-nowrap items-center justify-between gap-2 px-4;
+    @apply flex min-h-[92px] w-full min-w-full flex-nowrap items-center justify-between gap-2 bg-dark-100 px-4;
   }
 
   .document-list-container {
@@ -102,11 +102,11 @@
   }
 
   .document-list-item {
-    @apply bg-doc flex items-center justify-between gap-4 rounded-lg bg-cover p-5 shadow-xl;
+    @apply flex items-center justify-between gap-4 rounded-lg bg-doc bg-cover p-5 shadow-xl;
   }
 
   .document-list-empty {
-    @apply bg-dark-200 flex w-full max-w-[730px] flex-col items-center justify-center gap-5 rounded-lg px-10 py-8;
+    @apply flex w-full max-w-[730px] flex-col items-center justify-center gap-5 rounded-lg bg-dark-200 px-10 py-8;
   }
 
   .document-title-input {
@@ -114,11 +114,11 @@
   }
 
   .document-title {
-    @apply border-dark-400 line-clamp-1 text-base font-semibold leading-[24px] sm:pl-0 sm:text-xl;
+    @apply line-clamp-1 border-dark-400 text-base font-semibold leading-[24px] sm:pl-0 sm:text-xl;
   }
 
   .view-only-tag {
-    @apply bg-dark-400/50 rounded-md px-2 py-0.5 text-xs text-blue-100/50;
+    @apply rounded-md bg-dark-400/50 px-2 py-0.5 text-xs text-blue-100/50;
   }
 
   .collaborators-list {
@@ -126,7 +126,7 @@
   }
 
   .share-input {
-    @apply bg-dark-400 h-11 flex-1 border-none focus-visible:ring-0 focus-visible:ring-offset-0 !important;
+    @apply h-11 flex-1 border-none bg-dark-400 focus-visible:ring-0 focus-visible:ring-offset-0 !important;
   }
 
   .remove-btn {
@@ -138,11 +138,11 @@
   }
 
   .comment-composer {
-    @apply border-dark-300 bg-dark-200 w-full max-w-[800px] border shadow-sm lg:w-[350px];
+    @apply w-full max-w-[800px] border border-dark-300 bg-dark-200 shadow-sm lg:w-[350px];
   }
 
   .comment-thread {
-    @apply border-dark-300 bg-dark-200 w-full max-w-[800px] border shadow-sm transition-all lg:w-[350px];
+    @apply w-full max-w-[800px] border border-dark-300 bg-dark-200 shadow-sm transition-all lg:w-[350px];
   }
 
   .loader {

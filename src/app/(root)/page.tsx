@@ -1,11 +1,11 @@
 import { NextPage } from 'next';
 
-import { Button } from '@/common/components/ui/button';
+import { Editor } from '@/common/components/editor/Editor';
 
 const HomePage: NextPage = () => {
   return (
     <div>
-      <Button>123</Button>
+      <Editor roomId="" currentUserType="creator" />
     </div>
   );
 };
