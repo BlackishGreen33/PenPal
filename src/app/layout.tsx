@@ -5,6 +5,7 @@ import { Inter as FontSans } from 'next/font/google';
 
 import '@/common/styles/globals.scss';
 
+import Provider from '@/common/components/poviders/Provider';
 import { cn } from '@/common/utils/tailwindMerge';
 
 const fontSans = FontSans({
@@ -39,7 +40,7 @@ export default function RootLayout({
             fontSans.variable
           )}
         >
-          {children}
+          <Provider>{children}</Provider>
         </body>
       </html>
     </ClerkProvider>
