@@ -74,7 +74,6 @@ const ShareModal: React.FC<ShareDocumentDialogProps> = memo(
               Select which users can view and edit this document
             </DialogDescription>
           </DialogHeader>
-
           <Label htmlFor="email" className="mt-6 text-blue-100">
             Email address
           </Label>

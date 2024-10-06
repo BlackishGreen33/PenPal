@@ -1,7 +1,14 @@
 import { NextPage } from 'next';
 
-const page: NextPage = () => {
-  return <div>123</div>;
-};
+import Document from '@/modules/Document';
 
-export default page;
+interface SearchParamProps {
+  params: { [key: string]: string };
+  searchParams: { [key: string]: string | string[] | undefined };
+}
+
+const Page: NextPage<SearchParamProps> = ({ params: { id } }) => (
+  <Document id={id} />
+);
+
+export default Page;

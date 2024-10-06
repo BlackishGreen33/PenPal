@@ -244,6 +244,7 @@ export function createDOMRange(
   try {
     range.setStart(anchorDOM, anchorOffset);
     range.setEnd(focusDOM, focusOffset);
+    // eslint-disable-next-line unused-imports/no-unused-vars
   } catch (e) {
     return null;
   }
