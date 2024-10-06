@@ -20,7 +20,7 @@ export const brightColors = [
   '#FF6347', // Darker Neon Vermilion
 ];
 
-export function getUserColor(userId: string) {
+const getUserColor = (userId: string) => {
   let sum = 0;
   for (let i = 0; i < userId.length; i++) {
     sum += userId.charCodeAt(i);
@@ -28,4 +28,6 @@ export function getUserColor(userId: string) {
 
   const colorIndex = sum % brightColors.length;
   return brightColors[colorIndex];
-}
+};
+
+export default getUserColor;

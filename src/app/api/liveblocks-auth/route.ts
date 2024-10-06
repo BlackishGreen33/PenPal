@@ -2,7 +2,7 @@ import { currentUser } from '@clerk/nextjs/server';
 import { redirect } from 'next/navigation';
 
 import { liveblocks } from '@/common/libs/liveblocks';
-import { getUserColor } from '@/common/utils/getUserColor';
+import { getUserColor } from '@/common/utils';
 
 // eslint-disable-next-line unused-imports/no-unused-vars
 export async function POST(request: Request) {

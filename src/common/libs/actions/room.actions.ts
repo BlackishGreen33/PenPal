@@ -5,8 +5,7 @@ import { nanoid } from 'nanoid';
 import { revalidatePath } from 'next/cache';
 import { redirect } from 'next/navigation';
 
-import { getAccessType } from '@/common/utils/getAccessType';
-import { parseStringify } from '@/common/utils/parseStringify';
+import { getAccessType, parseStringify } from '@/common/utils';
 
 import { liveblocks } from '../liveblocks';
 

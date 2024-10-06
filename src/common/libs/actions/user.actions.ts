@@ -3,7 +3,7 @@
 
 import { clerkClient } from '@clerk/nextjs/server';
 
-import { parseStringify } from '@/common/utils/parseStringify';
+import { parseStringify } from '@/common/utils';
 
 import { liveblocks } from '../liveblocks';
 

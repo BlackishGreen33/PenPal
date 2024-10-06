@@ -8,7 +8,7 @@ import { memo } from 'react';
 import AddDocumentBtn from '@/common/components/elements/AddDocumentBtn';
 import DeleteModal from '@/common/components/elements/DeleteModal';
 import { getDocuments } from '@/common/libs/actions/room.actions';
-import dateConverter from '@/common/utils/dateConverter';
+import { dateConverter } from '@/common/utils';
 
 const DocumentList: React.FC = memo(async () => {
   const clerkUser = await currentUser();

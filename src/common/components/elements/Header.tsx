@@ -2,7 +2,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { FC, memo } from 'react';
 
-import { cn } from '@/common/utils/tailwindMerge';
+import { cn } from '@/common/utils';
 
 interface HeaderProps {
   children: React.ReactNode;

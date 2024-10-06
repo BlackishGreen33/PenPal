@@ -1,4 +1,4 @@
-export const getAccessType = (userType: UserType) => {
+const getAccessType = (userType: UserType) => {
   switch (userType) {
     case 'creator':
       return ['room:write'];
@@ -10,3 +10,5 @@ export const getAccessType = (userType: UserType) => {
       return ['room:read', 'room:presence:write'];
   }
 };
+
+export default getAccessType;

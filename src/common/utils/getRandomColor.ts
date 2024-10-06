@@ -1,5 +1,5 @@
 // Function to generate a random color in hex format, excluding specified colors
-export function getRandomColor() {
+const getRandomColor = () => {
   const avoidColors = ['#000000', '#FFFFFF', '#8B4513']; // Black, White, Brown in hex format
 
   let randomColor;
@@ -14,4 +14,6 @@ export function getRandomColor() {
   } while (avoidColors.includes(randomColor));
 
   return randomColor;
-}
+};
+
+export default getRandomColor;
