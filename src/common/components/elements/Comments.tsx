@@ -1,6 +1,7 @@
-import { useThreads } from '@liveblocks/react/suspense';
+/* eslint-disable simple-import-sort/imports */
 import { useIsThreadActive } from '@liveblocks/react-lexical';
 import { Composer, Thread } from '@liveblocks/react-ui';
+import { useThreads } from '@liveblocks/react/suspense';
 import { memo } from 'react';
 
 import { cn } from '@/common/utils';
