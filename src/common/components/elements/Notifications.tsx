@@ -1,14 +1,15 @@
+/* eslint-disable simple-import-sort/imports */
 'use client';
 
-import {
-  useInboxNotifications,
-  useUnreadInboxNotificationsCount,
-} from '@liveblocks/react/suspense';
 import {
   InboxNotification,
   InboxNotificationList,
   LiveblocksUIConfig,
 } from '@liveblocks/react-ui';
+import {
+  useInboxNotifications,
+  useUnreadInboxNotificationsCount,
+} from '@liveblocks/react/suspense';
 import Image from 'next/image';
 import { FC, memo, ReactNode } from 'react';
 

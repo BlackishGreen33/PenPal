@@ -1,3 +1,4 @@
+/* eslint-disable simple-import-sort/imports */
 'use client';
 
 import { AutoFocusPlugin } from '@lexical/react/LexicalAutoFocusPlugin';
@@ -7,7 +8,6 @@ import { LexicalErrorBoundary } from '@lexical/react/LexicalErrorBoundary';
 import { HistoryPlugin } from '@lexical/react/LexicalHistoryPlugin';
 import { RichTextPlugin } from '@lexical/react/LexicalRichTextPlugin';
 import { HeadingNode } from '@lexical/rich-text';
-import { useThreads } from '@liveblocks/react/suspense';
 import {
   FloatingComposer,
   FloatingThreads,
@@ -15,6 +15,7 @@ import {
   LiveblocksPlugin,
   useEditorStatus,
 } from '@liveblocks/react-lexical';
+import { useThreads } from '@liveblocks/react/suspense';
 
 import FloatingToolbarPlugin from './plugins/FloatingToolbarPlugin';
 import Theme from './plugins/Theme';
