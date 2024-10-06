@@ -4,6 +4,7 @@ import { redirect } from 'next/navigation';
 import { liveblocks } from '@/common/libs/liveblocks';
 import { getUserColor } from '@/common/utils/getUserColor';
 
+// eslint-disable-next-line unused-imports/no-unused-vars
 export async function POST(request: Request) {
   const clerkUser = await currentUser();
 

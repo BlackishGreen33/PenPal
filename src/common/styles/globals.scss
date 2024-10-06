@@ -2,8 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
-@import '@liveblocks/react-ui/styles.scss';
-@import '@liveblocks/react-lexical/styles.scss';
+@import '@liveblocks/react-ui/styles.css';
+@import '@liveblocks/react-lexical/styles.css';
 
 @import './dark-theme.scss';
 
@@ -89,20 +89,8 @@
     @apply custom-scrollbar h-[calc(100vh-140px)] gap-5 overflow-auto px-5 pt-5 lg:flex-row lg:items-start lg:justify-center xl:gap-10 xl:pt-10;
   }
 
-  .document-list-container {
-    @apply mb-10 flex w-full flex-col items-center gap-10 px-5;
-  }
-
-  .document-list-title {
-    @apply flex w-full max-w-[730px] items-end justify-between;
-  }
-
   .document-list-item {
     @apply flex items-center justify-between gap-4 rounded-lg bg-doc bg-cover p-5 shadow-xl;
-  }
-
-  .document-list-empty {
-    @apply flex w-full max-w-[730px] flex-col items-center justify-center gap-5 rounded-lg bg-dark-200 px-10 py-8;
   }
 
   .document-title-input {
@@ -148,15 +136,6 @@
   /* ======================== Auth Pages */
   .auth-page {
     @apply flex h-screen w-full flex-col items-center justify-center gap-10;
-  }
-
-  /* ======================== Home Page */
-  .home-container {
-    @apply relative flex min-h-screen w-full flex-col items-center gap-5 sm:gap-10;
-  }
-
-  .document-ul {
-    @apply flex w-full max-w-[730px] flex-col gap-5;
   }
 
   /* ======================== CollaborativeRoom */

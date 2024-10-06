@@ -58,11 +58,4 @@ declare type CollaboratorProps = {
   user: User;
 };
 
-declare type AddDocumentBtnProps = {
-  userId: string;
-  email: string;
-};
-
-declare type DeleteModalProps = { roomId: string };
-
 declare type ThreadWrapperProps = { thread: ThreadData<BaseMetadata> };
