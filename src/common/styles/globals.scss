@@ -105,10 +105,6 @@
     @apply rounded-md bg-dark-400/50 px-2 py-0.5 text-xs text-blue-100/50;
   }
 
-  .collaborators-list {
-    @apply hidden items-center justify-end -space-x-3 overflow-hidden sm:flex;
-  }
-
   .share-input {
     @apply h-11 flex-1 border-none bg-dark-400 focus-visible:ring-0 focus-visible:ring-offset-0 !important;
   }
@@ -136,11 +132,6 @@
   /* ======================== Auth Pages */
   .auth-page {
     @apply flex h-screen w-full flex-col items-center justify-center gap-10;
-  }
-
-  /* ======================== CollaborativeRoom */
-  .collaborative-room {
-    @apply flex size-full max-h-screen flex-1 flex-col items-center overflow-hidden;
   }
 }
 

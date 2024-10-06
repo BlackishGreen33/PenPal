@@ -3,24 +3,41 @@
 import {
   ClientSideSuspense,
   LiveblocksProvider,
-  RoomProvider,
 } from '@liveblocks/react/suspense';
-import { FC, memo, ReactNode } from 'react';
+import { memo } from 'react';
 
-import Loader from '../elements/Loader';
+import Loader from '@/common/components/elements/Loader';
+import {
+  getClerkUsers,
+  getDocumentUsers,
+} from '@/common/libs/actions/user.actions';
 
 interface ProviderProps {
-  children: ReactNode;
+  children: React.ReactNode;
 }
 
-const Provider: FC<ProviderProps> = memo(({ children }) => {
+const Provider: React.FC<ProviderProps> = memo(({ children }) => {
   return (
-    <LiveblocksProvider authEndpoint="/api/liveblocks-auth">
-      <RoomProvider id="my-room">
-        <ClientSideSuspense fallback={<Loader />}>
-          {children}
-        </ClientSideSuspense>
-      </RoomProvider>
+    <LiveblocksProvider
+      authEndpoint="/api/liveblocks-auth"
+      resolveUsers={async ({ userIds }) => {
+        const users = await getClerkUsers({ userIds });
+
+        return users;
+      }}
+      resolveMentionSuggestions={async ({ text, roomId }) => {
+        const roomUsers = await getDocumentUsers({
+          roomId,
+          // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+          // @ts-expect-error
+          currentUser: clerkUser?.emailAddresses[0].emailAddress,
+          text,
+        });
+
+        return roomUsers;
+      }}
+    >
+      <ClientSideSuspense fallback={<Loader />}>{children}</ClientSideSuspense>
     </LiveblocksProvider>
   );
 });

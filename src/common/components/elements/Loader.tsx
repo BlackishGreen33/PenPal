@@ -1,7 +1,7 @@
 import Image from 'next/image';
-import { FC, memo } from 'react';
+import { memo } from 'react';
 
-const Loader: FC = memo(() => (
+const Loader: React.FC = memo(() => (
   <div className="loader">
     <Image
       src="/assets/icons/loader.svg"

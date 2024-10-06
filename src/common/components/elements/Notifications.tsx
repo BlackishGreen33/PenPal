@@ -11,11 +11,15 @@ import {
   useUnreadInboxNotificationsCount,
 } from '@liveblocks/react/suspense';
 import Image from 'next/image';
-import { FC, memo, ReactNode } from 'react';
+import { memo } from 'react';
 
-import { Popover, PopoverContent, PopoverTrigger } from '../ui/popover';
+import {
+  Popover,
+  PopoverContent,
+  PopoverTrigger,
+} from '@/common/components/ui/popover';
 
-const Notifications: FC = memo(() => {
+const Notifications: React.FC = memo(() => {
   const { inboxNotifications } = useInboxNotifications();
   const { count } = useUnreadInboxNotificationsCount();
 
@@ -39,7 +43,7 @@ const Notifications: FC = memo(() => {
       <PopoverContent align="end" className="shad-popover">
         <LiveblocksUIConfig
           overrides={{
-            INBOX_NOTIFICATION_TEXT_MENTION: (user: ReactNode) => (
+            INBOX_NOTIFICATION_TEXT_MENTION: (user: React.ReactNode) => (
               <>{user} mentioned you.</>
             ),
           }}

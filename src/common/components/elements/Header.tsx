@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import { FC, memo } from 'react';
+import { memo } from 'react';
 
 import { cn } from '@/common/utils';
 
@@ -9,7 +9,7 @@ interface HeaderProps {
   className?: string;
 }
 
-const Header: FC<HeaderProps> = memo(({ children, className }) => {
+const Header: React.FC<HeaderProps> = memo(({ children, className }) => {
   return (
     <div
       className={cn(
