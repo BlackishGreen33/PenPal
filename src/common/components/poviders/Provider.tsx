@@ -4,7 +4,6 @@ import {
   ClientSideSuspense,
   LiveblocksProvider,
 } from '@liveblocks/react/suspense';
-import { memo } from 'react';
 
 import Loader from '@/common/components/elements/Loader';
 import {
@@ -16,7 +15,7 @@ interface ProviderProps {
   children: React.ReactNode;
 }
 
-const Provider: React.FC<ProviderProps> = memo(({ children }) => {
+const Provider: React.FC<ProviderProps> = ({ children }) => {
   return (
     <LiveblocksProvider
       authEndpoint="/api/liveblocks-auth"
@@ -30,7 +29,8 @@ const Provider: React.FC<ProviderProps> = memo(({ children }) => {
           roomId,
           // eslint-disable-next-line @typescript-eslint/ban-ts-comment
           // @ts-expect-error
-          currentUser: clerkUser?.emailAddresses[0].emailAddress,
+          // eslint-disable-next-line @typescript-eslint/no-non-null-asserted-optional-chain
+          currentUser: clerkUser?.emailAddresses[0].emailAddress!,
           text,
         });
 
@@ -40,6 +40,6 @@ const Provider: React.FC<ProviderProps> = memo(({ children }) => {
       <ClientSideSuspense fallback={<Loader />}>{children}</ClientSideSuspense>
     </LiveblocksProvider>
   );
-});
+};
 
 export default Provider;
