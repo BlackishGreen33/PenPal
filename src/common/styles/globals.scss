@@ -35,13 +35,6 @@
 }
 
 @layer utilities {
-  .text-28-semibold {
-    @apply text-[28px] font-semibold;
-  }
-  .text-10-regular {
-    @apply text-[10px] font-normal;
-  }
-
   .gradient-blue {
     @apply bg-gradient-to-t from-blue-500 to-blue-400;
   }
@@ -73,65 +66,12 @@
     @apply w-[460px] border-none bg-dark-200 shadow-lg !important;
   }
 
-  .floating-toolbar {
-    @apply flex w-full min-w-max items-center justify-center gap-2 rounded-lg bg-dark-350 p-1.5 shadow-xl;
-  }
-
-  .floating-toolbar-btn {
-    @apply relative inline-flex size-8 items-center justify-center whitespace-nowrap rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 disabled:pointer-events-none disabled:opacity-50;
-  }
-
-  .toolbar-wrapper {
-    @apply custom-scrollbar z-50 w-screen overflow-auto border-y border-dark-300 bg-dark-100 pl-3 pr-4 shadow-sm;
-  }
-
-  .editor-wrapper {
-    @apply custom-scrollbar h-[calc(100vh-140px)] gap-5 overflow-auto px-5 pt-5 lg:flex-row lg:items-start lg:justify-center xl:gap-10 xl:pt-10;
-  }
-
-  .document-list-item {
-    @apply flex items-center justify-between gap-4 rounded-lg bg-doc bg-cover p-5 shadow-xl;
-  }
-
   .document-title-input {
     @apply min-w-[78px] flex-1 border-none bg-transparent px-0 text-left text-base font-semibold leading-[24px] focus-visible:ring-0 focus-visible:ring-offset-0 disabled:text-black sm:text-xl md:text-center !important;
   }
 
-  .document-title {
-    @apply line-clamp-1 border-dark-400 text-base font-semibold leading-[24px] sm:pl-0 sm:text-xl;
-  }
-
-  .view-only-tag {
-    @apply rounded-md bg-dark-400/50 px-2 py-0.5 text-xs text-blue-100/50;
-  }
-
   .share-input {
     @apply h-11 flex-1 border-none bg-dark-400 focus-visible:ring-0 focus-visible:ring-offset-0 !important;
-  }
-
-  .remove-btn {
-    @apply rounded-lg bg-transparent px-0 text-red-500 hover:bg-transparent;
-  }
-
-  .comments-container {
-    @apply mb-10 flex w-full flex-col items-center justify-center space-y-4 lg:w-fit;
-  }
-
-  .comment-composer {
-    @apply w-full max-w-[800px] border border-dark-300 bg-dark-200 shadow-sm lg:w-[350px];
-  }
-
-  .comment-thread {
-    @apply w-full max-w-[800px] border border-dark-300 bg-dark-200 shadow-sm transition-all lg:w-[350px];
-  }
-
-  .loader {
-    @apply flex size-full h-screen items-center justify-center gap-3 text-white;
-  }
-
-  /* ======================== Auth Pages */
-  .auth-page {
-    @apply flex h-screen w-full flex-col items-center justify-center gap-10;
   }
 }
 

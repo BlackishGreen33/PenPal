@@ -100,7 +100,9 @@ const CollaborativeRoom: React.FC<CollaborativeRoomProps> = memo(
                     className="document-title-input"
                   />
                 ) : (
-                  <p className="document-title">{documentTitle}</p>
+                  <p className="line-clamp-1 border-dark-400 text-base font-semibold leading-[24px] sm:pl-0 sm:text-xl">
+                    {documentTitle}
+                  </p>
                 )}
 
                 {currentUserType === 'editor' && !editing && (
@@ -115,7 +117,9 @@ const CollaborativeRoom: React.FC<CollaborativeRoomProps> = memo(
                 )}
 
                 {currentUserType !== 'editor' && !editing && (
-                  <p className="view-only-tag">View only</p>
+                  <p className="rounded-md bg-dark-400/50 px-2 py-0.5 text-xs text-blue-100/50">
+                    View only
+                  </p>
                 )}
 
                 {loading && <p className="text-sm text-gray-400">saving...</p>}

@@ -21,7 +21,7 @@ const DocumentList: React.FC = memo(async () => {
   return (
     <div className="mb-10 flex w-full flex-col items-center gap-10 px-5">
       <div className="flex w-full max-w-[730px] items-end justify-between">
-        <h3 className="text-28-semibold">All documents</h3>
+        <h3 className="text-[28px] font-semibold">All documents</h3>
         <AddDocumentBtn
           userId={clerkUser.id}
           email={clerkUser.emailAddresses[0].emailAddress}
@@ -29,7 +29,10 @@ const DocumentList: React.FC = memo(async () => {
       </div>
       <ul className="flex w-full max-w-[730px] flex-col gap-5">
         {roomDocuments.data.map(({ id, metadata, createdAt }: any) => (
-          <li key={id} className="document-list-item">
+          <li
+            key={id}
+            className="flex items-center justify-between gap-4 rounded-lg bg-doc bg-cover p-5 shadow-xl"
+          >
             <Link
               href={`/documents/${id}`}
               className="flex flex-1 items-center gap-4"

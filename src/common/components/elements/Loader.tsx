@@ -2,7 +2,7 @@ import Image from 'next/image';
 import { memo } from 'react';
 
 const Loader: React.FC = memo(() => (
-  <div className="loader">
+  <div className="flex size-full h-screen items-center justify-center gap-3 text-white">
     <Image
       src="/assets/icons/loader.svg"
       alt="loader"

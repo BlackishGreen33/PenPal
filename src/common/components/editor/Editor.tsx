@@ -58,11 +58,11 @@ export function Editor({
   return (
     <LexicalComposer initialConfig={initialConfig}>
       <div className="editor-container size-full">
-        <div className="toolbar-wrapper flex min-w-full justify-between">
+        <div className="custom-scrollbar z-50 flex w-screen min-w-full justify-between overflow-auto border-y border-dark-300 bg-dark-100 pl-3 pr-4 shadow-sm">
           <ToolbarPlugin />
           {currentUserType === 'editor' && <DeleteModal roomId={roomId} />}
         </div>
-        <div className="editor-wrapper flex flex-col items-center justify-start">
+        <div className="custom-scrollbar flex h-[calc(100vh-140px)] flex-col items-center justify-start gap-5 overflow-auto px-5 pt-5 lg:flex-row lg:items-start lg:justify-center xl:gap-10 xl:pt-10">
           {status === 'not-loaded' || status === 'loading' ? (
             <Loader />
           ) : (
