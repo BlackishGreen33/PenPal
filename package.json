@@ -18,7 +18,7 @@
     "start": "next start",
     "lint": "next lint",
     "prettier": "prettier --write .",
-    "prepare": "husky install"
+    "prepare": "husky"
   },
   "dependencies": {
     "@clerk/nextjs": "^5.7.1",
