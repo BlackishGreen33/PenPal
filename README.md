@@ -1,36 +1,77 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+<div align="center">
+  <img width="130" src="https://github.com/BlackishGreen33/PenPal/blob/main/public/assets/images/logo.png" alt="PenPal Logo">
+  <h1 align="center">PenPal</h1>
+  <h3>智能协作，书写未来</h3>
+  <a href="https://github.com/BlackishGreen33/PenPal"><strong>探索项目文档 »</strong></a>
+  <br />
+  <br />
 
-## Getting Started
+![license](https://img.shields.io/github/license/BlackishGreen33/PenPal)
+![language](https://img.shields.io/github/languages/top/BlackishGreen33/PenPal)
+![last](https://img.shields.io/github/last-commit/BlackishGreen33/PenPal)
 
-First, run the development server:
+<a href="" target="_blank">在线体验</a>
+·
+<a href="https://github.com/BlackishGreen33/PenPal/issues">报告Bug</a>
+·
+<a href="https://github.com/BlackishGreen33/PenPal/issues">提出新特性</a>
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+</div>
+
+## 🔖 项目导览
+
+### ✨ 現有功能
+
+- (待更新)
+
+### ✒️ 引用技術
+
+- **框架**: [Next.js](https://nextjs.org)
+- **样式**: [Tailwind CSS](https://www.tailwindcss.cn/)
+- (待更新)
+
+### 📋 提交规范
+
+- 🎉 init：项目初始化
+- ✨ feat：新增功能（feature）
+- 🐞 fix：修复bug
+- 📃 docs：文档修改
+- 🌈 style：代码样式修改，不影响原代码逻辑
+- ✅ test：测试相关的改动
+- 🔨 refactor：代码重构
+- 🔧 chore：建制过程或辅助工具的变动
+
+### 🎯 相容环境
+
+- 现代浏览器（Chrome >= 64, Edge >= 79, Firefox >= 78, Safari >= 12）
+
+### 💻 本地调试
+
+记得先配置环境变量：
+
+```env
+NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=
+CLERK_SECRET_KEY=
+
+NEXT_PUBLIC_CLERK_SIGN_IN_URL=/sign-in
+NEXT_PUBLIC_CLERK_SIGN_UP_URL=/sign-up
+
+LIVEBLOCKS_SECRET_KEY=
+
+SENTRY_AUTH_TOKEN=
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+接着拉取代码和安装依赖：
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+$ git clone https://github.com/BlackishGreen33/PenPal.git
+$ cd PenPal
+$ pnpm install
+$ pnpm run dev
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### 📝 授权
 
-## Learn More
+上述文件皆以 MIT 许可授权
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+> 详细之授权请参考 [LICENSE](LICENSE) 文件
