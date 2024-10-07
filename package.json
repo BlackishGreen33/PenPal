@@ -1,7 +1,17 @@
 {
-  "name": "penpal",
+  "name": "pelpal",
   "version": "0.1.0",
   "private": true,
+  "description": "PenPal - 智能协作，书写未来",
+  "author": "BlackishGreen33 <s5460703@gmail.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BlackishGreen33/PenPal.git"
+  },
+  "bugs": {
+    "url": "https://github.com/BlackishGreen33/PenPal/issues"
+  },
   "scripts": {
     "dev": "next dev",
     "build": "next build",
