@@ -2,7 +2,7 @@
 
 import { useSelf } from '@liveblocks/react/suspense';
 import Image from 'next/image';
-import { memo, useState } from 'react';
+import { useState } from 'react';
 
 import { Button } from '@/common/components/ui/button';
 import {
@@ -27,95 +27,98 @@ interface ShareDocumentDialogProps {
   currentUserType: UserType;
 }
 
-const ShareModal: React.FC<ShareDocumentDialogProps> = memo(
-  ({ roomId, collaborators, creatorId, currentUserType }) => {
-    const user = useSelf();
+const ShareModal: React.FC<ShareDocumentDialogProps> = ({
+  roomId,
+  collaborators,
+  creatorId,
+  currentUserType,
+}) => {
+  const user = useSelf();
 
-    const [open, setOpen] = useState(false);
-    const [loading, setLoading] = useState(false);
+  const [open, setOpen] = useState(false);
+  const [loading, setLoading] = useState(false);
 
-    const [email, setEmail] = useState('');
-    const [userType, setUserType] = useState<UserType>('viewer');
+  const [email, setEmail] = useState('');
+  const [userType, setUserType] = useState<UserType>('viewer');
 
-    const shareDocumentHandler = async () => {
-      setLoading(true);
+  const shareDocumentHandler = async () => {
+    setLoading(true);
 
-      await updateDocumentAccess({
-        roomId,
-        email,
-        userType: userType as UserType,
-        updatedBy: user.info,
-      });
+    await updateDocumentAccess({
+      roomId,
+      email,
+      userType: userType as UserType,
+      updatedBy: user.info,
+    });
 
-      setLoading(false);
-    };
+    setLoading(false);
+  };
 
-    return (
-      <Dialog open={open} onOpenChange={setOpen}>
-        <DialogTrigger>
-          <Button
-            className="gradient-blue flex h-9 gap-1 px-4"
-            disabled={currentUserType !== 'editor'}
-          >
-            <Image
-              src="/assets/icons/share.svg"
-              alt="share"
-              width={20}
-              height={20}
-              className="min-w-4 md:size-5"
+  return (
+    <Dialog open={open} onOpenChange={setOpen}>
+      <DialogTrigger>
+        <Button
+          className="gradient-blue flex h-9 gap-1 px-4"
+          disabled={currentUserType !== 'editor'}
+        >
+          <Image
+            src="/assets/icons/share.svg"
+            alt="share"
+            width={20}
+            height={20}
+            className="min-w-4 md:size-5"
+          />
+          <p className="mr-1 hidden sm:block">Share</p>
+        </Button>
+      </DialogTrigger>
+      <DialogContent className="shad-dialog">
+        <DialogHeader>
+          <DialogTitle>Manage who can view this project</DialogTitle>
+          <DialogDescription>
+            Select which users can view and edit this document
+          </DialogDescription>
+        </DialogHeader>
+        <Label htmlFor="email" className="mt-6 text-blue-100">
+          Email address
+        </Label>
+        <div className="flex items-center gap-3">
+          <div className="flex flex-1 rounded-md bg-dark-400">
+            <Input
+              id="email"
+              placeholder="Enter email address"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              className="share-input"
             />
-            <p className="mr-1 hidden sm:block">Share</p>
+            <UserTypeSelector userType={userType} setUserType={setUserType} />
+          </div>
+          <Button
+            type="submit"
+            onClick={shareDocumentHandler}
+            className="gradient-blue flex h-full gap-1 px-5"
+            disabled={loading}
+          >
+            {loading ? 'Sending...' : 'Invite'}
           </Button>
-        </DialogTrigger>
-        <DialogContent className="shad-dialog">
-          <DialogHeader>
-            <DialogTitle>Manage who can view this project</DialogTitle>
-            <DialogDescription>
-              Select which users can view and edit this document
-            </DialogDescription>
-          </DialogHeader>
-          <Label htmlFor="email" className="mt-6 text-blue-100">
-            Email address
-          </Label>
-          <div className="flex items-center gap-3">
-            <div className="flex flex-1 rounded-md bg-dark-400">
-              <Input
-                id="email"
-                placeholder="Enter email address"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                className="share-input"
-              />
-              <UserTypeSelector userType={userType} setUserType={setUserType} />
-            </div>
-            <Button
-              type="submit"
-              onClick={shareDocumentHandler}
-              className="gradient-blue flex h-full gap-1 px-5"
-              disabled={loading}
-            >
-              {loading ? 'Sending...' : 'Invite'}
-            </Button>
-          </div>
+        </div>
 
-          <div className="my-2 space-y-2">
-            <ul className="flex flex-col">
-              {collaborators.map((collaborator) => (
-                <Collaborator
-                  key={collaborator.id}
-                  roomId={roomId}
-                  creatorId={creatorId}
-                  email={collaborator.email}
-                  collaborator={collaborator}
-                  user={user.info}
-                />
-              ))}
-            </ul>
-          </div>
-        </DialogContent>
-      </Dialog>
-    );
-  }
-);
+        <div className="my-2 space-y-2">
+          <ul className="flex flex-col">
+            {collaborators.map((collaborator) => (
+              <Collaborator
+                key={collaborator.id}
+                roomId={roomId}
+                creatorId={creatorId}
+                email={collaborator.email}
+                collaborator={collaborator}
+                user={user.info}
+              />
+            ))}
+          </ul>
+        </div>
+      </DialogContent>
+    </Dialog>
+  );
+};
 
 export default ShareModal;

@@ -1,8 +1,7 @@
 import { useOthers } from '@liveblocks/react/suspense';
 import Image from 'next/image';
-import { memo } from 'react';
 
-const ActiveCollaborators: React.FC = memo(() => {
+const ActiveCollaborators: React.FC = () => {
   const others = useOthers();
 
   const collaborators = others.map((other) => other.info);
@@ -23,6 +22,6 @@ const ActiveCollaborators: React.FC = memo(() => {
       ))}
     </ul>
   );
-});
+};
 
 export default ActiveCollaborators;

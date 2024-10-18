@@ -11,7 +11,6 @@ import {
   useUnreadInboxNotificationsCount,
 } from '@liveblocks/react/suspense';
 import Image from 'next/image';
-import { memo } from 'react';
 
 import {
   Popover,
@@ -19,7 +18,7 @@ import {
   PopoverTrigger,
 } from '@/common/components/ui/popover';
 
-const Notifications: React.FC = memo(() => {
+const Notifications: React.FC = () => {
   const { inboxNotifications } = useInboxNotifications();
   const { count } = useUnreadInboxNotificationsCount();
 
@@ -107,6 +106,6 @@ const Notifications: React.FC = memo(() => {
       </PopoverContent>
     </Popover>
   );
-});
+};
 
 export default Notifications;

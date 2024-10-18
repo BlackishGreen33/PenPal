@@ -2,11 +2,10 @@
 import { useIsThreadActive } from '@liveblocks/react-lexical';
 import { Composer, Thread } from '@liveblocks/react-ui';
 import { useThreads } from '@liveblocks/react/suspense';
-import { memo } from 'react';
 
 import { cn } from '@/common/utils';
 
-const ThreadWrapper: React.FC<ThreadWrapperProps> = memo(({ thread }) => {
+const ThreadWrapper: React.FC<ThreadWrapperProps> = ({ thread }) => {
   const isActive = useIsThreadActive(thread.id);
 
   return (
@@ -20,9 +19,9 @@ const ThreadWrapper: React.FC<ThreadWrapperProps> = memo(({ thread }) => {
       )}
     />
   );
-});
+};
 
-const Comments: React.FC = memo(() => {
+const Comments: React.FC = () => {
   const { threads } = useThreads();
 
   return (
@@ -33,6 +32,6 @@ const Comments: React.FC = memo(() => {
       ))}
     </div>
   );
-});
+};
 
 export default Comments;

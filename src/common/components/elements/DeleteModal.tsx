@@ -1,7 +1,7 @@
 'use client';
 
 import Image from 'next/image';
-import { memo, useState } from 'react';
+import { useState } from 'react';
 
 import { Button } from '@/common/components/ui/button';
 import {
@@ -20,7 +20,7 @@ interface DeleteModalProps {
   roomId: string;
 }
 
-const DeleteModal: React.FC<DeleteModalProps> = memo(({ roomId }) => {
+const DeleteModal: React.FC<DeleteModalProps> = ({ roomId }) => {
   const [open, setOpen] = useState(false);
   const [loading, setLoading] = useState(false);
 
@@ -81,6 +81,6 @@ const DeleteModal: React.FC<DeleteModalProps> = memo(({ roomId }) => {
       </DialogContent>
     </Dialog>
   );
-});
+};
 
 export default DeleteModal;

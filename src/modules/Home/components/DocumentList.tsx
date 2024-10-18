@@ -3,14 +3,13 @@ import { currentUser } from '@clerk/nextjs/server';
 import Image from 'next/image';
 import Link from 'next/link';
 import { redirect } from 'next/navigation';
-import { memo } from 'react';
 
 import AddDocumentBtn from '@/common/components/elements/AddDocumentBtn';
 import DeleteModal from '@/common/components/elements/DeleteModal';
 import { getDocuments } from '@/common/libs/actions/room.actions';
 import { dateConverter } from '@/common/utils';
 
-const DocumentList: React.FC = memo(async () => {
+const DocumentList: React.FC = async () => {
   const clerkUser = await currentUser();
   if (!clerkUser) redirect('/sign-in');
 
@@ -58,6 +57,6 @@ const DocumentList: React.FC = memo(async () => {
       </ul>
     </div>
   );
-});
+};
 
 export default DocumentList;
