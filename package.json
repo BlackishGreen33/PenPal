@@ -32,7 +32,7 @@
     "@liveblocks/node": "^2.9.1",
     "@liveblocks/react": "^2.9.2",
     "@liveblocks/react-lexical": "^2.9.1",
-    "@liveblocks/react-ui": "^2.9.1",
+    "@liveblocks/react-ui": "^2.9.2",
     "@radix-ui/react-dialog": "^1.1.2",
     "@radix-ui/react-label": "^2.1.0",
     "@radix-ui/react-popover": "^1.1.2",
