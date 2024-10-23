@@ -28,7 +28,7 @@
     "@lexical/rich-text": "^0.18.0",
     "@lexical/selection": "^0.18.0",
     "@lexical/utils": "^0.18.0",
-    "@liveblocks/client": "^2.9.1",
+    "@liveblocks/client": "^2.9.2",
     "@liveblocks/node": "^2.9.1",
     "@liveblocks/react": "^2.9.2",
     "@liveblocks/react-lexical": "^2.9.1",

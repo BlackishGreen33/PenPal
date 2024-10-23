@@ -30,8 +30,8 @@ importers:
         specifier: ^0.18.0
         version: 0.18.0
       '@liveblocks/client':
-        specifier: ^2.9.1
-        version: 2.9.1
+        specifier: ^2.9.2
+        version: 2.9.2
       '@liveblocks/node':
         specifier: ^2.9.1
         version: 2.9.1
@@ -1372,9 +1372,6 @@ packages:
 
   '@types/mysql@2.15.26':
     resolution: {integrity: sha512-DSLCOXhkvfS5WNNPbfn2KdICAmk8lLc+/PNvnPnF7gOdMZCxopXduqv0OQ13y/yA/zXTSikZZqVgybUxOEg6YQ==}
-
-  '@types/node@22.7.6':
-    resolution: {integrity: sha512-/d7Rnj0/ExXDMcioS78/kf1lMzYk4BZV8MZGTBKzTGZ6/406ukkbYlIsZmMPhcR5KlkunDHQLrtAVmSq7r+mSw==}
 
   '@types/node@22.7.8':
     resolution: {integrity: sha512-a922jJy31vqR5sk+kAdIENJjHblqcZ4RmERviFsER4WJcEONqxKcjNOlk0q7OUfrF5sddT+vng070cdfMlrPLg==}
@@ -5154,10 +5151,6 @@ snapshots:
     dependencies:
       '@types/node': 22.7.8
 
-  '@types/node@22.7.6':
-    dependencies:
-      undici-types: 6.19.8
-
   '@types/node@22.7.8':
     dependencies:
       undici-types: 6.19.8
@@ -6476,7 +6469,7 @@ snapshots:
 
   jest-worker@27.5.1:
     dependencies:
-      '@types/node': 22.7.6
+      '@types/node': 22.7.8
       merge-stream: 2.0.0
       supports-color: 8.1.1
 
