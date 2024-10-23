@@ -36,8 +36,8 @@ importers:
         specifier: ^2.9.1
         version: 2.9.1
       '@liveblocks/react':
-        specifier: ^2.9.1
-        version: 2.9.1(react@18.3.1)
+        specifier: ^2.9.2
+        version: 2.9.2(react@18.3.1)
       '@liveblocks/react-lexical':
         specifier: ^2.9.1
         version: 2.9.1(@lexical/react@0.18.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(yjs@13.6.20))(@lexical/utils@0.18.0)(@lexical/yjs@0.18.0(yjs@13.6.20))(@types/react-dom@18.3.1)(@types/react@18.3.11)(lexical@0.18.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
@@ -423,8 +423,14 @@ packages:
   '@liveblocks/client@2.9.1':
     resolution: {integrity: sha512-aUgRluyJszMqSvkIoFHFh7xYOymY4Aw8a9zmabbQnUtDc06iD9eS7gsOHPxd6bdIK46vkc5vdyUK7viFeunUiw==}
 
+  '@liveblocks/client@2.9.2':
+    resolution: {integrity: sha512-SorpCeR7ap1SNVerjEP0NLYyo+WZoASWx/Ib6aCImQr8sMzXwkk0CUO7ZyuQGUaH86M/zqnFUfsotfTpfbPKBw==}
+
   '@liveblocks/core@2.9.1':
     resolution: {integrity: sha512-9bxo/ZfG2tTW07KKWh1hv4s6Rpu8qsZfROOKPxpYU3O6e7emmEdend1MTN05oTfSe+HmEtUXzZjuWNK5OTkxvw==}
+
+  '@liveblocks/core@2.9.2':
+    resolution: {integrity: sha512-CNzCdoH+7wzmM69fcuDHwNvao/IXod/TLlTGPvULA6FqrXZOfzUCQfsWmFFALTwu3pYNRIg3rgYaHowShgEUmw==}
 
   '@liveblocks/node@2.9.1':
     resolution: {integrity: sha512-H66URgpZ1tp6gSeH5egoZ4926zuQ5t6Nja35mIoeJHr3xwXsd4PlJ7Crt+57TkmnPMeZWQXuyjUwCtUBh5cwjw==}
@@ -446,6 +452,11 @@ packages:
 
   '@liveblocks/react@2.9.1':
     resolution: {integrity: sha512-JoYnZ+LDDmN/XsCI9s1HCDhbATXtMLQPcqS/04AtOlzyFBLHTEQHScBtsy+cp3ImBGOsJ4aLNjnnTlWitrf6KQ==}
+    peerDependencies:
+      react: ^16.14.0 || ^17 || ^18
+
+  '@liveblocks/react@2.9.2':
+    resolution: {integrity: sha512-wgZnSiAX7jLjCT/vxziDgCUbDCxhwA7GtGkgwayXklyPP9qoluA7eCwHTN7+lSE/3HUbmiyatq2aeZVguug+KA==}
     peerDependencies:
       react: ^16.14.0 || ^17 || ^18
 
@@ -4059,7 +4070,13 @@ snapshots:
     dependencies:
       '@liveblocks/core': 2.9.1
 
+  '@liveblocks/client@2.9.2':
+    dependencies:
+      '@liveblocks/core': 2.9.2
+
   '@liveblocks/core@2.9.1': {}
+
+  '@liveblocks/core@2.9.2': {}
 
   '@liveblocks/node@2.9.1':
     dependencies:
@@ -4117,6 +4134,13 @@ snapshots:
     dependencies:
       '@liveblocks/client': 2.9.1
       '@liveblocks/core': 2.9.1
+      react: 18.3.1
+      use-sync-external-store: 1.2.2(react@18.3.1)
+
+  '@liveblocks/react@2.9.2(react@18.3.1)':
+    dependencies:
+      '@liveblocks/client': 2.9.2
+      '@liveblocks/core': 2.9.2
       react: 18.3.1
       use-sync-external-store: 1.2.2(react@18.3.1)
 
