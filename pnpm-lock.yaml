@@ -36,8 +36,8 @@ importers:
         specifier: ^2.9.2
         version: 2.9.2
       '@liveblocks/react':
-        specifier: ^2.9.2
-        version: 2.9.2(react@18.3.1)
+        specifier: ^2.10.0
+        version: 2.10.0(react@18.3.1)
       '@liveblocks/react-lexical':
         specifier: ^2.9.2
         version: 2.9.2(@lexical/react@0.18.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(yjs@13.6.20))(@lexical/utils@0.18.0)(@lexical/yjs@0.18.0(yjs@13.6.20))(@types/react-dom@18.3.1)(@types/react@18.3.12)(lexical@0.18.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
@@ -424,8 +424,14 @@ packages:
     peerDependencies:
       yjs: '>=13.5.22'
 
+  '@liveblocks/client@2.10.0':
+    resolution: {integrity: sha512-CyhYWoYVpXfGb98TOaRae+C/6ZQfyhS+e9eBIYYolejLfyZqI65B1bdhUbNtdrQxfodLWu3YxhegAAtoluxPqA==}
+
   '@liveblocks/client@2.9.2':
     resolution: {integrity: sha512-SorpCeR7ap1SNVerjEP0NLYyo+WZoASWx/Ib6aCImQr8sMzXwkk0CUO7ZyuQGUaH86M/zqnFUfsotfTpfbPKBw==}
+
+  '@liveblocks/core@2.10.0':
+    resolution: {integrity: sha512-njlVO7QerDNRFNz/nDTjp8BdjcBVsrHEJHgS6qmuQSUA4eL1G3qie/ZOEhjayFq6W7V7FGra227TWXyWd7YRaQ==}
 
   '@liveblocks/core@2.9.2':
     resolution: {integrity: sha512-CNzCdoH+7wzmM69fcuDHwNvao/IXod/TLlTGPvULA6FqrXZOfzUCQfsWmFFALTwu3pYNRIg3rgYaHowShgEUmw==}
@@ -445,6 +451,11 @@ packages:
 
   '@liveblocks/react-ui@2.9.2':
     resolution: {integrity: sha512-sJEmoG5J3aZ8C8UJ1UBqPNlHMN27qbnL5zBK4Y7kh3ZgZ8owVpt3HfTXui8VUaRylCj8vr3hDaEJhUo7kZQK7Q==}
+    peerDependencies:
+      react: ^16.14.0 || ^17 || ^18
+
+  '@liveblocks/react@2.10.0':
+    resolution: {integrity: sha512-X7F3tBsRcGkbhMlfBAZqdD8x8B2f3WW30m9RsQLMaSQ1hH2SVU9AcPKdkJ8ib/JV1zhBG+QM7jca7YlsftWDdg==}
     peerDependencies:
       react: ^16.14.0 || ^17 || ^18
 
@@ -4081,9 +4092,15 @@ snapshots:
       lexical: 0.18.0
       yjs: 13.6.20
 
+  '@liveblocks/client@2.10.0':
+    dependencies:
+      '@liveblocks/core': 2.10.0
+
   '@liveblocks/client@2.9.2':
     dependencies:
       '@liveblocks/core': 2.9.2
+
+  '@liveblocks/core@2.10.0': {}
 
   '@liveblocks/core@2.9.2': {}
 
@@ -4138,6 +4155,13 @@ snapshots:
       - '@types/react'
       - '@types/react-dom'
       - react-dom
+
+  '@liveblocks/react@2.10.0(react@18.3.1)':
+    dependencies:
+      '@liveblocks/client': 2.10.0
+      '@liveblocks/core': 2.10.0
+      react: 18.3.1
+      use-sync-external-store: 1.2.2(react@18.3.1)
 
   '@liveblocks/react@2.9.2(react@18.3.1)':
     dependencies:
