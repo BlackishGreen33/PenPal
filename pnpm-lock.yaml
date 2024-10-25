@@ -30,8 +30,8 @@ importers:
         specifier: ^0.18.0
         version: 0.18.0
       '@liveblocks/client':
-        specifier: ^2.9.2
-        version: 2.9.2
+        specifier: ^2.10.0
+        version: 2.10.0
       '@liveblocks/node':
         specifier: ^2.9.2
         version: 2.9.2
@@ -424,8 +424,14 @@ packages:
     peerDependencies:
       yjs: '>=13.5.22'
 
+  '@liveblocks/client@2.10.0':
+    resolution: {integrity: sha512-CyhYWoYVpXfGb98TOaRae+C/6ZQfyhS+e9eBIYYolejLfyZqI65B1bdhUbNtdrQxfodLWu3YxhegAAtoluxPqA==}
+
   '@liveblocks/client@2.9.2':
     resolution: {integrity: sha512-SorpCeR7ap1SNVerjEP0NLYyo+WZoASWx/Ib6aCImQr8sMzXwkk0CUO7ZyuQGUaH86M/zqnFUfsotfTpfbPKBw==}
+
+  '@liveblocks/core@2.10.0':
+    resolution: {integrity: sha512-njlVO7QerDNRFNz/nDTjp8BdjcBVsrHEJHgS6qmuQSUA4eL1G3qie/ZOEhjayFq6W7V7FGra227TWXyWd7YRaQ==}
 
   '@liveblocks/core@2.9.2':
     resolution: {integrity: sha512-CNzCdoH+7wzmM69fcuDHwNvao/IXod/TLlTGPvULA6FqrXZOfzUCQfsWmFFALTwu3pYNRIg3rgYaHowShgEUmw==}
@@ -4081,9 +4087,15 @@ snapshots:
       lexical: 0.18.0
       yjs: 13.6.20
 
+  '@liveblocks/client@2.10.0':
+    dependencies:
+      '@liveblocks/core': 2.10.0
+
   '@liveblocks/client@2.9.2':
     dependencies:
       '@liveblocks/core': 2.9.2
+
+  '@liveblocks/core@2.10.0': {}
 
   '@liveblocks/core@2.9.2': {}
 
