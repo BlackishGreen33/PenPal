@@ -33,8 +33,8 @@ importers:
         specifier: ^2.9.2
         version: 2.9.2
       '@liveblocks/node':
-        specifier: ^2.9.2
-        version: 2.9.2
+        specifier: ^2.10.0
+        version: 2.10.0
       '@liveblocks/react':
         specifier: ^2.9.2
         version: 2.9.2(react@18.3.1)
@@ -427,11 +427,14 @@ packages:
   '@liveblocks/client@2.9.2':
     resolution: {integrity: sha512-SorpCeR7ap1SNVerjEP0NLYyo+WZoASWx/Ib6aCImQr8sMzXwkk0CUO7ZyuQGUaH86M/zqnFUfsotfTpfbPKBw==}
 
+  '@liveblocks/core@2.10.0':
+    resolution: {integrity: sha512-njlVO7QerDNRFNz/nDTjp8BdjcBVsrHEJHgS6qmuQSUA4eL1G3qie/ZOEhjayFq6W7V7FGra227TWXyWd7YRaQ==}
+
   '@liveblocks/core@2.9.2':
     resolution: {integrity: sha512-CNzCdoH+7wzmM69fcuDHwNvao/IXod/TLlTGPvULA6FqrXZOfzUCQfsWmFFALTwu3pYNRIg3rgYaHowShgEUmw==}
 
-  '@liveblocks/node@2.9.2':
-    resolution: {integrity: sha512-LHBZkUPR6D10Yb0ck91S8sf+HClc3X31OnIM3UM5dB3D1m5cbSHmReuepOMuXhpqySWZzj3zP3SmCmCIOmNu4A==}
+  '@liveblocks/node@2.10.0':
+    resolution: {integrity: sha512-KlKFQeKwEs2O6bGJyce52tBX5xOjvYUAN3pnQm5yk6brqWyzvpIwF/+7RbLHOYLZTM5zvQfeCw02h4shPfMCIQ==}
 
   '@liveblocks/react-lexical@2.9.2':
     resolution: {integrity: sha512-Q0ihmGvaEJxrMdnBhJyUFfp1R/xGOUCFzyAVvc+adC4CkR74Hnq4ItkckXSCNE42LfpgV0kCRhan95cOwUIsNQ==}
@@ -4085,11 +4088,13 @@ snapshots:
     dependencies:
       '@liveblocks/core': 2.9.2
 
+  '@liveblocks/core@2.10.0': {}
+
   '@liveblocks/core@2.9.2': {}
 
-  '@liveblocks/node@2.9.2':
+  '@liveblocks/node@2.10.0':
     dependencies:
-      '@liveblocks/core': 2.9.2
+      '@liveblocks/core': 2.10.0
       '@stablelib/base64': 1.0.1
       fast-sha256: 1.3.0
       node-fetch: 2.7.0
