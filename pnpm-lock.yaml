@@ -39,8 +39,8 @@ importers:
         specifier: ^2.9.2
         version: 2.9.2(react@18.3.1)
       '@liveblocks/react-lexical':
-        specifier: ^2.10.0
-        version: 2.10.0(@lexical/react@0.18.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(yjs@13.6.20))(@lexical/utils@0.18.0)(@lexical/yjs@0.18.0(yjs@13.6.20))(@types/react-dom@18.3.1)(@types/react@18.3.12)(lexical@0.18.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+        specifier: ^2.10.2
+        version: 2.10.2(@lexical/react@0.18.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(yjs@13.6.20))(@lexical/utils@0.18.0)(@lexical/yjs@0.18.0(yjs@13.6.20))(@types/react-dom@18.3.1)(@types/react@18.3.12)(lexical@0.18.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@liveblocks/react-ui':
         specifier: ^2.9.2
         version: 2.9.2(@types/react-dom@18.3.1)(@types/react@18.3.12)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
@@ -424,8 +424,8 @@ packages:
     peerDependencies:
       yjs: '>=13.5.22'
 
-  '@liveblocks/client@2.10.0':
-    resolution: {integrity: sha512-CyhYWoYVpXfGb98TOaRae+C/6ZQfyhS+e9eBIYYolejLfyZqI65B1bdhUbNtdrQxfodLWu3YxhegAAtoluxPqA==}
+  '@liveblocks/client@2.10.2':
+    resolution: {integrity: sha512-ckK+FAzuSrALiFEjX74FD0CbrNH4vnwrhOSje4XaoSK+UfRLQlYmKgg856bZcB92/jzEXCluq5cMdTmnFKxnnw==}
 
   '@liveblocks/client@2.9.2':
     resolution: {integrity: sha512-SorpCeR7ap1SNVerjEP0NLYyo+WZoASWx/Ib6aCImQr8sMzXwkk0CUO7ZyuQGUaH86M/zqnFUfsotfTpfbPKBw==}
@@ -433,44 +433,47 @@ packages:
   '@liveblocks/core@2.10.0':
     resolution: {integrity: sha512-njlVO7QerDNRFNz/nDTjp8BdjcBVsrHEJHgS6qmuQSUA4eL1G3qie/ZOEhjayFq6W7V7FGra227TWXyWd7YRaQ==}
 
+  '@liveblocks/core@2.10.2':
+    resolution: {integrity: sha512-j0I7ZPYFxnGrJeUwzVlwW2l2J/BhtvXZ6GfXrrCHSePSwXmFstrOpgy58cFn5g/WxR0TFJh/gH3NNYAd8SdJPw==}
+
   '@liveblocks/core@2.9.2':
     resolution: {integrity: sha512-CNzCdoH+7wzmM69fcuDHwNvao/IXod/TLlTGPvULA6FqrXZOfzUCQfsWmFFALTwu3pYNRIg3rgYaHowShgEUmw==}
 
   '@liveblocks/node@2.10.0':
     resolution: {integrity: sha512-KlKFQeKwEs2O6bGJyce52tBX5xOjvYUAN3pnQm5yk6brqWyzvpIwF/+7RbLHOYLZTM5zvQfeCw02h4shPfMCIQ==}
 
-  '@liveblocks/react-lexical@2.10.0':
-    resolution: {integrity: sha512-S2qmI7G9QiZz7v0bhaXC0EQAJb25p8wYtoj4VPFqD6a574e/z3AKPY3fT7IVSMEU6AzQUGRMV6j37uDzkoVX0w==}
+  '@liveblocks/react-lexical@2.10.2':
+    resolution: {integrity: sha512-FykYoauKPnWtjPhPNv03cvKwItd+vr6u2w4qxQQ47O8Ckepzcw0mbNadDFVVtW7IAppsOmHYP4yKts4FaxVtfw==}
     peerDependencies:
       '@lexical/react': 0.16.1
       '@lexical/utils': 0.16.1
       '@lexical/yjs': 0.16.1
       lexical: 0.16.1
-      react: ^16.14.0 || ^17 || ^18
-      react-dom: ^16.14.0 || ^17 || ^18
+      react: ^16.14.0 || ^17 || ^18 || ^19 || ^19.0.0-rc
+      react-dom: ^16.14.0 || ^17 || ^18 || ^19 || ^19.0.0-rc
 
-  '@liveblocks/react-ui@2.10.0':
-    resolution: {integrity: sha512-PyZs5rNfDwZcv/cNYN4fYSKne2ZLV3BMgtS0PxTMxOI416ssPgjtaXimH2YQV2QkRrUG2Y25oJ1CBkZwebbgSQ==}
+  '@liveblocks/react-ui@2.10.2':
+    resolution: {integrity: sha512-bsnZvkyZ9Qo5R944vEWkwh+aa+xjrs/A0QnIfKA1ZRfH84LlvwtnqBv7Gc59EosJaAE5KCVvSyj9e7wjCe5YhA==}
     peerDependencies:
-      react: ^16.14.0 || ^17 || ^18
+      react: ^16.14.0 || ^17 || ^18 || ^19 || ^19.0.0-rc
 
   '@liveblocks/react-ui@2.9.2':
     resolution: {integrity: sha512-sJEmoG5J3aZ8C8UJ1UBqPNlHMN27qbnL5zBK4Y7kh3ZgZ8owVpt3HfTXui8VUaRylCj8vr3hDaEJhUo7kZQK7Q==}
     peerDependencies:
       react: ^16.14.0 || ^17 || ^18
 
-  '@liveblocks/react@2.10.0':
-    resolution: {integrity: sha512-X7F3tBsRcGkbhMlfBAZqdD8x8B2f3WW30m9RsQLMaSQ1hH2SVU9AcPKdkJ8ib/JV1zhBG+QM7jca7YlsftWDdg==}
+  '@liveblocks/react@2.10.2':
+    resolution: {integrity: sha512-+bvlaxcsiLfeD1axvDRyD1BQEioUFcFnt+qCtkjzc3MGsVx9BgrDNzowpIndwtrRELTD/aZ0ADq4yZwpSQ4hYA==}
     peerDependencies:
-      react: ^16.14.0 || ^17 || ^18
+      react: ^16.14.0 || ^17 || ^18 || ^19 || ^19.0.0-rc
 
   '@liveblocks/react@2.9.2':
     resolution: {integrity: sha512-wgZnSiAX7jLjCT/vxziDgCUbDCxhwA7GtGkgwayXklyPP9qoluA7eCwHTN7+lSE/3HUbmiyatq2aeZVguug+KA==}
     peerDependencies:
       react: ^16.14.0 || ^17 || ^18
 
-  '@liveblocks/yjs@2.10.0':
-    resolution: {integrity: sha512-x9MGxKy/6LWKQoGAAQ22sBCe+XBZBr+Km5lAj/su5Egmbg/K1yNpEQPI4QINEUH5twzMQKnPlSedFS3VkiZmzQ==}
+  '@liveblocks/yjs@2.10.2':
+    resolution: {integrity: sha512-oZYnMDkt+lxqJVOfdgf1unmwoApkW2+3sE0wPGAs4EhLyBHNGiff0HPzFU8ALkN4TxfjAdWdxrNg+pHgukUi+g==}
     peerDependencies:
       yjs: ^13.6.1
 
@@ -1381,9 +1384,6 @@ packages:
 
   '@types/mysql@2.15.26':
     resolution: {integrity: sha512-DSLCOXhkvfS5WNNPbfn2KdICAmk8lLc+/PNvnPnF7gOdMZCxopXduqv0OQ13y/yA/zXTSikZZqVgybUxOEg6YQ==}
-
-  '@types/node@22.8.1':
-    resolution: {integrity: sha512-k6Gi8Yyo8EtrNtkHXutUu2corfDf9su95VYVP10aGYMMROM6SAItZi0w1XszA6RtWTHSVp5OeFof37w0IEqCQg==}
 
   '@types/node@22.8.4':
     resolution: {integrity: sha512-SpNNxkftTJOPk0oN+y2bIqurEXHTA2AOZ3EJDDKeJ5VzkvvORSvmQXGQarcOzWV1ac7DCaPBEdMDxBsM+d8jWw==}
@@ -4100,15 +4100,17 @@ snapshots:
       lexical: 0.18.0
       yjs: 13.6.20
 
-  '@liveblocks/client@2.10.0':
+  '@liveblocks/client@2.10.2':
     dependencies:
-      '@liveblocks/core': 2.10.0
+      '@liveblocks/core': 2.10.2
 
   '@liveblocks/client@2.9.2':
     dependencies:
       '@liveblocks/core': 2.9.2
 
   '@liveblocks/core@2.10.0': {}
+
+  '@liveblocks/core@2.10.2': {}
 
   '@liveblocks/core@2.9.2': {}
 
@@ -4121,17 +4123,17 @@ snapshots:
     transitivePeerDependencies:
       - encoding
 
-  '@liveblocks/react-lexical@2.10.0(@lexical/react@0.18.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(yjs@13.6.20))(@lexical/utils@0.18.0)(@lexical/yjs@0.18.0(yjs@13.6.20))(@types/react-dom@18.3.1)(@types/react@18.3.12)(lexical@0.18.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
+  '@liveblocks/react-lexical@2.10.2(@lexical/react@0.18.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(yjs@13.6.20))(@lexical/utils@0.18.0)(@lexical/yjs@0.18.0(yjs@13.6.20))(@types/react-dom@18.3.1)(@types/react@18.3.12)(lexical@0.18.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
     dependencies:
       '@floating-ui/react-dom': 2.1.2(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@lexical/react': 0.18.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(yjs@13.6.20)
       '@lexical/utils': 0.18.0
       '@lexical/yjs': 0.18.0(yjs@13.6.20)
-      '@liveblocks/client': 2.10.0
-      '@liveblocks/core': 2.10.0
-      '@liveblocks/react': 2.10.0(react@18.3.1)
-      '@liveblocks/react-ui': 2.10.0(@types/react-dom@18.3.1)(@types/react@18.3.12)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
-      '@liveblocks/yjs': 2.10.0(yjs@13.6.20)
+      '@liveblocks/client': 2.10.2
+      '@liveblocks/core': 2.10.2
+      '@liveblocks/react': 2.10.2(react@18.3.1)
+      '@liveblocks/react-ui': 2.10.2(@types/react-dom@18.3.1)(@types/react@18.3.12)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@liveblocks/yjs': 2.10.2(yjs@13.6.20)
       lexical: 0.18.0
       react: 18.3.1
       react-dom: 18.3.1(react@18.3.1)
@@ -4141,12 +4143,12 @@ snapshots:
       - '@types/react'
       - '@types/react-dom'
 
-  '@liveblocks/react-ui@2.10.0(@types/react-dom@18.3.1)(@types/react@18.3.12)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
+  '@liveblocks/react-ui@2.10.2(@types/react-dom@18.3.1)(@types/react@18.3.12)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
     dependencies:
       '@floating-ui/react-dom': 2.1.2(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
-      '@liveblocks/client': 2.10.0
-      '@liveblocks/core': 2.10.0
-      '@liveblocks/react': 2.10.0(react@18.3.1)
+      '@liveblocks/client': 2.10.2
+      '@liveblocks/core': 2.10.2
+      '@liveblocks/react': 2.10.2(react@18.3.1)
       '@radix-ui/react-dropdown-menu': 2.1.2(@types/react-dom@18.3.1)(@types/react@18.3.12)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@radix-ui/react-popover': 1.1.2(@types/react-dom@18.3.1)(@types/react@18.3.12)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@radix-ui/react-slot': 1.1.0(@types/react@18.3.12)(react@18.3.1)
@@ -4187,10 +4189,10 @@ snapshots:
       - '@types/react-dom'
       - react-dom
 
-  '@liveblocks/react@2.10.0(react@18.3.1)':
+  '@liveblocks/react@2.10.2(react@18.3.1)':
     dependencies:
-      '@liveblocks/client': 2.10.0
-      '@liveblocks/core': 2.10.0
+      '@liveblocks/client': 2.10.2
+      '@liveblocks/core': 2.10.2
       react: 18.3.1
       use-sync-external-store: 1.2.2(react@18.3.1)
 
@@ -4201,10 +4203,10 @@ snapshots:
       react: 18.3.1
       use-sync-external-store: 1.2.2(react@18.3.1)
 
-  '@liveblocks/yjs@2.10.0(yjs@13.6.20)':
+  '@liveblocks/yjs@2.10.2(yjs@13.6.20)':
     dependencies:
-      '@liveblocks/client': 2.10.0
-      '@liveblocks/core': 2.10.0
+      '@liveblocks/client': 2.10.2
+      '@liveblocks/core': 2.10.2
       js-base64: 3.7.7
       yjs: 13.6.20
 
@@ -5210,10 +5212,6 @@ snapshots:
   '@types/mysql@2.15.26':
     dependencies:
       '@types/node': 22.8.4
-
-  '@types/node@22.8.1':
-    dependencies:
-      undici-types: 6.19.8
 
   '@types/node@22.8.4':
     dependencies:
@@ -6560,7 +6558,7 @@ snapshots:
 
   jest-worker@27.5.1:
     dependencies:
-      '@types/node': 22.8.1
+      '@types/node': 22.8.4
       merge-stream: 2.0.0
       supports-color: 8.1.1
 
