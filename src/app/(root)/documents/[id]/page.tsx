@@ -7,8 +7,11 @@ interface SearchParamProps {
   searchParams: { [key: string]: string | string[] | undefined };
 }
 
-const Page: NextPage<SearchParamProps> = ({ params: { id } }) => (
-  <Document id={id} />
-);
+const Page: NextPage<SearchParamProps> = (props) => {
+  const params = props.params;
+  const { id } = params;
+
+  return <Document id={id} />;
+};
 
 export default Page;
