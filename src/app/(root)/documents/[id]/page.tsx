@@ -1,16 +1,15 @@
 import { NextPage } from 'next';
+import { use } from 'react';
 
 import Document from '@/modules/Document';
 
-type Params = Promise<{ [key: string]: string }>;
 interface SearchParamProps {
-  params: Params;
-  searchParams: { [key: string]: string | string[] | undefined };
+  params: Promise<{ [key: string]: string }>;
+  searchParams: Promise<{ [key: string]: string | string[] | undefined }>;
 }
 
-const Page: NextPage<SearchParamProps> = async (props) => {
-  const params = await props.params;
-  const { id } = params;
+const Page: NextPage<SearchParamProps> = ({ params }) => {
+  const { id } = use(params);
 
   return <Document id={id} />;
 };

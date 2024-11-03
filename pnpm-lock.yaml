@@ -8,8 +8,8 @@ importers:
   .:
     dependencies:
       '@clerk/nextjs':
-        specifier: ^5.7.5
-        version: 5.7.5(next@15.0.2(@babel/core@7.26.0)(@opentelemetry/api@1.9.0)(babel-plugin-react-compiler@19.0.0-beta-6fc168f-20241025)(react-dom@19.0.0-rc-603e6108-20241029(react@19.0.0-rc-603e6108-20241029))(react@19.0.0-rc-603e6108-20241029)(sass@1.80.6))(react-dom@19.0.0-rc-603e6108-20241029(react@19.0.0-rc-603e6108-20241029))(react@19.0.0-rc-603e6108-20241029)
+        specifier: ^6.1.3
+        version: 6.1.3(next@15.0.2(@babel/core@7.26.0)(@opentelemetry/api@1.9.0)(babel-plugin-react-compiler@19.0.0-beta-6fc168f-20241025)(react-dom@19.0.0-rc-603e6108-20241029(react@19.0.0-rc-603e6108-20241029))(react@19.0.0-rc-603e6108-20241029)(sass@1.80.6))(react-dom@19.0.0-rc-603e6108-20241029(react@19.0.0-rc-603e6108-20241029))(react@19.0.0-rc-603e6108-20241029)
       '@clerk/themes':
         specifier: ^2.1.40
         version: 2.1.40
@@ -39,7 +39,7 @@ importers:
         version: 2.10.2(react@19.0.0-rc-603e6108-20241029)
       '@liveblocks/react-lexical':
         specifier: ^2.10.2
-        version: 2.10.2(@lexical/react@0.19.0(react-dom@19.0.0-rc-603e6108-20241029(react@19.0.0-rc-603e6108-20241029))(react@19.0.0-rc-603e6108-20241029)(yjs@13.6.20))(@lexical/utils@0.19.0)(@lexical/yjs@0.19.0(yjs@13.6.20))(@types/react-dom@18.3.1)(@types/react@18.3.12)(lexical@0.18.0)(react-dom@19.0.0-rc-603e6108-20241029(react@19.0.0-rc-603e6108-20241029))(react@19.0.0-rc-603e6108-20241029)
+        version: 2.10.2(@lexical/react@0.19.0(react-dom@19.0.0-rc-603e6108-20241029(react@19.0.0-rc-603e6108-20241029))(react@19.0.0-rc-603e6108-20241029)(yjs@13.6.20))(@lexical/utils@0.19.0)(@lexical/yjs@0.19.0(yjs@13.6.20))(@types/react-dom@18.3.1)(@types/react@18.3.12)(lexical@0.19.0)(react-dom@19.0.0-rc-603e6108-20241029(react@19.0.0-rc-603e6108-20241029))(react@19.0.0-rc-603e6108-20241029)
       '@liveblocks/react-ui':
         specifier: ^2.10.2
         version: 2.10.2(@types/react-dom@18.3.1)(@types/react@18.3.12)(react-dom@19.0.0-rc-603e6108-20241029(react@19.0.0-rc-603e6108-20241029))(react@19.0.0-rc-603e6108-20241029)
@@ -72,10 +72,10 @@ importers:
         version: 2.1.1
       jsm-editor:
         specifier: ^0.0.12
-        version: 0.0.12(@lexical/react@0.19.0(react-dom@19.0.0-rc-603e6108-20241029(react@19.0.0-rc-603e6108-20241029))(react@19.0.0-rc-603e6108-20241029)(yjs@13.6.20))(@lexical/rich-text@0.19.0)(@lexical/selection@0.19.0)(@lexical/utils@0.19.0)(lexical@0.18.0)
+        version: 0.0.12(@lexical/react@0.19.0(react-dom@19.0.0-rc-603e6108-20241029(react@19.0.0-rc-603e6108-20241029))(react@19.0.0-rc-603e6108-20241029)(yjs@13.6.20))(@lexical/rich-text@0.19.0)(@lexical/selection@0.19.0)(@lexical/utils@0.19.0)(lexical@0.19.0)
       lexical:
-        specifier: ^0.18.0
-        version: 0.18.0
+        specifier: ^0.19.0
+        version: 0.19.0
       lucide-react:
         specifier: ^0.453.0
         version: 0.453.0(react@19.0.0-rc-603e6108-20241029)
@@ -102,8 +102,8 @@ importers:
         version: 1.0.7(tailwindcss@3.4.14)
     devDependencies:
       '@types/node':
-        specifier: ^22.8.6
-        version: 22.8.6
+        specifier: ^22.8.7
+        version: 22.8.7
       '@types/react':
         specifier: ^18.3.12
         version: 18.3.12
@@ -283,38 +283,38 @@ packages:
       }
     engines: { node: '>=6.9.0' }
 
-  '@clerk/backend@1.14.1':
+  '@clerk/backend@1.15.5':
     resolution:
       {
-        integrity: sha512-YlKMpiVo4UITw3sgA+9QrAFRILVOz5hgB1Zw180Y2LEZ5a+MdpX668vJKGh7riSweMN7JQvU2jlsKGRO+1bXDw==,
+        integrity: sha512-sgwWNm96IRQCIVmlJpm0Hr09GqK9jP19ko3AZUINuFxfqX+U3o26G7vwUoAGDxeSxvcb7LzxoAVAXBZZFsDzyw==,
       }
     engines: { node: '>=18.17.0' }
 
-  '@clerk/clerk-react@5.12.0':
+  '@clerk/clerk-react@5.14.3':
     resolution:
       {
-        integrity: sha512-3Lr2QazCm5R6ZLbu7wM+d5YwCElrAoX00OBWcKqjPYaWDJCCmEYN6LJbLzOTYQ8QT1J1ZIed85/lKa+q2aD1aA==,
-      }
-    engines: { node: '>=18.17.0' }
-    peerDependencies:
-      react: '>=18 || >=19.0.0-beta'
-      react-dom: '>=18 || >=19.0.0-beta'
-
-  '@clerk/nextjs@5.7.5':
-    resolution:
-      {
-        integrity: sha512-hfH4IiKcDT9LlqSOlNHZoYfX6iF4lBqPXf/KwnILCX/0+MVYaotb30FwWXkcHI2jZgcvumlQTOq8Gv5KugnihA==,
+        integrity: sha512-rzRTt+f7jzmL9CtebGJUsQkluEI6UhPLwV6sIuiLjlMEaVfBjhSoMXfqOfP0PDaQk/hJE5kGupNi6XEOo4olDA==,
       }
     engines: { node: '>=18.17.0' }
     peerDependencies:
-      next: ^13.5.4 || ^14.0.3 || >=15.0.0-rc
-      react: '>=18 || >=19.0.0-beta'
-      react-dom: '>=18 || >=19.0.0-beta'
+      react: ^18 || ^19.0.0-0
+      react-dom: ^18 || ^19.0.0-0
 
-  '@clerk/shared@2.9.2':
+  '@clerk/nextjs@6.1.3':
     resolution:
       {
-        integrity: sha512-vRMDj13Pv9n8Pf+f8P40AvqJ8QEq348qUxUVIf17vn9R3/toicrQOY/Q6qsrAS8KXY9+ZnyTafJa+VFK+6iEFA==,
+        integrity: sha512-MtjwOhW0fDzIQRru78it2/DK1YtbnpiTxNFyaQgLgw7v/OWhZ9vPcXQ7txDpTwMXrvQMM4hQe4LN8GKAaCscJw==,
+      }
+    engines: { node: '>=18.17.0' }
+    peerDependencies:
+      next: ^13.5.4 || ^14.0.3 || ^15.0.0
+      react: ^18 || ^19.0.0-0
+      react-dom: ^18 || ^19.0.0-0
+
+  '@clerk/shared@2.11.3':
+    resolution:
+      {
+        integrity: sha512-twA/vbfhLdXU4kCFRme9kP0juzh1FNcKg/HoVaXrT7WaiN68fnpD0TtwVc6jmKV4bj5mjh3TBxrvrp3HOQjigw==,
       }
     engines: { node: '>=18.17.0' }
     peerDependencies:
@@ -330,13 +330,6 @@ packages:
     resolution:
       {
         integrity: sha512-1Sl+rptRIwnUEexGY+ZxxPu3Y/JtyWVUPFlACqy5HRgaR50B86Zp3jkKpee9v+Jd8cFTfUBHJy7Dq0t8K1xG0Q==,
-      }
-    engines: { node: '>=18.17.0' }
-
-  '@clerk/types@4.26.0':
-    resolution:
-      {
-        integrity: sha512-VGcrQz/XpCiGbpIIzKVwWw4nLorzKnIP1IAemj1xt/80ULcdEZCncwhas6PoYBBsl1W55A1SwP9B/pEs0nmkCw==,
       }
     engines: { node: '>=18.17.0' }
 
@@ -2190,10 +2183,10 @@ packages:
         integrity: sha512-DSLCOXhkvfS5WNNPbfn2KdICAmk8lLc+/PNvnPnF7gOdMZCxopXduqv0OQ13y/yA/zXTSikZZqVgybUxOEg6YQ==,
       }
 
-  '@types/node@22.8.6':
+  '@types/node@22.8.7':
     resolution:
       {
-        integrity: sha512-tosuJYKrIqjQIlVCM4PEGxOmyg3FCPa/fViuJChnGeEIhjA46oy8FMVoF9su1/v8PNs2a8Q0iFNyOx0uOF91nw==,
+        integrity: sha512-LidcG+2UeYIWcMuMUpBKOnryBWG/rnmOHQR5apjn8myTQcx3rinFRn7DcIFhMnS0PPFSC6OafdIKEad0lj6U0Q==,
       }
 
   '@types/pg-pool@2.0.6':
@@ -2703,10 +2696,10 @@ packages:
       }
     engines: { node: '>= 6' }
 
-  caniuse-lite@1.0.30001676:
+  caniuse-lite@1.0.30001677:
     resolution:
       {
-        integrity: sha512-Qz6zwGCiPghQXGJvgQAem79esjitvJ+CxSbSQkW9H/UX5hg8XM88d4lp2W+MEQ81j+Hip58Il+jGVdazk1z9cw==,
+        integrity: sha512-fmfjsOlJUpMWu+mAAtZZZHz7UEwsUxIIvu1TJfO1HqFQvB/B+ii0xr9B5HpbZY/mC4XZ8SvjHJqtAY6pDPQEog==,
       }
 
   chalk@3.0.0:
@@ -3400,6 +3393,14 @@ packages:
         integrity: sha512-VyhnebXciFV2DESc+p6B+y0LjSm0krU4OgJN44qFAhBY0TJ+1V61tYD2+wHusZ6F9n5K+vl8k0sTy7PEfV4qpg==,
       }
     engines: { node: '>=16.17' }
+
+  ezheaders@0.1.0:
+    resolution:
+      {
+        integrity: sha512-U0wdCs2dS+IzFuxyHGyw1aWhiunW22sGqnyH4yQsovkgqUvO4YSbzQ5BQzV6HY4oFlNnK+TbFGJj8rvvX5aN7w==,
+      }
+    peerDependencies:
+      next: ^13.5.4 || ^14 || ^15
 
   fast-deep-equal@3.1.3:
     resolution:
@@ -4221,12 +4222,6 @@ packages:
         integrity: sha512-+bT2uH4E5LGE7h/n3evcS/sQlJXCpIp6ym8OWJ5eV6+67Dsql/LaaT7qJBAt2rzfoa/5QBGBhxDix1dMt2kQKQ==,
       }
     engines: { node: '>= 0.8.0' }
-
-  lexical@0.18.0:
-    resolution:
-      {
-        integrity: sha512-3K/B0RpzjoW+Wj2E455wWXxkqxqK8UgdIiuqkOqdOsoSSo5mCkHOU6eVw7Nlmlr1MFvAMzGmz4RPn8NZaLQ2Mw==,
-      }
 
   lexical@0.19.0:
     resolution:
@@ -6205,10 +6200,10 @@ snapshots:
       '@babel/helper-string-parser': 7.25.9
       '@babel/helper-validator-identifier': 7.25.9
 
-  '@clerk/backend@1.14.1(react-dom@19.0.0-rc-603e6108-20241029(react@19.0.0-rc-603e6108-20241029))(react@19.0.0-rc-603e6108-20241029)':
+  '@clerk/backend@1.15.5(react-dom@19.0.0-rc-603e6108-20241029(react@19.0.0-rc-603e6108-20241029))(react@19.0.0-rc-603e6108-20241029)':
     dependencies:
-      '@clerk/shared': 2.9.2(react-dom@19.0.0-rc-603e6108-20241029(react@19.0.0-rc-603e6108-20241029))(react@19.0.0-rc-603e6108-20241029)
-      '@clerk/types': 4.26.0
+      '@clerk/shared': 2.11.3(react-dom@19.0.0-rc-603e6108-20241029(react@19.0.0-rc-603e6108-20241029))(react@19.0.0-rc-603e6108-20241029)
+      '@clerk/types': 4.29.0
       cookie: 0.7.0
       snakecase-keys: 5.4.4
       tslib: 2.4.1
@@ -6216,30 +6211,31 @@ snapshots:
       - react
       - react-dom
 
-  '@clerk/clerk-react@5.12.0(react-dom@19.0.0-rc-603e6108-20241029(react@19.0.0-rc-603e6108-20241029))(react@19.0.0-rc-603e6108-20241029)':
+  '@clerk/clerk-react@5.14.3(react-dom@19.0.0-rc-603e6108-20241029(react@19.0.0-rc-603e6108-20241029))(react@19.0.0-rc-603e6108-20241029)':
     dependencies:
-      '@clerk/shared': 2.9.2(react-dom@19.0.0-rc-603e6108-20241029(react@19.0.0-rc-603e6108-20241029))(react@19.0.0-rc-603e6108-20241029)
-      '@clerk/types': 4.26.0
+      '@clerk/shared': 2.11.3(react-dom@19.0.0-rc-603e6108-20241029(react@19.0.0-rc-603e6108-20241029))(react@19.0.0-rc-603e6108-20241029)
+      '@clerk/types': 4.29.0
       react: 19.0.0-rc-603e6108-20241029
       react-dom: 19.0.0-rc-603e6108-20241029(react@19.0.0-rc-603e6108-20241029)
       tslib: 2.4.1
 
-  '@clerk/nextjs@5.7.5(next@15.0.2(@babel/core@7.26.0)(@opentelemetry/api@1.9.0)(babel-plugin-react-compiler@19.0.0-beta-6fc168f-20241025)(react-dom@19.0.0-rc-603e6108-20241029(react@19.0.0-rc-603e6108-20241029))(react@19.0.0-rc-603e6108-20241029)(sass@1.80.6))(react-dom@19.0.0-rc-603e6108-20241029(react@19.0.0-rc-603e6108-20241029))(react@19.0.0-rc-603e6108-20241029)':
+  '@clerk/nextjs@6.1.3(next@15.0.2(@babel/core@7.26.0)(@opentelemetry/api@1.9.0)(babel-plugin-react-compiler@19.0.0-beta-6fc168f-20241025)(react-dom@19.0.0-rc-603e6108-20241029(react@19.0.0-rc-603e6108-20241029))(react@19.0.0-rc-603e6108-20241029)(sass@1.80.6))(react-dom@19.0.0-rc-603e6108-20241029(react@19.0.0-rc-603e6108-20241029))(react@19.0.0-rc-603e6108-20241029)':
     dependencies:
-      '@clerk/backend': 1.14.1(react-dom@19.0.0-rc-603e6108-20241029(react@19.0.0-rc-603e6108-20241029))(react@19.0.0-rc-603e6108-20241029)
-      '@clerk/clerk-react': 5.12.0(react-dom@19.0.0-rc-603e6108-20241029(react@19.0.0-rc-603e6108-20241029))(react@19.0.0-rc-603e6108-20241029)
-      '@clerk/shared': 2.9.2(react-dom@19.0.0-rc-603e6108-20241029(react@19.0.0-rc-603e6108-20241029))(react@19.0.0-rc-603e6108-20241029)
-      '@clerk/types': 4.26.0
+      '@clerk/backend': 1.15.5(react-dom@19.0.0-rc-603e6108-20241029(react@19.0.0-rc-603e6108-20241029))(react@19.0.0-rc-603e6108-20241029)
+      '@clerk/clerk-react': 5.14.3(react-dom@19.0.0-rc-603e6108-20241029(react@19.0.0-rc-603e6108-20241029))(react@19.0.0-rc-603e6108-20241029)
+      '@clerk/shared': 2.11.3(react-dom@19.0.0-rc-603e6108-20241029(react@19.0.0-rc-603e6108-20241029))(react@19.0.0-rc-603e6108-20241029)
+      '@clerk/types': 4.29.0
       crypto-js: 4.2.0
+      ezheaders: 0.1.0(next@15.0.2(@babel/core@7.26.0)(@opentelemetry/api@1.9.0)(babel-plugin-react-compiler@19.0.0-beta-6fc168f-20241025)(react-dom@19.0.0-rc-603e6108-20241029(react@19.0.0-rc-603e6108-20241029))(react@19.0.0-rc-603e6108-20241029)(sass@1.80.6))
       next: 15.0.2(@babel/core@7.26.0)(@opentelemetry/api@1.9.0)(babel-plugin-react-compiler@19.0.0-beta-6fc168f-20241025)(react-dom@19.0.0-rc-603e6108-20241029(react@19.0.0-rc-603e6108-20241029))(react@19.0.0-rc-603e6108-20241029)(sass@1.80.6)
       react: 19.0.0-rc-603e6108-20241029
       react-dom: 19.0.0-rc-603e6108-20241029(react@19.0.0-rc-603e6108-20241029)
       server-only: 0.0.1
       tslib: 2.4.1
 
-  '@clerk/shared@2.9.2(react-dom@19.0.0-rc-603e6108-20241029(react@19.0.0-rc-603e6108-20241029))(react@19.0.0-rc-603e6108-20241029)':
+  '@clerk/shared@2.11.3(react-dom@19.0.0-rc-603e6108-20241029(react@19.0.0-rc-603e6108-20241029))(react@19.0.0-rc-603e6108-20241029)':
     dependencies:
-      '@clerk/types': 4.26.0
+      '@clerk/types': 4.29.0
       glob-to-regexp: 0.4.1
       js-cookie: 3.0.5
       std-env: 3.7.0
@@ -6252,10 +6248,6 @@ snapshots:
     dependencies:
       '@clerk/types': 4.29.0
       tslib: 2.4.1
-
-  '@clerk/types@4.26.0':
-    dependencies:
-      csstype: 3.1.1
 
   '@clerk/types@4.29.0':
     dependencies:
@@ -6588,7 +6580,7 @@ snapshots:
     transitivePeerDependencies:
       - encoding
 
-  '@liveblocks/react-lexical@2.10.2(@lexical/react@0.19.0(react-dom@19.0.0-rc-603e6108-20241029(react@19.0.0-rc-603e6108-20241029))(react@19.0.0-rc-603e6108-20241029)(yjs@13.6.20))(@lexical/utils@0.19.0)(@lexical/yjs@0.19.0(yjs@13.6.20))(@types/react-dom@18.3.1)(@types/react@18.3.12)(lexical@0.18.0)(react-dom@19.0.0-rc-603e6108-20241029(react@19.0.0-rc-603e6108-20241029))(react@19.0.0-rc-603e6108-20241029)':
+  '@liveblocks/react-lexical@2.10.2(@lexical/react@0.19.0(react-dom@19.0.0-rc-603e6108-20241029(react@19.0.0-rc-603e6108-20241029))(react@19.0.0-rc-603e6108-20241029)(yjs@13.6.20))(@lexical/utils@0.19.0)(@lexical/yjs@0.19.0(yjs@13.6.20))(@types/react-dom@18.3.1)(@types/react@18.3.12)(lexical@0.19.0)(react-dom@19.0.0-rc-603e6108-20241029(react@19.0.0-rc-603e6108-20241029))(react@19.0.0-rc-603e6108-20241029)':
     dependencies:
       '@floating-ui/react-dom': 2.1.2(react-dom@19.0.0-rc-603e6108-20241029(react@19.0.0-rc-603e6108-20241029))(react@19.0.0-rc-603e6108-20241029)
       '@lexical/react': 0.19.0(react-dom@19.0.0-rc-603e6108-20241029(react@19.0.0-rc-603e6108-20241029))(react@19.0.0-rc-603e6108-20241029)(yjs@13.6.20)
@@ -6599,7 +6591,7 @@ snapshots:
       '@liveblocks/react': 2.10.2(react@19.0.0-rc-603e6108-20241029)
       '@liveblocks/react-ui': 2.10.2(@types/react-dom@18.3.1)(@types/react@18.3.12)(react-dom@19.0.0-rc-603e6108-20241029(react@19.0.0-rc-603e6108-20241029))(react@19.0.0-rc-603e6108-20241029)
       '@liveblocks/yjs': 2.10.2(yjs@13.6.20)
-      lexical: 0.18.0
+      lexical: 0.19.0
       react: 19.0.0-rc-603e6108-20241029
       react-dom: 19.0.0-rc-603e6108-20241029(react@19.0.0-rc-603e6108-20241029)
       use-sync-external-store: 1.2.2(react@19.0.0-rc-603e6108-20241029)
@@ -7634,7 +7626,7 @@ snapshots:
 
   '@types/connect@3.4.36':
     dependencies:
-      '@types/node': 22.8.6
+      '@types/node': 22.8.7
 
   '@types/eslint-scope@3.7.7':
     dependencies:
@@ -7658,9 +7650,9 @@ snapshots:
 
   '@types/mysql@2.15.26':
     dependencies:
-      '@types/node': 22.8.6
+      '@types/node': 22.8.7
 
-  '@types/node@22.8.6':
+  '@types/node@22.8.7':
     dependencies:
       undici-types: 6.19.8
 
@@ -7670,7 +7662,7 @@ snapshots:
 
   '@types/pg@8.6.1':
     dependencies:
-      '@types/node': 22.8.6
+      '@types/node': 22.8.7
       pg-protocol: 1.7.0
       pg-types: 2.2.0
 
@@ -8006,7 +7998,7 @@ snapshots:
 
   browserslist@4.24.2:
     dependencies:
-      caniuse-lite: 1.0.30001676
+      caniuse-lite: 1.0.30001677
       electron-to-chromium: 1.5.50
       node-releases: 2.0.18
       update-browserslist-db: 1.1.1(browserslist@4.24.2)
@@ -8029,7 +8021,7 @@ snapshots:
 
   camelcase-css@2.0.1: {}
 
-  caniuse-lite@1.0.30001676: {}
+  caniuse-lite@1.0.30001677: {}
 
   chalk@3.0.0:
     dependencies:
@@ -8563,6 +8555,10 @@ snapshots:
       signal-exit: 4.1.0
       strip-final-newline: 3.0.0
 
+  ezheaders@0.1.0(next@15.0.2(@babel/core@7.26.0)(@opentelemetry/api@1.9.0)(babel-plugin-react-compiler@19.0.0-beta-6fc168f-20241025)(react-dom@19.0.0-rc-603e6108-20241029(react@19.0.0-rc-603e6108-20241029))(react@19.0.0-rc-603e6108-20241029)(sass@1.80.6)):
+    dependencies:
+      next: 15.0.2(@babel/core@7.26.0)(@opentelemetry/api@1.9.0)(babel-plugin-react-compiler@19.0.0-beta-6fc168f-20241025)(react-dom@19.0.0-rc-603e6108-20241029(react@19.0.0-rc-603e6108-20241029))(react@19.0.0-rc-603e6108-20241029)(sass@1.80.6)
+
   fast-deep-equal@3.1.3: {}
 
   fast-glob@3.3.1:
@@ -8940,7 +8936,7 @@ snapshots:
 
   jest-worker@27.5.1:
     dependencies:
-      '@types/node': 22.8.6
+      '@types/node': 22.8.7
       merge-stream: 2.0.0
       supports-color: 8.1.1
 
@@ -8958,7 +8954,7 @@ snapshots:
 
   jsesc@3.0.2: {}
 
-  jsm-editor@0.0.12(@lexical/react@0.19.0(react-dom@19.0.0-rc-603e6108-20241029(react@19.0.0-rc-603e6108-20241029))(react@19.0.0-rc-603e6108-20241029)(yjs@13.6.20))(@lexical/rich-text@0.19.0)(@lexical/selection@0.19.0)(@lexical/utils@0.19.0)(lexical@0.18.0):
+  jsm-editor@0.0.12(@lexical/react@0.19.0(react-dom@19.0.0-rc-603e6108-20241029(react@19.0.0-rc-603e6108-20241029))(react@19.0.0-rc-603e6108-20241029)(yjs@13.6.20))(@lexical/rich-text@0.19.0)(@lexical/selection@0.19.0)(@lexical/utils@0.19.0)(lexical@0.19.0):
     dependencies:
       '@lexical/react': 0.19.0(react-dom@19.0.0-rc-603e6108-20241029(react@19.0.0-rc-603e6108-20241029))(react@19.0.0-rc-603e6108-20241029)(yjs@13.6.20)
       '@lexical/rich-text': 0.19.0
@@ -8966,7 +8962,7 @@ snapshots:
       '@lexical/utils': 0.19.0
       '@types/react-dom': 18.3.1
       fs-extra: 10.1.0
-      lexical: 0.18.0
+      lexical: 0.19.0
       react: 18.3.1
       react-dom: 18.3.1(react@18.3.1)
       yargs: 17.7.2
@@ -9012,8 +9008,6 @@ snapshots:
     dependencies:
       prelude-ls: 1.2.1
       type-check: 0.4.0
-
-  lexical@0.18.0: {}
 
   lexical@0.19.0: {}
 
@@ -9158,7 +9152,7 @@ snapshots:
       '@swc/counter': 0.1.3
       '@swc/helpers': 0.5.13
       busboy: 1.6.0
-      caniuse-lite: 1.0.30001676
+      caniuse-lite: 1.0.30001677
       postcss: 8.4.31
       react: 19.0.0-rc-603e6108-20241029
       react-dom: 19.0.0-rc-603e6108-20241029(react@19.0.0-rc-603e6108-20241029)

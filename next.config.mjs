@@ -1,20 +1,18 @@
 import { withSentryConfig } from '@sentry/nextjs';
+
 /** @type {import('next').NextConfig} */
+
 const nextConfig = {
   images: {
     remotePatterns: [{ protocol: 'https', hostname: 'img.clerk.com' }],
+  },
+  sassOptions: {
+    silenceDeprecations: ['legacy-js-api'],
   },
   experimental: {
     reactCompiler: true,
     after: true,
     cssChunking: 'loose',
-  },
-  typescript: {
-    // !! WARN !!
-    // Dangerously allow production builds to successfully complete even if
-    // your project has type errors.
-    // !! WARN !!
-    ignoreBuildErrors: true,
   },
 };
 

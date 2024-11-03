@@ -9,7 +9,9 @@ import { liveblocks } from '../liveblocks';
 
 export const getClerkUsers = async ({ userIds }: { userIds: string[] }) => {
   try {
-    const { data } = await clerkClient().users.getUserList({
+    const { data } = await (
+      await clerkClient()
+    ).users.getUserList({
       emailAddress: userIds,
     });
 
