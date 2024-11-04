@@ -66,8 +66,8 @@ SENTRY_AUTH_TOKEN=
 ```bash
 $ git clone https://github.com/BlackishGreen33/PenPal.git
 $ cd PenPal
-$ pnpm install
-$ pnpm run dev
+$ bun install
+$ bun run dev
 ```
 
 ### 📝 授权
