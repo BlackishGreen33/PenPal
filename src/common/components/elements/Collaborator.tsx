@@ -81,6 +81,7 @@ const Collaborator: React.FC<CollaboratorProps> = ({
             onClickHandler={shareDocumentHandler}
           />
           <Button
+            variant="editor"
             type="button"
             onClick={() => removeCollaboratorHandler(collaborator.email)}
           >

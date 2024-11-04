@@ -58,6 +58,7 @@ const ShareModal: React.FC<ShareDocumentDialogProps> = ({
     <Dialog open={open} onOpenChange={setOpen}>
       <DialogTrigger>
         <Button
+          variant="editor"
           className="gradient-blue flex h-9 gap-1 px-4"
           disabled={currentUserType !== 'editor'}
         >
@@ -93,6 +94,7 @@ const ShareModal: React.FC<ShareDocumentDialogProps> = ({
             <UserTypeSelector userType={userType} setUserType={setUserType} />
           </div>
           <Button
+            variant="editor"
             type="submit"
             onClick={shareDocumentHandler}
             className="gradient-blue flex h-full gap-1 px-5"

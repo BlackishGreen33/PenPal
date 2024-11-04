@@ -27,6 +27,7 @@ const AddDocumentBtn: React.FC<AddDocumentBtnProps> = ({ userId, email }) => {
 
   return (
     <Button
+      variant="editor"
       type="submit"
       onClick={addDocumentHandler}
       className="gradient-blue flex gap-1 shadow-md"
