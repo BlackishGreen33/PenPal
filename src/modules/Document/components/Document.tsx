@@ -1,7 +1,7 @@
 import { currentUser } from '@clerk/nextjs/server';
 import { redirect } from 'next/navigation';
 
-import CollaborativeRoom from '@/common/components/elements/CollaborativeRoom';
+import CollaborativeRoom from '@/common/components/docs/CollaborativeRoom';
 import { getDocument } from '@/common/libs/actions/room.actions';
 import { getClerkUsers } from '@/common/libs/actions/user.actions';
 
@@ -11,7 +11,7 @@ interface DocumentProps {
 
 const Document: React.FC<DocumentProps> = async ({ id }) => {
   const clerkUser = await currentUser();
-  if (!clerkUser) redirect('/sign-in');
+  if (!clerkUser) redirect('/docs-sign-in');
 
   const room = await getDocument({
     roomId: id,

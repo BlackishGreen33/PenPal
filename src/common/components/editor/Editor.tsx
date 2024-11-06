@@ -17,9 +17,9 @@ import {
 } from '@liveblocks/react-lexical';
 import { useThreads } from '@liveblocks/react/suspense';
 
-import Comments from '@/common/components/elements/Comments';
-import DeleteModal from '@/common/components/elements/DeleteModal';
-import Loader from '@/common/components/elements/Loader';
+import Comments from '@/common/components/docs/Comments';
+import DeleteModal from '@/common/components/docs/DeleteModal';
+import Loader from '@/common/components/docs/Loader';
 
 import FloatingToolbarPlugin from './plugins/FloatingToolbarPlugin';
 import Theme from './plugins/Theme';

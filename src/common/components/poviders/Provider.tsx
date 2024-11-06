@@ -5,7 +5,7 @@ import {
   LiveblocksProvider,
 } from '@liveblocks/react/suspense';
 
-import Loader from '@/common/components/elements/Loader';
+import Loader from '@/common/components/docs/Loader';
 import {
   getClerkUsers,
   getDocumentUsers,
