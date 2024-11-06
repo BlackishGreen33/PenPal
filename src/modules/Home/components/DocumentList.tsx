@@ -4,14 +4,14 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { redirect } from 'next/navigation';
 
-import AddDocumentBtn from '@/common/components/elements/AddDocumentBtn';
-import DeleteModal from '@/common/components/elements/DeleteModal';
+import AddDocumentBtn from '@/common/components/docs/AddDocumentBtn';
+import DeleteModal from '@/common/components/docs/DeleteModal';
 import { getDocuments } from '@/common/libs/actions/room.actions';
 import { dateConverter } from '@/common/utils';
 
 const DocumentList: React.FC = async () => {
   const clerkUser = await currentUser();
-  if (!clerkUser) redirect('/sign-in');
+  if (!clerkUser) redirect('/docs-sign-in');
 
   const roomDocuments = await getDocuments(
     clerkUser.emailAddresses[0].emailAddress

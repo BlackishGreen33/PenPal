@@ -1,7 +1,7 @@
 import { SignedIn, UserButton } from '@clerk/nextjs';
 
-import ElementHeader from '@/common/components/elements/Header';
-import Notifications from '@/common/components/elements/Notifications';
+import ElementHeader from '@/common/components/docs/Header';
+import Notifications from '@/common/components/docs/Notifications';
 
 const Header: React.FC = () => (
   <ElementHeader className="sticky left-0 top-0">

@@ -5,8 +5,8 @@ import { ClientSideSuspense, RoomProvider } from '@liveblocks/react/suspense';
 import Image from 'next/image';
 import { useEffect, useRef, useState } from 'react';
 
+import Header from '@/common/components/docs/Header';
 import { Editor } from '@/common/components/editor/Editor';
-import Header from '@/common/components/elements/Header';
 import { Input } from '@/common/components/ui/input';
 import { updateDocument } from '@/common/libs/actions/room.actions';
 
