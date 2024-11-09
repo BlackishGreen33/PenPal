@@ -18,7 +18,7 @@ const Document: React.FC<DocumentProps> = async ({ id }) => {
     userId: clerkUser.emailAddresses[0].emailAddress,
   });
 
-  if (!room) redirect('/');
+  if (!room) redirect('/livedocs');
 
   const userIds = Object.keys(room.usersAccesses);
   const users = await getClerkUsers({ userIds });

@@ -44,7 +44,7 @@ export const createDocument = async ({
       defaultAccesses: [],
     });
 
-    revalidatePath('/');
+    revalidatePath('/livedocs');
 
     return parseStringify(room);
   } catch (error) {
@@ -170,8 +170,8 @@ export const removeCollaborator = async ({
 export const deleteDocument = async (roomId: string) => {
   try {
     await liveblocks.deleteRoom(roomId);
-    revalidatePath('/');
-    redirect('/');
+    revalidatePath('/livedocs');
+    redirect('/livedocs');
   } catch (error) {
     console.error(`Error happened while deleting a room: ${error}`);
   }
