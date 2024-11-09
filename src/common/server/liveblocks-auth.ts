@@ -1,11 +1,11 @@
 import { currentUser } from '@clerk/nextjs/server';
+import { Hono } from 'hono';
 import { redirect } from 'next/navigation';
 
 import { liveblocks } from '@/common/libs/liveblocks';
 import { getUserColor } from '@/common/utils';
 
-// eslint-disable-next-line unused-imports/no-unused-vars
-export async function POST(request: Request) {
+const LiveblocksAuth = new Hono().post('/', async (c) => {
   const clerkUser = await currentUser();
 
   if (!clerkUser) redirect('/docs-sign-in');
@@ -33,5 +33,7 @@ export async function POST(request: Request) {
     { userInfo: user.info }
   );
 
-  return new Response(body, { status });
-}
+  return c.newResponse(body, { status });
+});
+
+export default LiveblocksAuth;
