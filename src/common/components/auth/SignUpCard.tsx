@@ -7,6 +7,8 @@ import { FaGithub } from 'react-icons/fa';
 import { FcGoogle } from 'react-icons/fc';
 import { z } from 'zod';
 
+// import { signUpWithGithub, signUpWithGoogle } from '@/lib/oauth';
+import { useRegister } from '@/common/api/auth';
 import DottedSeparator from '@/common/components/elements/DottedSeparator';
 import { Button } from '@/common/components/ui/button';
 import {
@@ -26,11 +28,8 @@ import {
 import { Input } from '@/common/components/ui/input';
 import { registerSchema } from '@/common/schemas/auth';
 
-// import { signUpWithGithub, signUpWithGoogle } from '@/lib/oauth';
-// import { useRegister } from '../../features/auth/api/useRegister';
-
 const SignUpCard: React.FC = () => {
-  // const { mutate, isPending } = useRegister();
+  const { mutate, isPending } = useRegister();
 
   const form = useForm<z.infer<typeof registerSchema>>({
     resolver: zodResolver(registerSchema),
@@ -42,7 +41,7 @@ const SignUpCard: React.FC = () => {
   });
 
   const onSubmit = (values: z.infer<typeof registerSchema>) => {
-    // mutate({ json: values });
+    mutate({ json: values });
   };
 
   return (
@@ -102,11 +101,7 @@ const SignUpCard: React.FC = () => {
                 </FormItem>
               )}
             />
-            <Button
-              // disabled={isPending}
-              size="lg"
-              className="w-full"
-            >
+            <Button disabled={isPending} size="lg" className="w-full">
               注册
             </Button>
           </form>
@@ -118,7 +113,7 @@ const SignUpCard: React.FC = () => {
       <CardContent className="flex flex-col gap-y-4 p-7">
         <Button
           // onClick={() => signUpWithGoogle()}
-          // disabled={isPending}
+          disabled={isPending}
           variant="secondary"
           size="lg"
           className="w-full"
@@ -128,7 +123,7 @@ const SignUpCard: React.FC = () => {
         </Button>
         <Button
           // onClick={() => signUpWithGithub()}
-          // disabled={isPending}
+          disabled={isPending}
           variant="secondary"
           size="lg"
           className="w-full"

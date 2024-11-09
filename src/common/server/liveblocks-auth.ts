@@ -2,7 +2,7 @@ import { currentUser } from '@clerk/nextjs/server';
 import { Hono } from 'hono';
 import { redirect } from 'next/navigation';
 
-import { liveblocks } from '@/common/libs/liveblocks';
+import liveblocks from '@/common/libs/liveblocks';
 import { getUserColor } from '@/common/utils';
 
 const LiveblocksAuth = new Hono().post('/', async (c) => {

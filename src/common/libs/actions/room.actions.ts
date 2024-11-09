@@ -7,7 +7,7 @@ import { redirect } from 'next/navigation';
 
 import { getAccessType, parseStringify } from '@/common/utils';
 
-import { liveblocks } from '../liveblocks';
+import liveblocks from '../liveblocks';
 
 interface CreateDocumentParams {
   userId: string;

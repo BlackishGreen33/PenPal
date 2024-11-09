@@ -2,6 +2,7 @@
 
 import { LogOut } from 'lucide-react';
 
+import { useCurrent, useLogout } from '@/common/api/auth';
 import DottedSeparator from '@/common/components/elements/DottedSeparator';
 import { Avatar, AvatarFallback } from '@/common/components/ui/avatar';
 import {
@@ -11,26 +12,23 @@ import {
   DropdownMenuTrigger,
 } from '@/common/components/ui/dropdown-menu';
 
-// import { useCurrent } from '../../features/auth/api/useCurrent';
-// import { useLogout } from '../../features/auth/api/useLogout';
-
 const UserButton: React.FC = () => {
-  // const { mutate: logout } = useLogout();
-  // const { data: user, isLoading } = useCurrent();
+  const { mutate: logout } = useLogout();
+  const { data: user, isLoading } = useCurrent();
 
-  // if (isLoading) {
-  //   return (
-  //     <div className="flex size-10 items-center justify-center rounded-full border border-neutral-300 bg-neutral-200">
-  //       <Loader className="text-muted-foreground size-4 animate-spin" />
-  //     </div>
-  //   );
-  // }
+  if (isLoading) {
+    return (
+      <div className="flex size-10 items-center justify-center rounded-full border border-neutral-300 bg-neutral-200">
+        {/* <Loader className="text-muted-foreground size-4 animate-spin" /> */}
+      </div>
+    );
+  }
 
-  // if (!user) {
-  //   return null;
-  // }
+  if (!user) {
+    return null;
+  }
 
-  // const { name, email } = user;
+  const { name, email } = user;
 
   // const avatarFallback = name
   //   ? name.charAt(0).toUpperCase()
@@ -59,14 +57,14 @@ const UserButton: React.FC = () => {
           </Avatar>
           <div className="flex flex-col items-center justify-center">
             <p className="text-sm font-medium text-neutral-900">
-              {/* {name || 'User'} */}
+              {name || 'User'}
             </p>
-            {/* <p className="text-xs text-neutral-500">{email}</p> */}
+            <p className="text-xs text-neutral-500">{email}</p>
           </div>
         </div>
         <DottedSeparator className="mb-1" />
         <DropdownMenuItem
-          // onClick={() => logout()}
+          onClick={() => logout()}
           className="flex h-10 cursor-pointer items-center justify-center font-medium text-amber-700"
         >
           <LogOut className="mr-2 size-4" />

@@ -5,7 +5,7 @@ import { clerkClient } from '@clerk/nextjs/server';
 
 import { parseStringify } from '@/common/utils';
 
-import { liveblocks } from '../liveblocks';
+import liveblocks from '../liveblocks';
 
 export const getClerkUsers = async ({ userIds }: { userIds: string[] }) => {
   try {

@@ -1,25 +1,19 @@
 import { Hono } from 'hono';
 import { handle } from 'hono/vercel';
 
-// import auth from '@/common/server/auth';
-// import members from '@/features/members/server/route';
-// import projects from '@/features/projects/server/route';
-// import tasks from '@/features/tasks/server/route';
-// import workspaces from '@/features/workspaces/server/route';
-import LiveblocksAuth from '@/common/server/liveblocks-auth';
-import SentryExampleApi from '@/common/server/sentry-example-api';
+import * as route from '@/common/server';
 
 const app = new Hono().basePath('/api');
 
 // eslint-disable-next-line unused-imports/no-unused-vars
 const routes = app
-  // .route('/auth', auth)
+  .route('/auth', route.Auth)
   // .route('/members', members)
   // .route('/workspaces', workspaces)
   // .route('/projects', projects)
   // .route('/tasks', tasks);
-  .route('/liveblocks-auth', LiveblocksAuth)
-  .route('/sentry-example-api', SentryExampleApi);
+  .route('/liveblocks-auth', route.LiveblocksAuth)
+  .route('/sentry-example-api', route.SentryExampleApi);
 
 export const GET = handle(app);
 export const POST = handle(app);
