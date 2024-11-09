@@ -6,6 +6,7 @@ import { Inter as FontSans } from 'next/font/google';
 import '@/common/styles/globals.scss';
 
 import Provider from '@/common/components/poviders/Provider';
+import { Toaster } from '@/common/components/ui/sonner';
 import { cn } from '@/common/utils';
 
 const fontSans = FontSans({
@@ -40,7 +41,10 @@ export default function RootLayout({
             fontSans.variable
           )}
         >
-          <Provider>{children}</Provider>
+          <Provider>
+            <Toaster />
+            {children}
+          </Provider>
         </body>
       </html>
     </ClerkProvider>
