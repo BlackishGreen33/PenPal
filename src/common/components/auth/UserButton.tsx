@@ -1,6 +1,6 @@
 'use client';
 
-import { LogOut } from 'lucide-react';
+import { Loader, LogOut } from 'lucide-react';
 
 import { useCurrent, useLogout } from '@/common/api/auth';
 import DottedSeparator from '@/common/components/elements/DottedSeparator';
@@ -19,7 +19,7 @@ const UserButton: React.FC = () => {
   if (isLoading) {
     return (
       <div className="flex size-10 items-center justify-center rounded-full border border-neutral-300 bg-neutral-200">
-        {/* <Loader className="text-muted-foreground size-4 animate-spin" /> */}
+        <Loader className="text-muted-foreground size-4 animate-spin" />
       </div>
     );
   }
@@ -30,16 +30,16 @@ const UserButton: React.FC = () => {
 
   const { name, email } = user;
 
-  // const avatarFallback = name
-  //   ? name.charAt(0).toUpperCase()
-  //   : (email.charAt(0).toUpperCase() ?? 'U');
+  const avatarFallback = name
+    ? name.charAt(0).toUpperCase()
+    : (email.charAt(0).toUpperCase() ?? 'U');
 
   return (
     <DropdownMenu modal={false}>
       <DropdownMenuTrigger className="relative outline-none">
         <Avatar className="size-10 border border-neutral-300 transition hover:opacity-75">
           <AvatarFallback className="flex items-center justify-center bg-neutral-200 font-medium text-neutral-500">
-            {/* {avatarFallback} */}
+            {avatarFallback}
           </AvatarFallback>
         </Avatar>
       </DropdownMenuTrigger>
@@ -52,7 +52,7 @@ const UserButton: React.FC = () => {
         <div className="flex flex-col items-center justify-center gap-2 px-2.5 py-4">
           <Avatar className="size-[52px] border border-neutral-300">
             <AvatarFallback className="flex items-center justify-center bg-neutral-200 text-xl font-medium text-neutral-500">
-              {/* {avatarFallback} */}
+              {avatarFallback}
             </AvatarFallback>
           </Avatar>
           <div className="flex flex-col items-center justify-center">

@@ -23,12 +23,12 @@ const useLogin = () => {
       return await response.json();
     },
     onSuccess: () => {
-      toast.success('Logged in');
+      toast.success('登录成功');
       router.refresh();
       queryClient.invalidateQueries({ queryKey: ['current'] });
     },
     onError: () => {
-      toast.error('Failed to log in');
+      toast.error('登录失败');
     },
   });
 

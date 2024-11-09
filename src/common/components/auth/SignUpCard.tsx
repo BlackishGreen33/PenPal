@@ -7,7 +7,6 @@ import { FaGithub } from 'react-icons/fa';
 import { FcGoogle } from 'react-icons/fc';
 import { z } from 'zod';
 
-// import { signUpWithGithub, signUpWithGoogle } from '@/lib/oauth';
 import { useRegister } from '@/common/api/auth';
 import DottedSeparator from '@/common/components/elements/DottedSeparator';
 import { Button } from '@/common/components/ui/button';
@@ -26,6 +25,7 @@ import {
   FormMessage,
 } from '@/common/components/ui/form';
 import { Input } from '@/common/components/ui/input';
+import { signUpWithGithub, signUpWithGoogle } from '@/common/libs/oauth';
 import { registerSchema } from '@/common/schemas/auth';
 
 const SignUpCard: React.FC = () => {
@@ -112,7 +112,7 @@ const SignUpCard: React.FC = () => {
       </div>
       <CardContent className="flex flex-col gap-y-4 p-7">
         <Button
-          // onClick={() => signUpWithGoogle()}
+          onClick={() => signUpWithGoogle()}
           disabled={isPending}
           variant="secondary"
           size="lg"
@@ -122,7 +122,7 @@ const SignUpCard: React.FC = () => {
           使用 Google 登录
         </Button>
         <Button
-          // onClick={() => signUpWithGithub()}
+          onClick={() => signUpWithGithub()}
           disabled={isPending}
           variant="secondary"
           size="lg"

@@ -25,12 +25,12 @@ const useRegister = () => {
       return await response.json();
     },
     onSuccess: () => {
-      toast.success('Registered');
+      toast.success('注册成功');
       router.refresh();
       queryClient.invalidateQueries({ queryKey: ['current'] });
     },
     onError: () => {
-      toast.error('Failed to register');
+      toast.error('注册失败');
     },
   });
 

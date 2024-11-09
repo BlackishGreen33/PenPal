@@ -22,13 +22,13 @@ const useLogout = () => {
       return await response.json();
     },
     onSuccess: () => {
-      toast.success('Logged out');
+      toast.success('登出成功');
       router.refresh();
       queryClient.invalidateQueries({ queryKey: ['current'] });
       queryClient.invalidateQueries({ queryKey: ['workspaces'] });
     },
     onError: () => {
-      toast.error('Failed to log out');
+      toast.error('登出失败');
     },
   });
 
