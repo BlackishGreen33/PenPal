@@ -21,7 +21,7 @@ const AuthLayout: React.FC<AuthLayoutProps> = ({ children }) => {
           <Image src="/logo.svg" alt="logo" width={152} height={56} />
           <Button asChild variant="secondary">
             <Link href={isSignIn ? '/sign-up' : '/sign-in'}>
-              {isSignIn ? 'Sign Up' : 'Login'}
+              {isSignIn ? '注册' : '登录'}
             </Link>
           </Button>
         </nav>

@@ -8,7 +8,7 @@ import { FcGoogle } from 'react-icons/fc';
 import { z } from 'zod';
 
 import { useRegister } from '@/common/api/auth';
-import DottedSeparator from '@/common/components/elements/DottedSeparator';
+import { DottedSeparator } from '@/common/components/elements';
 import { Button } from '@/common/components/ui/button';
 import {
   Card,

@@ -3,7 +3,7 @@
 import { Loader, LogOut } from 'lucide-react';
 
 import { useCurrent, useLogout } from '@/common/api/auth';
-import DottedSeparator from '@/common/components/elements/DottedSeparator';
+import { DottedSeparator } from '@/common/components/elements';
 import { Avatar, AvatarFallback } from '@/common/components/ui/avatar';
 import {
   DropdownMenu,
@@ -19,7 +19,7 @@ const UserButton: React.FC = () => {
   if (isLoading) {
     return (
       <div className="flex size-10 items-center justify-center rounded-full border border-neutral-300 bg-neutral-200">
-        <Loader className="text-muted-foreground size-4 animate-spin" />
+        <Loader className="size-4 animate-spin text-muted-foreground" />
       </div>
     );
   }

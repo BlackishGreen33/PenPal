@@ -37,7 +37,7 @@ const Document: React.FC<DocumentProps> = async ({ id }) => {
     : 'viewer';
 
   return (
-    <main className="flex w-full flex-col items-center">
+    <main id="livedocs" className="flex w-full flex-col items-center">
       <CollaborativeRoom
         roomId={id}
         roomMetadata={room.metadata}
