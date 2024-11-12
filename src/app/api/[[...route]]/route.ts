@@ -9,7 +9,7 @@ const app = new Hono().basePath('/api');
 const routes = app
   .route('/auth', route.Auth)
   // .route('/members', members)
-  // .route('/workspaces', workspaces)
+  .route('/workspaces', route.Workspaces)
   // .route('/projects', projects)
   // .route('/tasks', tasks);
   .route('/liveblocks-auth', route.LiveblocksAuth)
