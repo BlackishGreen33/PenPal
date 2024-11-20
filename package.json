@@ -22,7 +22,7 @@
   },
   "dependencies": {
     "@clerk/nextjs": "^6.4.0",
-    "@clerk/themes": "^2.1.42",
+    "@clerk/themes": "^2.1.45",
     "@floating-ui/react-dom": "^2.1.2",
     "@hono/zod-validator": "^0.4.1",
     "@hookform/resolvers": "^3.9.1",
