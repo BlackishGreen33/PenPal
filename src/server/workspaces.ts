@@ -16,11 +16,10 @@ import {
   createWorkspaceSchema,
   updateWorkspaceSchema,
 } from '@/common/schemas/workspaces';
+import { MemberRole } from '@/common/types/members';
+import { TaskStatus } from '@/common/types/tasks';
+import { Workspace } from '@/common/types/workspaces';
 import { generateInviteCode, getMember } from '@/common/utils';
-
-import { MemberRole } from '../types/members';
-import { TaskStatus } from '../types/tasks';
-import { Workspace } from '../types/workspaces';
 
 const Workspaces = new Hono()
   .get('/', sessionMiddleware, async (c) => {
