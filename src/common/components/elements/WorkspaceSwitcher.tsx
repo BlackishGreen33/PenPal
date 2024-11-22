@@ -12,13 +12,13 @@ import {
   SelectValue,
 } from '@/common/components/ui/select';
 import WorkspaceAvatar from '@/common/components/workspaces/WorkspaceAvatar';
-import { useWorkspaceId } from '@/common/hooks';
+import { useCreateWorkspaceModal, useWorkspaceId } from '@/common/hooks';
 
 const WorkspaceSwitcher: React.FC = () => {
   const workspaceId = useWorkspaceId();
   const router = useRouter();
   const { data: workspaces } = useGetWorkspaces();
-  // const { open } = useCreateWorkspaceModal();
+  const { open } = useCreateWorkspaceModal();
 
   const onSelect = (id: string) => {
     router.push(`/workspaces/${id}`);
@@ -29,7 +29,7 @@ const WorkspaceSwitcher: React.FC = () => {
       <div className="flex items-center justify-between">
         <p className="text-xs uppercase text-neutral-500">工作区</p>
         <RiAddCircleFill
-          // onClick={open}
+          onClick={open}
           className="size-5 cursor-pointer text-neutral-500 transition hover:opacity-75"
         />
       </div>
