@@ -28,13 +28,13 @@ const useResetInviteCode = () => {
       return await response.json();
     },
     onSuccess: ({ data }) => {
-      toast.success('Invite code reset');
+      toast.success('邀请链接已重置');
 
       queryClient.invalidateQueries({ queryKey: ['workspaces'] });
       queryClient.invalidateQueries({ queryKey: ['workspace', data.$id] });
     },
     onError: () => {
-      toast.error('Failed to reset invite code');
+      toast.error('邀请链接重置失败');
     },
   });
 

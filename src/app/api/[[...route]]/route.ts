@@ -8,7 +8,7 @@ const app = new Hono().basePath('/api');
 // eslint-disable-next-line unused-imports/no-unused-vars
 const routes = app
   .route('/auth', route.Auth)
-  // .route('/members', members)
+  .route('/members', route.Members)
   .route('/workspaces', route.Workspaces)
   // .route('/projects', projects)
   // .route('/tasks', tasks);
