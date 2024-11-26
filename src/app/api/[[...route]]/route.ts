@@ -10,7 +10,7 @@ const routes = app
   .route('/auth', route.Auth)
   .route('/members', route.Members)
   .route('/workspaces', route.Workspaces)
-  // .route('/projects', projects)
+  .route('/projects', route.Projects)
   // .route('/tasks', tasks);
   .route('/liveblocks-auth', route.LiveblocksAuth)
   .route('/sentry-example-api', route.SentryExampleApi);

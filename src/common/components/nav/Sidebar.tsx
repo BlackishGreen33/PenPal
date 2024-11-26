@@ -7,7 +7,7 @@ import {
 } from '@/common/components/elements';
 
 import Navigation from './Navigation';
-// import { Projects } from './projects';
+import Projects from './Projects';
 
 const Sidebar: React.FC = () => (
   <aside className="h-full w-full bg-neutral-100 p-4">
@@ -18,8 +18,8 @@ const Sidebar: React.FC = () => (
     <WorkspaceSwitcher />
     <DottedSeparator className="my-4" />
     <Navigation />
-    {/* <DottedSeparator className="my-4" />
-      <Projects /> */}
+    <DottedSeparator className="my-4" />
+    <Projects />
   </aside>
 );
 
