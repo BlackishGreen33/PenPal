@@ -19,7 +19,7 @@ const Analytics: React.FC<ProjectAnalyticsResponseType> = ({ data }) => {
         </div>
         <div className="flex flex-1 items-center">
           <AnalyticsCard
-            title="Assigned Tasks"
+            title="分配的任務"
             value={data.assignedTaskCount}
             variant={data.assignedTaskDifference > 0 ? 'up' : 'down'}
             increaseValue={data.assignedTaskDifference}
@@ -37,7 +37,7 @@ const Analytics: React.FC<ProjectAnalyticsResponseType> = ({ data }) => {
         </div>
         <div className="flex flex-1 items-center">
           <AnalyticsCard
-            title="Overdue Tasks"
+            title="逾期任務"
             value={data.overdueTaskCount}
             variant={data.overdueTaskDifference > 0 ? 'up' : 'down'}
             increaseValue={data.overdueTaskDifference}
@@ -46,7 +46,7 @@ const Analytics: React.FC<ProjectAnalyticsResponseType> = ({ data }) => {
         </div>
         <div className="flex flex-1 items-center">
           <AnalyticsCard
-            title="Incomplete Tasks"
+            title="未完成的任務"
             value={data.incompleteTaskCount}
             variant={data.incompleteTaskDifference > 0 ? 'up' : 'down'}
             increaseValue={data.incompleteTaskDifference}

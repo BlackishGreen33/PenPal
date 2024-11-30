@@ -3,10 +3,8 @@ import { NuqsAdapter } from 'nuqs/adapters/next/app';
 import { Navbar } from '@/common/components/nav';
 import Sidebar from '@/common/components/nav/Sidebar';
 import CreateProjectModal from '@/common/components/projects/CreateProjectModal';
+import CreateTaskModal from '@/common/components/tasks/CreateTaskModal';
 import { CreateWorkspaceModal } from '@/common/components/workspaces/CreateWorkspacesModal';
-
-// import { CreateTaskModal } from '@/features/tasks/components/create-task-modal';
-// import { EditTaskModal } from '@/features/tasks/components/edit-task-modal';
 
 interface DashboardLayoutProps {
   children: React.ReactNode;
@@ -18,8 +16,8 @@ const DashboardLayout: React.FC<DashboardLayoutProps> = ({ children }) => {
       <NuqsAdapter>
         <CreateWorkspaceModal />
         <CreateProjectModal />
-        {/*<CreateTaskModal />
-      <EditTaskModal /> */}
+        <CreateTaskModal />
+        {/*<EditTaskModal /> */}
         <div className="flex h-full w-full">
           <div className="fixed left-0 top-0 hidden h-full overflow-y-auto lg:block lg:w-[264px]">
             <Sidebar />

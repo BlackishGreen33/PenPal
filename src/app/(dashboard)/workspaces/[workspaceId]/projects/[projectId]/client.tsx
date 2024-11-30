@@ -6,6 +6,7 @@ import Link from 'next/link';
 import { useGetProject, useGetProjectAnalytics } from '@/common/api/projects';
 import { Analytics, PageError, PageLoader } from '@/common/components/elements';
 import ProjectAvatar from '@/common/components/projects/ProjectAvatar';
+import TaskViewSwitcher from '@/common/components/tasks/TaskViewSwitcher';
 import { Button } from '@/common/components/ui/button';
 import { useProjectId } from '@/common/hooks';
 
@@ -50,7 +51,7 @@ const ProjectIdClient: React.FC = () => {
         </div>
       </div>
       {analytics ? <Analytics data={analytics} /> : null}
-      {/* <TaskViewSwitcher hideProjectFilter /> */}
+      <TaskViewSwitcher hideProjectFilter />
     </div>
   );
 };
