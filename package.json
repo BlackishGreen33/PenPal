@@ -63,6 +63,7 @@
     "node-appwrite": "^14.1.0",
     "nuqs": "^2.2.2",
     "react": "19.0.0-rc-603e6108-20241029",
+    "react-big-calendar": "^1.16.3",
     "react-day-picker": "8.10.1",
     "react-dom": "19.0.0-rc-603e6108-20241029",
     "react-hook-form": "^7.53.2",
@@ -80,6 +81,7 @@
   "devDependencies": {
     "@types/node": "^22.9.0",
     "@types/react": "^18.3.12",
+    "@types/react-big-calendar": "^1.16.0",
     "@types/react-dom": "^18.3.1",
     "@typescript-eslint/eslint-plugin": "^8.13.0",
     "eslint": "^8.57.1",
