@@ -5,4 +5,5 @@ export { default as getMember } from './getMember';
 export { default as getRandomColor } from './getRandomColor';
 export { default as getUserColor } from './getUserColor';
 export { default as parseStringify } from './parseStringify';
+export { default as snakeCaseToTitleCase } from './snakeCaseToTitleCase';
 export { default as cn } from './tailwindMerge';

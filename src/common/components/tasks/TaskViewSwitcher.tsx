@@ -21,12 +21,12 @@ import {
 } from '@/common/hooks';
 import { TaskStatus } from '@/common/types/tasks';
 
+import Columns from './Columns';
 import DataFilters from './DataFilters';
+import DataTable from './DataTable';
 
-// import { columns } from './columns';
 // import { DataCalendar } from './data-calendar';
 // import { DataKanban } from './data-kanban';
-// import { DataTable } from './data-table';
 
 interface TaskViewSwitcherProps {
   hideProjectFilter?: boolean;
@@ -97,7 +97,7 @@ const TaskViewSwitcher: React.FC<TaskViewSwitcherProps> = ({
         ) : (
           <>
             <TabsContent value="table" className="mt-0">
-              {/* <DataTable columns={columns} data={tasks?.documents ?? []} /> */}
+              <DataTable columns={Columns} data={tasks?.documents ?? []} />
             </TabsContent>
             <TabsContent value="kanban" className="mt-0">
               {/* <DataKanban
