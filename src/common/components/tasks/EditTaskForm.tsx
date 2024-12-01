@@ -4,7 +4,7 @@ import { zodResolver } from '@hookform/resolvers/zod';
 import { useForm } from 'react-hook-form';
 import { z } from 'zod';
 
-import { useCreateTask } from '@/common/api/tasks';
+import { useUpdateTask } from '@/common/api/tasks';
 import { DatePicker, DottedSeparator } from '@/common/components/elements';
 import { Button } from '@/common/components/ui/button';
 import {
@@ -29,38 +29,43 @@ import {
   SelectTrigger,
   SelectValue,
 } from '@/common/components/ui/select';
-import { useWorkspaceId } from '@/common/hooks';
 import { createTaskSchema } from '@/common/schemas/tasks';
-import { TaskStatus } from '@/common/types/tasks';
+import { Task, TaskStatus } from '@/common/types/tasks';
 import { cn } from '@/common/utils';
 
 import MemberAvatar from '../members/MemberAvatar';
 import ProjectAvatar from '../projects/ProjectAvatar';
 
-interface CreateTaskFormProps {
+interface EditTaskFormProps {
   onCancel?: () => void;
   projectOptions: { id: string; name: string; imageUrl: string }[];
   memberOptions: { id: string; name: string }[];
+  initialValues: Task;
 }
 
-const CreateTaskForm: React.FC<CreateTaskFormProps> = ({
+const EditTaskForm: React.FC<EditTaskFormProps> = ({
   onCancel,
   projectOptions,
   memberOptions,
+  initialValues,
 }) => {
-  const workspaceId = useWorkspaceId();
-  const { mutate, isPending } = useCreateTask();
+  const { mutate, isPending } = useUpdateTask();
 
   const form = useForm<z.infer<typeof createTaskSchema>>({
-    resolver: zodResolver(createTaskSchema.omit({ workspaceId: true })),
+    resolver: zodResolver(
+      createTaskSchema.omit({ workspaceId: true, description: true })
+    ),
     defaultValues: {
-      workspaceId,
+      ...initialValues,
+      dueDate: initialValues.dueDate
+        ? new Date(initialValues.dueDate)
+        : undefined,
     },
   });
 
   const onSubmit = (values: z.infer<typeof createTaskSchema>) => {
     mutate(
-      { json: { ...values, workspaceId } },
+      { json: values, param: { taskId: initialValues.$id } },
       {
         onSuccess: () => {
           form.reset();
@@ -73,7 +78,7 @@ const CreateTaskForm: React.FC<CreateTaskFormProps> = ({
   return (
     <Card className="h-full w-full border-none shadow-none">
       <CardHeader className="flex p-7">
-        <CardTitle className="text-xl font-bold">创建新任务</CardTitle>
+        <CardTitle className="text-xl font-bold">编辑任务</CardTitle>
       </CardHeader>
       <div className="px-7">
         <DottedSeparator />
@@ -146,14 +151,14 @@ const CreateTaskForm: React.FC<CreateTaskFormProps> = ({
                 name="status"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel>状态</FormLabel>
+                    <FormLabel>Status</FormLabel>
                     <Select
                       defaultValue={field.value}
                       onValueChange={field.onChange}
                     >
                       <FormControl>
                         <SelectTrigger>
-                          <SelectValue placeholder="选择状态" />
+                          <SelectValue placeholder="Select status" />
                         </SelectTrigger>
                       </FormControl>
                       <FormMessage />
@@ -220,7 +225,7 @@ const CreateTaskForm: React.FC<CreateTaskFormProps> = ({
                 取消
               </Button>
               <Button disabled={isPending} type="submit" size="lg">
-                创建任务
+                保存变更
               </Button>
             </div>
           </form>
@@ -230,4 +235,4 @@ const CreateTaskForm: React.FC<CreateTaskFormProps> = ({
   );
 };
 
-export default CreateTaskForm;
+export default EditTaskForm;

@@ -76,7 +76,7 @@ const DataFilters: React.FC<DataFiltersProps> = ({ hideProjectFilter }) => {
           <SelectItem value={TaskStatus.BACKLOG}>滞留</SelectItem>
           <SelectItem value={TaskStatus.IN_PROGRESS}>进行中</SelectItem>
           <SelectItem value={TaskStatus.IN_REVIEW}>审核中</SelectItem>
-          <SelectItem value={TaskStatus.TODO}>代办</SelectItem>
+          <SelectItem value={TaskStatus.TODO}>待办</SelectItem>
           <SelectItem value={TaskStatus.DONE}>已完成</SelectItem>
         </SelectContent>
       </Select>

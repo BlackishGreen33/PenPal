@@ -1,13 +1,14 @@
 import { ExternalLinkIcon, PencilIcon, TrashIcon } from 'lucide-react';
 import { useRouter } from 'next/navigation';
 
+import { useDeleteTask } from '@/common/api/tasks';
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from '@/common/components/ui/dropdown-menu';
-import { useConfirm, useWorkspaceId } from '@/common/hooks';
+import { useConfirm, useEditTaskModal, useWorkspaceId } from '@/common/hooks';
 
 interface TaskActionsProps {
   id: string;
@@ -23,20 +24,20 @@ const TaskActions: React.FC<TaskActionsProps> = ({
   const workspaceId = useWorkspaceId();
   const router = useRouter();
 
-  // const { open } = useEditTaskModal();
+  const { open } = useEditTaskModal();
 
   const [ConfirmDialog, confirm] = useConfirm(
-    'Delete task',
-    'This action cannot be undone.',
+    '删除任务',
+    '此操作无法撤销。',
     'destructive'
   );
-  // const { mutate, isPending } = useDeleteTask();
+  const { mutate, isPending } = useDeleteTask();
 
   const onDelete = async () => {
     const ok = await confirm();
     if (!ok) return;
 
-    // mutate({ param: { taskId: id } });
+    mutate({ param: { taskId: id } });
   };
 
   const onOpenTask = () => {
@@ -76,7 +77,7 @@ const TaskActions: React.FC<TaskActionsProps> = ({
           </DropdownMenuItem>
           <DropdownMenuItem
             onClick={onDelete}
-            // disabled={isPending}
+            disabled={isPending}
             className="p-[10px] font-medium text-amber-700 focus:text-amber-700"
           >
             <TrashIcon className="mr-2 size-4 stroke-2" />
