@@ -23,10 +23,10 @@ import { TaskStatus } from '@/common/types/tasks';
 
 import Columns from './Columns';
 import DataFilters from './DataFilters';
+import DataKanban from './DataKanban';
 import DataTable from './DataTable';
 
 // import { DataCalendar } from './data-calendar';
-// import { DataKanban } from './data-kanban';
 
 interface TaskViewSwitcherProps {
   hideProjectFilter?: boolean;
@@ -100,10 +100,10 @@ const TaskViewSwitcher: React.FC<TaskViewSwitcherProps> = ({
               <DataTable columns={Columns} data={tasks?.documents ?? []} />
             </TabsContent>
             <TabsContent value="kanban" className="mt-0">
-              {/* <DataKanban
+              <DataKanban
                 onChange={onKanbanChange}
                 data={tasks?.documents ?? []}
-              /> */}
+              />
             </TabsContent>
             <TabsContent value="calendar" className="mt-0 h-full pb-4">
               {/* <DataCalendar data={tasks?.documents ?? []} /> */}
