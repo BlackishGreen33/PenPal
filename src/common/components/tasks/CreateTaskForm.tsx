@@ -43,11 +43,11 @@ interface CreateTaskFormProps {
   memberOptions: { id: string; name: string }[];
 }
 
-const CreateTaskForm = ({
+const CreateTaskForm: React.FC<CreateTaskFormProps> = ({
   onCancel,
   projectOptions,
   memberOptions,
-}: CreateTaskFormProps) => {
+}) => {
   const workspaceId = useWorkspaceId();
   const { mutate, isPending } = useCreateTask();
 
@@ -100,7 +100,7 @@ const CreateTaskForm = ({
                 name="dueDate"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel>起始时间</FormLabel>
+                    <FormLabel>截止日期</FormLabel>
                     <FormControl>
                       <DatePicker {...field} />
                     </FormControl>
@@ -158,17 +158,15 @@ const CreateTaskForm = ({
                       </FormControl>
                       <FormMessage />
                       <SelectContent>
-                        <SelectItem value={TaskStatus.BACKLOG}>
-                          Backlog
-                        </SelectItem>
+                        <SelectItem value={TaskStatus.BACKLOG}>滞留</SelectItem>
                         <SelectItem value={TaskStatus.IN_PROGRESS}>
-                          In Progress
+                          进行中
                         </SelectItem>
                         <SelectItem value={TaskStatus.IN_REVIEW}>
-                          In Review
+                          审核中
                         </SelectItem>
-                        <SelectItem value={TaskStatus.TODO}>Todo</SelectItem>
-                        <SelectItem value={TaskStatus.DONE}>Done</SelectItem>
+                        <SelectItem value={TaskStatus.TODO}>代办</SelectItem>
+                        <SelectItem value={TaskStatus.DONE}>已完成</SelectItem>
                       </SelectContent>
                     </Select>
                   </FormItem>

@@ -21,9 +21,10 @@ import {
 } from '@/common/hooks';
 import { TaskStatus } from '@/common/types/tasks';
 
+import DataFilters from './DataFilters';
+
 // import { columns } from './columns';
 // import { DataCalendar } from './data-calendar';
-// import { DataFilters } from './data-filters';
 // import { DataKanban } from './data-kanban';
 // import { DataTable } from './data-table';
 
@@ -87,7 +88,7 @@ const TaskViewSwitcher: React.FC<TaskViewSwitcherProps> = ({
           </Button>
         </div>
         <DottedSeparator className="my-4" />
-        {/* <DataFilters hideProjectFilter={hideProjectFilter} /> */}
+        <DataFilters hideProjectFilter={hideProjectFilter} />
         <DottedSeparator className="my-4" />
         {isLoadingTasks ? (
           <div className="flex h-[200px] w-full flex-col items-center justify-center rounded-lg border">
