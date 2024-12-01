@@ -67,7 +67,7 @@ const DataFilters: React.FC<DataFiltersProps> = ({ hideProjectFilter }) => {
         <SelectTrigger className="h-8 w-full lg:w-auto">
           <div className="flex items-center pr-2">
             <ListChecksIcon className="mr-2 size-4" />
-            <SelectValue placeholder="All statuses" />
+            <SelectValue placeholder="所有状态" />
           </div>
         </SelectTrigger>
         <SelectContent>
