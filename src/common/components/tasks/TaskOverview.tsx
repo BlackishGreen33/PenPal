@@ -30,14 +30,14 @@ const TaskOverview: React.FC<TaskOverviewProps> = ({ task }) => {
         </div>
         <DottedSeparator className="my-4" />
         <div className="flex flex-col gap-y-4">
-          <OverviewProperty label="Assignee">
+          <OverviewProperty label="负责人">
             <MemberAvatar name={task.assignee.name} className="size-6" />
             <p className="text-sm font-medium">{task.assignee.name}</p>
           </OverviewProperty>
-          <OverviewProperty label="Due Date">
+          <OverviewProperty label="截止日期">
             <TaskDate value={task.dueDate} className="text-sm font-medium" />
           </OverviewProperty>
-          <OverviewProperty label="Status">
+          <OverviewProperty label="状态">
             <Badge variant={task.status}>
               {snakeCaseToTitleCase(task.status)}
             </Badge>

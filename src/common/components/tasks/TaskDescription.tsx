@@ -35,7 +35,7 @@ const TaskDescription: React.FC<TaskDescriptionProps> = ({ task }) => {
   return (
     <div className="rounded-lg border p-4">
       <div className="flex items-center justify-between">
-        <p className="text-lg font-semibold">总览</p>
+        <p className="text-lg font-semibold">描述</p>
         <Button
           onClick={() => setIsEditing((prev) => !prev)}
           size="sm"
@@ -53,7 +53,7 @@ const TaskDescription: React.FC<TaskDescriptionProps> = ({ task }) => {
       {isEditing ? (
         <div className="flex flex-col gap-y-4">
           <Textarea
-            placeholder="Add a description..."
+            placeholder="添加描述..."
             value={value}
             rows={4}
             onChange={(e) => setValue(e.target.value)}
@@ -65,7 +65,7 @@ const TaskDescription: React.FC<TaskDescriptionProps> = ({ task }) => {
             onClick={handleSave}
             disabled={isPending}
           >
-            {isPending ? 'Saving...' : 'Save Changes'}
+            {isPending ? '保存中...' : '保存变更'}
           </Button>
         </div>
       ) : (

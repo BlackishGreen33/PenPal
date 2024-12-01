@@ -3,7 +3,7 @@ import { redirect } from 'next/navigation';
 
 import { getCurrent } from '@/common/libs/actions/auth.actions';
 
-import { TaskIdClient } from './client';
+import TaskIdClient from './client';
 
 const Page: NextPage = async () => {
   const user = await getCurrent();

@@ -151,7 +151,7 @@ const EditTaskForm: React.FC<EditTaskFormProps> = ({
                 name="status"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel>Status</FormLabel>
+                    <FormLabel>状态</FormLabel>
                     <Select
                       defaultValue={field.value}
                       onValueChange={field.onChange}
