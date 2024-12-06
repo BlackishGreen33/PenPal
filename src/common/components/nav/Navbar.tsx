@@ -2,7 +2,7 @@
 
 import { usePathname } from 'next/navigation';
 
-import UserButton from '@/common/components/auth/UserButton';
+import { UserButton } from '@/common/components/elements';
 
 import MobileSidebar from './MobileSidebar';
 

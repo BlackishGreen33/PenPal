@@ -1,8 +1,8 @@
 import { NextPage } from 'next';
 import { redirect } from 'next/navigation';
 
-import SignInCard from '@/common/components/auth/SignInCard';
 import { getCurrent } from '@/common/libs/actions/auth.actions';
+import { SignInCard } from '@/modules/Auth';
 
 const Page: NextPage = async () => {
   const user = await getCurrent();
