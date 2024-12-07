@@ -1,4 +1,5 @@
 export { default as Auth } from './auth';
+export { default as Files } from './files';
 export { default as LiveblocksAuth } from './liveblocks-auth';
 export { default as Members } from './members';
 export { default as Projects } from './projects';

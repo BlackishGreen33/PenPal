@@ -6,6 +6,7 @@ import { usePathname } from 'next/navigation';
 import {
   GoCheckCircle,
   GoCheckCircleFill,
+  GoDependabot,
   GoHome,
   GoHomeFill,
 } from 'react-icons/go';
@@ -25,6 +26,12 @@ const routes = [
     href: '/tasks',
     icon: GoCheckCircle,
     activeIcon: GoCheckCircleFill,
+  },
+  {
+    label: 'AI 对话',
+    href: '/chats',
+    icon: GoDependabot,
+    activeIcon: GoDependabot,
   },
   {
     label: '设定',

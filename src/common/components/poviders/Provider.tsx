@@ -12,41 +12,36 @@ import {
 } from '@/common/libs/actions/user.actions';
 
 import QueryProvider from './QueryProvider';
-import TRPCProvider from './TRPCProvider';
 
 interface ProviderProps {
   children: React.ReactNode;
 }
 
 const Provider: React.FC<ProviderProps> = ({ children }) => (
-  <TRPCProvider>
-    <QueryProvider>
-      <LiveblocksProvider
-        authEndpoint="/api/liveblocks-auth"
-        resolveUsers={async ({ userIds }) => {
-          const users = await getClerkUsers({ userIds });
+  <QueryProvider>
+    <LiveblocksProvider
+      authEndpoint="/api/liveblocks-auth"
+      resolveUsers={async ({ userIds }) => {
+        const users = await getClerkUsers({ userIds });
 
-          return users;
-        }}
-        resolveMentionSuggestions={async ({ text, roomId }) => {
-          const roomUsers = await getDocumentUsers({
-            roomId,
-            // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-            // @ts-expect-error
-            // eslint-disable-next-line @typescript-eslint/no-non-null-asserted-optional-chain
-            currentUser: clerkUser?.emailAddresses[0].emailAddress!,
-            text,
-          });
+        return users;
+      }}
+      resolveMentionSuggestions={async ({ text, roomId }) => {
+        const roomUsers = await getDocumentUsers({
+          roomId,
+          // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+          // @ts-expect-error
+          // eslint-disable-next-line @typescript-eslint/no-non-null-asserted-optional-chain
+          currentUser: clerkUser?.emailAddresses[0].emailAddress!,
+          text,
+        });
 
-          return roomUsers;
-        }}
-      >
-        <ClientSideSuspense fallback={<Loader />}>
-          {children}
-        </ClientSideSuspense>
-      </LiveblocksProvider>
-    </QueryProvider>
-  </TRPCProvider>
+        return roomUsers;
+      }}
+    >
+      <ClientSideSuspense fallback={<Loader />}>{children}</ClientSideSuspense>
+    </LiveblocksProvider>
+  </QueryProvider>
 );
 
 export default Provider;

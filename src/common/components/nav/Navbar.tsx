@@ -11,6 +11,10 @@ const pathnameMap = {
     title: '我的任务',
     description: '在此处查看您的任务',
   },
+  chats: {
+    title: 'AI 对话',
+    description: '在此处查看您的文档对话',
+  },
   projects: {
     title: '我的项目',
     description: '在此处查看您的项目',

@@ -1,19 +1,9 @@
-import { trpcServer } from '@hono/trpc-server';
 import { Hono } from 'hono';
 import { handle } from 'hono/vercel';
 
 import * as route from '@/server';
-import { appRouter } from '@/server/trpc';
 
 const app = new Hono().basePath('/api');
-
-app.use(
-  '/trpc/*',
-  trpcServer({
-    router: appRouter,
-  })
-);
-
 // eslint-disable-next-line unused-imports/no-unused-vars
 const routes = app
   .route('/auth', route.Auth)
@@ -21,6 +11,7 @@ const routes = app
   .route('/workspaces', route.Workspaces)
   .route('/projects', route.Projects)
   .route('/tasks', route.Tasks)
+  .route('/files', route.Files)
   .route('/liveblocks-auth', route.LiveblocksAuth)
   .route('/sentry-example-api', route.SentryExampleApi);
 
