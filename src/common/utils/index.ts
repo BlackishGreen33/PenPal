@@ -1,3 +1,4 @@
+export { default as absoluteUrl } from './absoluteUrl';
 export { default as dateConverter } from './dateConverter';
 export { default as generateInviteCode } from './generateInviteCode';
 export { default as getAccessType } from './getAccessType';

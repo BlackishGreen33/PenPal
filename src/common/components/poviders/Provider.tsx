@@ -12,13 +12,14 @@ import {
 } from '@/common/libs/actions/user.actions';
 
 import QueryProvider from './QueryProvider';
+import TRPCProvider from './TRPCProvider';
 
 interface ProviderProps {
   children: React.ReactNode;
 }
 
-const Provider: React.FC<ProviderProps> = ({ children }) => {
-  return (
+const Provider: React.FC<ProviderProps> = ({ children }) => (
+  <TRPCProvider>
     <QueryProvider>
       <LiveblocksProvider
         authEndpoint="/api/liveblocks-auth"
@@ -45,7 +46,7 @@ const Provider: React.FC<ProviderProps> = ({ children }) => {
         </ClientSideSuspense>
       </LiveblocksProvider>
     </QueryProvider>
-  );
-};
+  </TRPCProvider>
+);
 
 export default Provider;
