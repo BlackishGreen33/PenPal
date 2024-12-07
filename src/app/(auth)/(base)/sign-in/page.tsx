@@ -7,7 +7,7 @@ import { SignInCard } from '@/modules/Auth';
 const Page: NextPage = async () => {
   const user = await getCurrent();
 
-  if (user) redirect('/');
+  if (user) redirect('/workspaces');
 
   return <SignInCard />;
 };

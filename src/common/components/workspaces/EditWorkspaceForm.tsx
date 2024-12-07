@@ -87,7 +87,7 @@ const EditWorkspaceForm: React.FC<EditWorkspaceFormProps> = ({
       },
       {
         onSuccess: () => {
-          window.location.href = '/';
+          window.location.href = '/workspaces';
         },
       }
     );

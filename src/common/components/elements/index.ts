@@ -1,6 +1,7 @@
 export { default as Analytics } from './Analytics';
 export { default as DatePicker } from './DatePicker';
 export { default as DottedSeparator } from './DottedSeparator';
+export { default as MaxWidthWrapper } from './MaxWidthWrapper';
 export { default as PageError } from './PageError';
 export { default as PageLoader } from './PageLoader';
 export { default as ResponsiveModal } from './ResponsiveModal';
