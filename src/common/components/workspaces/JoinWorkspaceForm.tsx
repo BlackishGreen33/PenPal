@@ -64,7 +64,7 @@ const JoinWorkspaceForm: React.FC<JoinWorkspaceFormProps> = ({
             className="w-full lg:w-fit"
             disabled={isPending}
           >
-            <Link href="/">取消</Link>
+            <Link href="/workspaces">取消</Link>
           </Button>
           <Button
             size="lg"

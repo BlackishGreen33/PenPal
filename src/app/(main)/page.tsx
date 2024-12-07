@@ -4,10 +4,22 @@ import Image from 'next/image';
 import Link from 'next/link';
 
 import { MaxWidthWrapper } from '@/common/components/elements';
-import { buttonVariants } from '@/common/components/ui/button';
+import { Button, buttonVariants } from '@/common/components/ui/button';
 
 const HomePage: NextPage = () => (
   <>
+    <nav className="flex items-center justify-between px-10 pt-5">
+      <Image src="/logo.svg" alt="logo" width={152} height={56} />
+      <div className="flex gap-2">
+        <Button variant="secondary">
+          <Link href="/price">升级</Link>
+        </Button>
+        <Button variant="primary">
+          <Link href="/sign-up">开始体验</Link>
+          <ArrowRight className="ml-1.5 h-5 w-5" />
+        </Button>
+      </div>
+    </nav>
     <MaxWidthWrapper className="mb-12 mt-28 flex flex-col items-center justify-center text-center sm:mt-40">
       <div className="mx-auto mb-4 flex max-w-fit items-center justify-center space-x-2 overflow-hidden rounded-full border border-gray-200 bg-white px-7 py-2 shadow-md backdrop-blur transition-all hover:border-gray-300 hover:bg-white/50">
         <p className="text-sm font-semibold text-gray-700">
@@ -22,13 +34,12 @@ const HomePage: NextPage = () => (
         PenPal
         让你通过简单的操作，快速搭建团队空间，将知识沉淀为结构化文档，实现知识共享与协作。
       </p>
-
       <Link
         className={buttonVariants({
           size: 'lg',
           className: 'mt-5',
         })}
-        href="/dashboard"
+        href="/workspaces"
         target="_blank"
       >
         开始使用 <ArrowRight className="ml-2 h-5 w-5" />
