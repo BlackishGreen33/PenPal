@@ -18,26 +18,50 @@ import { z } from 'zod';
 import 'react-pdf/dist/Page/AnnotationLayer.css';
 import 'react-pdf/dist/Page/TextLayer.css';
 
-import { useToast } from '@/common/hooks';
-import { cn } from '@/common/utils';
-
-import PdfFullscreen from './PdfFullscreen';
-import { Button } from '../ui/button';
+import { Button } from '@/common/components/ui/button';
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
-} from '../ui/dropdown-menu';
-import { Input } from '../ui/input';
+} from '@/common/components/ui/dropdown-menu';
+import { Input } from '@/common/components/ui/input';
+import { useToast } from '@/common/hooks';
+import { cn } from '@/common/utils';
 
-pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.js`;
+import PdfFullscreen from './PdfFullscreen';
+
+pdfjs.GlobalWorkerOptions.workerSrc = `//unpkg.com/pdfjs-dist@${pdfjs.version}/build/pdf.worker.min.mjs`;
 
 interface PdfRendererProps {
   url: string;
 }
 
 const PdfRenderer: React.FC<PdfRendererProps> = ({ url }) => {
+  if (typeof Promise.withResolvers === 'undefined') {
+    if (typeof window !== 'undefined') {
+      // @ts-expect-error This does not exist outside of polyfill which this is doing
+      window.Promise.withResolvers = function () {
+        let resolve, reject;
+        const promise = new Promise((res, rej) => {
+          resolve = res;
+          reject = rej;
+        });
+        return { promise, resolve, reject };
+      };
+    } else {
+      // @ts-expect-error This does not exist outside of polyfill which this is doing
+      global.Promise.withResolvers = function () {
+        let resolve, reject;
+        const promise = new Promise((res, rej) => {
+          resolve = res;
+          reject = rej;
+        });
+        return { promise, resolve, reject };
+      };
+    }
+  }
+
   const { toast } = useToast();
 
   const [numPages, setNumPages] = useState<number>();

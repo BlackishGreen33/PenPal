@@ -1,11 +1,18 @@
 'use client';
 
+import dynamic from 'next/dynamic';
+
 import { useGetWorkspaceFile } from '@/common/api/files';
 import ChatWrapper from '@/common/components/chat/ChatWrapper';
-import PdfRenderer from '@/common/components/chat/PdfRenderer';
 import { PageError, PageLoader } from '@/common/components/elements';
 import { useFileId } from '@/common/hooks';
 // import { getUserSubscriptionPlan } from '@/lib/stripe';
+
+const PdfRenderer = dynamic(
+  () =>
+    import('@/common/components/chat/PdfRenderer').then((mod) => mod.default),
+  { ssr: false }
+);
 
 const ChatClient: React.FC = () => {
   const fileId = useFileId();
