@@ -39,13 +39,21 @@ const onUploadComplete = async ({
   console.log('Upload complete for userId:', metadata.userId);
   console.log('file url', file.url);
 
+  console.log('debug start');
+
   const { databases } = await createSessionClient();
+
+  console.log('databases', databases);
 
   const fileList = await databases.listDocuments<File>(DATABASE_ID, FILES_ID, [
     Query.equal('key', file.key),
   ]);
 
+  console.log('fileList', fileList);
+
   const isFileExist = fileList.documents[0];
+
+  console.log('isFileExist', isFileExist);
 
   if (isFileExist) return;
 
@@ -57,15 +65,15 @@ const onUploadComplete = async ({
       key: file.key,
       name: file.name,
       userId: metadata.userId,
-      url: `https://uploadthing-prod.s3.us-west-2.amazonaws.com/${file.key}`,
+      url: file.url,
       uploadStatus: 'PROCESSING',
     }
   );
 
+  console.log('createdFile', createdFile);
+
   try {
-    const response = await fetch(
-      `https://uploadthing-prod.s3.us-west-2.amazonaws.com/${file.key}`
-    );
+    const response = await fetch(file.url);
 
     const blob = await response.blob();
 
