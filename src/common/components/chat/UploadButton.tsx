@@ -1,8 +1,7 @@
 'use client';
 
 import { Cloud, File, Loader2 } from 'lucide-react';
-import { useRouter } from 'next/navigation';
-import { useState } from 'react';
+import { Dispatch, SetStateAction, useState } from 'react';
 import Dropzone from 'react-dropzone';
 
 import { Button } from '@/common/components/ui/button';
@@ -12,14 +11,16 @@ import {
   DialogTrigger,
 } from '@/common/components/ui/dialog';
 import { Progress } from '@/common/components/ui/progress';
-import { useToast } from '@/common/hooks';
-// import { useUploadThing } from '@/common/libs';
+import { useToast, useUploadThing } from '@/common/hooks';
 
-const UploadDropzone: React.FC<{
-  isSubscribed: boolean;
-}> = ({ isSubscribed }) => {
-  const router = useRouter();
+interface UploadDropzoneProps {
+  setIsOpen: Dispatch<SetStateAction<boolean>>;
+}
 
+// const UploadDropzone: React.FC<{
+//   isSubscribed: boolean;
+// }> = ({ isSubscribed }) => {
+const UploadDropzone: React.FC<UploadDropzoneProps> = ({ setIsOpen }) => {
   const [isUploading, setIsUploading] = useState<boolean>(false);
   const [uploadProgress, setUploadProgress] = useState<number>(0);
   const { toast } = useToast();
@@ -27,6 +28,7 @@ const UploadDropzone: React.FC<{
   // const { startUpload } = useUploadThing(
   //   isSubscribed ? 'proPlanUploader' : 'freePlanUploader'
   // );
+  const { startUpload } = useUploadThing('freePlanUploader');
 
   // const { mutate: startPolling } = trpc.getFile.useMutation({
   //   onSuccess: (file) => {
@@ -60,33 +62,31 @@ const UploadDropzone: React.FC<{
 
         const progressInterval = startSimulatedProgress();
 
-        // handle file uploading
-        // const res = await startUpload(acceptedFile);
+        const res = await startUpload(acceptedFile);
 
-        // if (!res) {
-        //   return toast({
-        //     title: 'Something went wrong',
-        //     description: 'Please try again later',
-        //     variant: 'destructive',
-        //   });
-        // }
+        if (!res) {
+          return toast({
+            title: '发生了一些错误',
+            description: '请稍后再试一遍',
+            variant: 'destructive',
+          });
+        }
 
-        // const [fileResponse] = res;
+        const [fileResponse] = res;
 
-        // const key = fileResponse?.key;
+        const key = fileResponse?.key;
 
-        // if (!key) {
-        //   return toast({
-        //     title: 'Something went wrong',
-        //     description: 'Please try again later',
-        //     variant: 'destructive',
-        //   });
-        // }
-
+        if (!key) {
+          return toast({
+            title: '发生了一些错误',
+            description: '请稍后再试一遍',
+            variant: 'destructive',
+          });
+        }
         clearInterval(progressInterval);
         setUploadProgress(100);
 
-        // startPolling({ key });
+        // setIsOpen(false);
       }}
     >
       {({ getRootProps, getInputProps, acceptedFiles }) => (
@@ -102,11 +102,12 @@ const UploadDropzone: React.FC<{
               <div className="flex flex-col items-center justify-center pb-6 pt-5">
                 <Cloud className="mb-2 h-6 w-6 text-zinc-500" />
                 <p className="mb-2 text-sm text-zinc-700">
-                  <span className="font-semibold">Click to upload</span> or drag
-                  and drop
+                  <span className="font-semibold">点击或拖拽至此</span>{' '}
+                  以上传档案
                 </p>
                 <p className="text-xs text-zinc-500">
-                  PDF (up to {isSubscribed ? '16' : '4'}MB)
+                  {/* PDF (up to {isSubscribed ? '16' : '4'}MB) */}
+                  PDF (最大 4MB)
                 </p>
               </div>
               {acceptedFiles && acceptedFiles[0] ? (
@@ -131,7 +132,7 @@ const UploadDropzone: React.FC<{
                   {uploadProgress === 100 ? (
                     <div className="flex items-center justify-center gap-1 pt-2 text-center text-sm text-zinc-700">
                       <Loader2 className="h-3 w-3 animate-spin" />
-                      Redirecting...
+                      为您重新定向...
                     </div>
                   ) : null}
                 </div>
@@ -170,6 +171,7 @@ const UploadButton: React.FC = () => {
       </DialogTrigger>
       <DialogContent>
         {/* <UploadDropzone isSubscribed={isSubscribed} /> */}
+        <UploadDropzone setIsOpen={setIsOpen} />
       </DialogContent>
     </Dialog>
   );

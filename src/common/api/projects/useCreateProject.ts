@@ -24,11 +24,11 @@ const useCreateProject = () => {
       return await response.json();
     },
     onSuccess: () => {
-      toast.success('Project created');
+      toast.success('已创建项目');
       queryClient.invalidateQueries({ queryKey: ['projects'] });
     },
     onError: () => {
-      toast.error('Failed to create project');
+      toast.error('创建项目失败');
     },
   });
 

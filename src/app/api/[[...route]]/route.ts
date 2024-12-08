@@ -12,7 +12,6 @@ const routes = app
   .route('/projects', route.Projects)
   .route('/tasks', route.Tasks)
   .route('/files', route.Files)
-  .route('/liveblocks-auth', route.LiveblocksAuth)
   .route('/sentry-example-api', route.SentryExampleApi);
 
 export const GET = handle(app);

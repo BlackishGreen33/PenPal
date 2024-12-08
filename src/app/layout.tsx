@@ -1,10 +1,9 @@
-import { ClerkProvider } from '@clerk/nextjs';
-import { dark } from '@clerk/themes';
 import type { Metadata } from 'next';
 import { Inter as FontSans } from 'next/font/google';
 
 import '@/common/styles/globals.scss';
 import 'react-loading-skeleton/dist/skeleton.css';
+import 'simplebar-react/dist/simplebar.min.css';
 
 import Provider from '@/common/components/poviders/Provider';
 import { Toaster } from '@/common/components/ui/sonner';
@@ -26,28 +25,15 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <ClerkProvider
-      appearance={{
-        baseTheme: dark,
-        variables: {
-          colorPrimary: '#3371FF',
-          fontSize: '16px',
-        },
-      }}
-    >
-      <html lang="en" suppressHydrationWarning>
-        <body
-          className={cn(
-            'min-h-screen font-sans antialiased',
-            fontSans.variable
-          )}
-        >
-          <Provider>
-            <Toaster />
-            {children}
-          </Provider>
-        </body>
-      </html>
-    </ClerkProvider>
+    <html lang="en" suppressHydrationWarning>
+      <body
+        className={cn('min-h-screen font-sans antialiased', fontSans.variable)}
+      >
+        <Provider>
+          <Toaster />
+          {children}
+        </Provider>
+      </body>
+    </html>
   );
 }

@@ -9,4 +9,5 @@ export { default as useProjectId } from './useProjectId';
 export { default as useTaskFilters } from './useTaskFilters';
 export { default as useTaskId } from './useTaskId';
 export { useToast } from './useToast';
+export { useUploadThing } from './useUploadThing';
 export { default as useWorkspaceId } from './useWorkspaceId';
