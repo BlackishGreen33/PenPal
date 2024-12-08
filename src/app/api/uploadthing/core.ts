@@ -6,7 +6,7 @@ import { createUploadthing, type FileRouter } from 'uploadthing/next';
 
 import { DATABASE_ID, FILES_ID } from '@/common/configs';
 import { getCurrent } from '@/common/libs/actions/auth.actions';
-import { getDatabases } from '@/common/libs/actions/file.actions';
+import { createSessionClient } from '@/common/libs/appwrite';
 import { type File } from '@/common/types/files';
 // import { PLANS } from '@/config/stripe'
 // import { getPineconeClient } from '@/common/libs/pinecone';
@@ -36,15 +36,20 @@ const onUploadComplete = async ({
     url: string;
   };
 }) => {
-  const databases = await getDatabases();
+  console.log('Upload complete for userId:', metadata.userId);
+  console.log('file url', file.url);
 
-  const isFileExist = databases?.listDocuments<File>(DATABASE_ID, FILES_ID, [
+  const { databases } = await createSessionClient();
+
+  const fileList = await databases.listDocuments<File>(DATABASE_ID, FILES_ID, [
     Query.equal('key', file.key),
   ]);
 
+  const isFileExist = fileList.documents[0];
+
   if (isFileExist) return;
 
-  const createdFile = await databases?.createDocument(
+  const createdFile = await databases.createDocument(
     DATABASE_ID,
     FILES_ID,
     ID.unique(),
@@ -96,11 +101,11 @@ const onUploadComplete = async ({
     //   namespace: createdFile?.id,
     // });
 
-    await databases?.updateDocument(DATABASE_ID, FILES_ID, createdFile?.id, {
+    await databases.updateDocument(DATABASE_ID, FILES_ID, createdFile.id, {
       uploadStatus: 'SUCCESS',
     });
   } catch (err) {
-    await databases?.updateDocument(DATABASE_ID, FILES_ID, createdFile?.id, {
+    await databases.updateDocument(DATABASE_ID, FILES_ID, createdFile.id, {
       uploadStatus: 'FAILED',
     });
   }

@@ -86,7 +86,7 @@ const UploadDropzone: React.FC<UploadDropzoneProps> = ({ setIsOpen }) => {
         clearInterval(progressInterval);
         setUploadProgress(100);
 
-        // setIsOpen(false);
+        setIsOpen(false);
       }}
     >
       {({ getRootProps, getInputProps, acceptedFiles }) => (
@@ -123,9 +123,9 @@ const UploadDropzone: React.FC<UploadDropzoneProps> = ({ setIsOpen }) => {
               {isUploading ? (
                 <div className="mx-auto mt-4 w-full max-w-xs">
                   <Progress
-                    // indicatorColor={
-                    //   uploadProgress === 100 ? 'bg-green-500' : ''
-                    // }
+                    indicatorColor={
+                      uploadProgress === 100 ? 'bg-green-500' : ''
+                    }
                     value={uploadProgress}
                     className="h-1 w-full bg-zinc-200"
                   />
