@@ -6,11 +6,13 @@ import Link from 'next/link';
 import { useState } from 'react';
 import Skeleton from 'react-loading-skeleton';
 
-import { useDeleteFile, useGetWorkspaceFiles } from '@/common/api/files';
+import {
+  useDeleteWorkspaceFile,
+  useGetWorkspaceFiles,
+} from '@/common/api/files';
+import UploadButton from '@/common/components/chat/UploadButton';
 import { Button } from '@/common/components/ui/button';
 import { useConfirm, useWorkspaceId } from '@/common/hooks';
-
-import UploadButton from './UploadButton';
 
 // import { getUserSubscriptionPlan } from '@/common/libs/stripe';
 
@@ -18,7 +20,7 @@ import UploadButton from './UploadButton';
 // subscriptionPlan: Awaited<ReturnType<typeof getUserSubscriptionPlan>>;
 // }
 
-const Dashboard: React.FC = () => {
+const DashboardClient: React.FC = () => {
   // const Dashboard: React.FC<DashboardProps> = ({ subscriptionPlan }) => {
   const [currentlyDeletingFile, setCurrentlyDeletingFile] = useState<
     string | null
@@ -30,7 +32,8 @@ const Dashboard: React.FC = () => {
     workspaceId,
   });
 
-  const { mutate: deleteFile, isPending: isDeletingFile } = useDeleteFile();
+  const { mutate: deleteFile, isPending: isDeletingFile } =
+    useDeleteWorkspaceFile();
 
   const [DeleteDialog, confirmDelete] = useConfirm(
     '删除文档',
@@ -79,7 +82,7 @@ const Dashboard: React.FC = () => {
                 className="col-span-1 divide-y divide-gray-200 rounded-lg bg-white shadow transition hover:shadow-lg"
               >
                 <Link
-                  href={`/dashboard/${file.$id}`}
+                  href={`/workspaces/${workspaceId}/chats/${file.$id}`}
                   className="flex flex-col gap-2"
                 >
                   <div className="flex w-full items-center justify-between space-x-6 px-6 pt-6">
@@ -132,4 +135,4 @@ const Dashboard: React.FC = () => {
   );
 };
 
-export default Dashboard;
+export default DashboardClient;

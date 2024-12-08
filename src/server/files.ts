@@ -6,6 +6,7 @@ import { z } from 'zod';
 import { DATABASE_ID, FILES_ID } from '@/common/configs';
 import sessionMiddleware from '@/common/libs/session-middleware';
 import { File } from '@/common/types/files';
+import { getMember } from '@/common/utils';
 
 const Files = new Hono()
   .get(
@@ -13,11 +14,22 @@ const Files = new Hono()
     sessionMiddleware,
     zValidator('query', z.object({ workspaceId: z.string() })),
     async (c) => {
+      const user = c.get('user');
       const databases = c.get('databases');
       const { workspaceId } = c.req.valid('query');
 
       if (!workspaceId) {
         return c.json({ error: 'Missing workspaceId' }, 400);
+      }
+
+      const member = await getMember({
+        databases,
+        workspaceId,
+        userId: user.$id,
+      });
+
+      if (!member) {
+        return c.json({ error: 'Unauthorized' }, 401);
       }
 
       const files = await databases.listDocuments<File>(DATABASE_ID, FILES_ID, [
@@ -28,6 +40,29 @@ const Files = new Hono()
       return c.json({ data: files });
     }
   )
+  .get('/:fileId', sessionMiddleware, async (c) => {
+    const user = c.get('user');
+    const databases = c.get('databases');
+    const { fileId } = c.req.param();
+
+    const file = await databases.getDocument<File>(
+      DATABASE_ID,
+      FILES_ID,
+      fileId
+    );
+
+    const member = await getMember({
+      databases,
+      workspaceId: file.workspaceId,
+      userId: user.$id,
+    });
+
+    if (!member) {
+      return c.json({ error: 'Unauthorized' }, 401);
+    }
+
+    return c.json({ data: file });
+  })
   .delete('/:fileId', sessionMiddleware, async (c) => {
     const databases = c.get('databases');
     const { fileId } = c.req.param();

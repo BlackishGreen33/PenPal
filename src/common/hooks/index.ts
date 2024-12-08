@@ -3,6 +3,7 @@ export { default as useCreateProjectModal } from './useCreateProjectModal';
 export { default as useCreateTaskModal } from './useCreateTaskModal';
 export { default as useCreateWorkspaceModal } from './useCreateWorkspaceModal';
 export { default as useEditTaskModal } from './useEditTaskModal';
+export { default as useFileId } from './useFileId';
 export { default as useInviteCode } from './useInviteCode';
 export { default as useProjectId } from './useProjectId';
 export { default as useTaskFilters } from './useTaskFilters';

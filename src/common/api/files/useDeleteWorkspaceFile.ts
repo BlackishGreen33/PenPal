@@ -12,7 +12,7 @@ type RequestType = InferRequestType<
   (typeof client.api.files)[':fileId']['$delete']
 >;
 
-const useDeleteFile = () => {
+const useDeleteWorkspaceFile = () => {
   const queryClient = useQueryClient();
 
   const mutation = useMutation<ResponseType, Error, RequestType>({
@@ -41,4 +41,4 @@ const useDeleteFile = () => {
   return mutation;
 };
 
-export default useDeleteFile;
+export default useDeleteWorkspaceFile;

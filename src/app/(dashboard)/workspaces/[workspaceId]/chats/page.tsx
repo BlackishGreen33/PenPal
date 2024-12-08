@@ -1,7 +1,8 @@
 import { redirect } from 'next/navigation';
 
-import Dashboard from '@/common/components/chat/Dashboard';
 import { getCurrent } from '@/common/libs/actions/auth.actions';
+
+import DashboardClient from './client';
 // import { getUserSubscriptionPlan } from '@/common/libs/stripe';
 
 const Page = async () => {
@@ -11,7 +12,7 @@ const Page = async () => {
   // const subscriptionPlan = await getUserSubscriptionPlan();
 
   // return <Dashboard subscriptionPlan={subscriptionPlan} />;
-  return <Dashboard />;
+  return <DashboardClient />;
 };
 
 export default Page;
