@@ -6,9 +6,11 @@ import Link from 'next/link';
 import { useState } from 'react';
 import Skeleton from 'react-loading-skeleton';
 
-import useGetWorkspaceFiles from '@/common/api/files/useGetWorkspaceFiles';
+import { useDeleteFile, useGetWorkspaceFiles } from '@/common/api/files';
 import { Button } from '@/common/components/ui/button';
-import { useWorkspaceId } from '@/common/hooks';
+import { useConfirm, useWorkspaceId } from '@/common/hooks';
+
+import UploadButton from './UploadButton';
 
 // import { getUserSubscriptionPlan } from '@/common/libs/stripe';
 
@@ -23,27 +25,45 @@ const Dashboard: React.FC = () => {
   >(null);
 
   const workspaceId = useWorkspaceId();
+
   const { data: files, isLoading } = useGetWorkspaceFiles({
     workspaceId,
   });
 
-  // const { mutate: deleteFile } = trpc.deleteFile.useMutation({
-  //   onSuccess: () => {
-  //     utils.getUserFiles.invalidate();
-  //   },
-  //   onMutate({ id }) {
-  //     setCurrentlyDeletingFile(id);
-  //   },
-  //   onSettled() {
-  //     setCurrentlyDeletingFile(null);
-  //   },
-  // });
+  const { mutate: deleteFile, isPending: isDeletingFile } = useDeleteFile();
+
+  const [DeleteDialog, confirmDelete] = useConfirm(
+    '删除文档',
+    '此操作无法撤销。',
+    'destructive'
+  );
+
+  const handleDelete = async ({ fileId }: { fileId: string }) => {
+    const ok = await confirmDelete();
+
+    if (!ok) return;
+
+    setCurrentlyDeletingFile(fileId);
+
+    deleteFile(
+      {
+        param: { fileId: fileId },
+      },
+      {
+        onSettled: () => {
+          setCurrentlyDeletingFile(null);
+        },
+      }
+    );
+  };
 
   return (
-    <main className="mx-auto max-w-7xl md:p-10">
-      <div className="mt-8 flex flex-col items-start justify-between gap-4 border-b border-gray-200 pb-5 sm:flex-row sm:items-center sm:gap-0">
+    <main className="mx-auto w-full max-w-7xl md:p-10">
+      <DeleteDialog />
+      <div className="mt-8 flex w-full flex-col items-start justify-between gap-4 border-b border-gray-200 pb-5 sm:flex-row sm:items-center sm:gap-0">
         <h1 className="mb-3 text-5xl font-bold text-gray-900">文档库</h1>
         {/* <UploadButton isSubscribed={subscriptionPlan.isSubscribed} /> */}
+        <UploadButton />
       </div>
       {files && files.total !== 0 ? (
         <ul className="mt-8 grid grid-cols-1 gap-6 divide-y divide-zinc-200 md:grid-cols-2 lg:grid-cols-3">
@@ -83,12 +103,13 @@ const Dashboard: React.FC = () => {
                     mocked
                   </div>
                   <Button
-                    // onClick={() => deleteFile({ id: file.$id })}
+                    onClick={() => handleDelete({ fileId: file.$id })}
+                    disabled={isDeletingFile}
                     size="sm"
                     className="w-full"
                     variant="destructive"
                   >
-                    {currentlyDeletingFile === file.id ? (
+                    {currentlyDeletingFile === file.$id ? (
                       <Loader2 className="h-4 w-4 animate-spin" />
                     ) : (
                       <Trash className="h-4 w-4" />

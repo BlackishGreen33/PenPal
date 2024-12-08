@@ -4,6 +4,7 @@ import type { Metadata } from 'next';
 import { Inter as FontSans } from 'next/font/google';
 
 import '@/common/styles/globals.scss';
+import 'react-loading-skeleton/dist/skeleton.css';
 
 import Provider from '@/common/components/poviders/Provider';
 import { Toaster } from '@/common/components/ui/sonner';
