@@ -63,18 +63,20 @@ const Files = new Hono()
 
     return c.json({ data: file });
   })
-  .get('/:key', sessionMiddleware, async (c) => {
+  .get('/uploadStatus/:fileId', sessionMiddleware, async (c) => {
     const user = c.get('user');
     const databases = c.get('databases');
-    const { key } = c.req.param();
+    const { fileId } = c.req.param();
 
-    const files = await databases?.listDocuments<File>(DATABASE_ID, FILES_ID, [
-      Query.equal('key', key),
-    ]);
+    const file = await databases.getDocument<File>(
+      DATABASE_ID,
+      FILES_ID,
+      fileId
+    );
 
     const member = await getMember({
       databases,
-      workspaceId: files.documents[0].workspaceId,
+      workspaceId: file.workspaceId,
       userId: user.$id,
     });
 
@@ -82,7 +84,7 @@ const Files = new Hono()
       return c.json({ error: 'Unauthorized' }, 401);
     }
 
-    return c.json({ data: files.documents[0] });
+    return c.json({ data: file.uploadStatus });
   })
   .delete('/:fileId', sessionMiddleware, async (c) => {
     const databases = c.get('databases');

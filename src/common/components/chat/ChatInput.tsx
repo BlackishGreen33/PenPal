@@ -32,8 +32,6 @@ const ChatInput: React.FC<ChatInputProps> = ({ isDisabled }) => {
                   if (e.key === 'Enter' && !e.shiftKey) {
                     e.preventDefault();
 
-                    // addMessage();
-
                     textareaRef.current?.focus();
                   }
                 }}
@@ -45,7 +43,6 @@ const ChatInput: React.FC<ChatInputProps> = ({ isDisabled }) => {
                 className="absolute bottom-1.5 right-[8px]"
                 aria-label="send message"
                 onClick={() => {
-                  // addMessage();
                   textareaRef.current?.focus();
                 }}
               >

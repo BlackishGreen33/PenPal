@@ -6,7 +6,8 @@ import { createUploadthing, type FileRouter } from 'uploadthing/next';
 
 import { DATABASE_ID, FILES_ID } from '@/common/configs';
 import { getCurrent } from '@/common/libs/actions/auth.actions';
-import { createSessionClient } from '@/common/libs/appwrite';
+import { getWorkspaces } from '@/common/libs/actions/workspaces.action';
+import { createAdminClient } from '@/common/libs/appwrite';
 import { type File } from '@/common/types/files';
 // import { PLANS } from '@/config/stripe'
 // import { getPineconeClient } from '@/common/libs/pinecone';
@@ -19,10 +20,12 @@ const middleware = async () => {
 
   if (!user) throw new Error('Unauthorized');
 
+  const workspaces = await getWorkspaces();
+
   // const subscriptionPlan = await getUserSubscriptionPlan();
 
   // return { subscriptionPlan, userId: user.$id };
-  return { userId: user.$id };
+  return { userId: user.$id, workspaceId: workspaces.documents[0].$id };
 };
 
 const onUploadComplete = async ({
@@ -39,19 +42,15 @@ const onUploadComplete = async ({
   console.log('Upload complete for userId:', metadata.userId);
   console.log('file url', file.url);
 
-  console.log('debug start');
+  const { databases } = await createAdminClient();
 
-  const { databases } = await createSessionClient();
-
-  console.log('databases', databases);
-
-  const fileList = await databases.listDocuments<File>(DATABASE_ID, FILES_ID, [
+  const files = await databases.listDocuments<File>(DATABASE_ID, FILES_ID, [
     Query.equal('key', file.key),
   ]);
 
-  console.log('fileList', fileList);
+  console.log('files', files);
 
-  const isFileExist = fileList.documents[0];
+  const isFileExist = files.documents[0];
 
   console.log('isFileExist', isFileExist);
 
@@ -64,7 +63,7 @@ const onUploadComplete = async ({
     {
       key: file.key,
       name: file.name,
-      userId: metadata.userId,
+      workspaceId: metadata.workspaceId,
       url: file.url,
       uploadStatus: 'PROCESSING',
     }
@@ -109,13 +108,23 @@ const onUploadComplete = async ({
     //   namespace: createdFile?.id,
     // });
 
-    await databases.updateDocument(DATABASE_ID, FILES_ID, createdFile.id, {
-      uploadStatus: 'SUCCESS',
-    });
+    await databases.updateDocument(
+      DATABASE_ID,
+      FILES_ID,
+      createdFile.data.$id,
+      {
+        uploadStatus: 'SUCCESS',
+      }
+    );
   } catch (err) {
-    await databases.updateDocument(DATABASE_ID, FILES_ID, createdFile.id, {
-      uploadStatus: 'FAILED',
-    });
+    await databases.updateDocument(
+      DATABASE_ID,
+      FILES_ID,
+      createdFile.data.$id,
+      {
+        uploadStatus: 'FAILED',
+      }
+    );
   }
 };
 

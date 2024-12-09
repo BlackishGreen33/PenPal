@@ -33,7 +33,7 @@ const DashboardClient: React.FC = () => {
   });
 
   const { mutate: deleteFile, isPending: isDeletingFile } =
-    useDeleteWorkspaceFile();
+    useDeleteWorkspaceFile({ setCurrentlyDeletingFile });
 
   const [DeleteDialog, confirmDelete] = useConfirm(
     '删除文档',

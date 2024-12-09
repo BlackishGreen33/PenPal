@@ -1,5 +1,6 @@
 import { useMutation, useQueryClient } from '@tanstack/react-query';
 import { InferRequestType, InferResponseType } from 'hono';
+import { Dispatch, SetStateAction } from 'react';
 import { toast } from 'sonner';
 
 import client from '@/common/libs/rpc';
@@ -12,7 +13,11 @@ type RequestType = InferRequestType<
   (typeof client.api.files)[':fileId']['$delete']
 >;
 
-const useDeleteWorkspaceFile = () => {
+const useDeleteWorkspaceFile = ({
+  setCurrentlyDeletingFile,
+}: {
+  setCurrentlyDeletingFile: Dispatch<SetStateAction<string | null>>;
+}) => {
   const queryClient = useQueryClient();
 
   const mutation = useMutation<ResponseType, Error, RequestType>({
@@ -32,6 +37,9 @@ const useDeleteWorkspaceFile = () => {
 
       queryClient.invalidateQueries({ queryKey: ['files'] });
       queryClient.invalidateQueries({ queryKey: ['file', data.$id] });
+    },
+    onMutate({ param }) {
+      setCurrentlyDeletingFile(param.fileId);
     },
     onError: () => {
       toast.error('文档删除失败');
