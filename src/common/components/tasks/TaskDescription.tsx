@@ -2,7 +2,7 @@ import { PencilIcon, XIcon } from 'lucide-react';
 import { useState } from 'react';
 
 import { useUpdateTask } from '@/common/api/tasks';
-import { Task } from '@/common/types/tasks';
+import { type Task } from '@/common/types/tasks';
 
 import { DottedSeparator } from '../elements';
 import { Button } from '../ui/button';

@@ -12,8 +12,8 @@ import {
 import { createAdminClient } from '@/common/libs/appwrite';
 import sessionMiddleware from '@/common/libs/session-middleware';
 import { createTaskSchema } from '@/common/schemas/tasks';
-import { Project } from '@/common/types/projects';
-import { Task, TaskStatus } from '@/common/types/tasks';
+import { type Project } from '@/common/types/projects';
+import { type Task, TaskStatus } from '@/common/types/tasks';
 import { getMember } from '@/common/utils';
 
 const app = new Hono()

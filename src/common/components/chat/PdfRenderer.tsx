@@ -114,7 +114,7 @@ const PdfRenderer: React.FC<PdfRendererProps> = ({ url }) => {
             variant="ghost"
             aria-label="previous page"
           >
-            <ChevronDown className="h-4 w-4" />
+            <ChevronUp className="h-4 w-4" />
           </Button>
           <div className="flex items-center gap-1.5">
             <Input
@@ -145,7 +145,7 @@ const PdfRenderer: React.FC<PdfRendererProps> = ({ url }) => {
             variant="ghost"
             aria-label="next page"
           >
-            <ChevronUp className="h-4 w-4" />
+            <ChevronDown className="h-4 w-4" />
           </Button>
         </div>
         <div className="space-x-2">

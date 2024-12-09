@@ -30,7 +30,7 @@ import {
   SelectValue,
 } from '@/common/components/ui/select';
 import { createTaskSchema } from '@/common/schemas/tasks';
-import { Task, TaskStatus } from '@/common/types/tasks';
+import { type Task, TaskStatus } from '@/common/types/tasks';
 import { cn } from '@/common/utils';
 
 import MemberAvatar from '../members/MemberAvatar';

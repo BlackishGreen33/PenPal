@@ -6,7 +6,7 @@ import { z } from 'zod';
 import { DATABASE_ID, MEMBERS_ID } from '@/common/configs';
 import { createAdminClient } from '@/common/libs/appwrite';
 import sessionMiddleware from '@/common/libs/session-middleware';
-import { Member, MemberRole } from '@/common/types/members';
+import { type Member, MemberRole } from '@/common/types/members';
 import { getMember } from '@/common/utils';
 
 const app = new Hono()

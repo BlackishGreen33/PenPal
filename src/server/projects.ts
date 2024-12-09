@@ -15,7 +15,7 @@ import {
   createProjectSchema,
   updateProjectSchema,
 } from '@/common/schemas/projects';
-import { Project } from '@/common/types/projects';
+import { type Project } from '@/common/types/projects';
 import { TaskStatus } from '@/common/types/tasks';
 import { getMember } from '@/common/utils';
 

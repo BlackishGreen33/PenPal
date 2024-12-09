@@ -5,7 +5,7 @@ import MemberAvatar from '@/common/components/members/MemberAvatar';
 import { Badge } from '@/common/components/ui/badge';
 import { Button } from '@/common/components/ui/button';
 import { useEditTaskModal } from '@/common/hooks';
-import { Task } from '@/common/types/tasks';
+import { type Task } from '@/common/types/tasks';
 import { snakeCaseToTitleCase } from '@/common/utils';
 
 import OverviewProperty from './OverviewProperty';

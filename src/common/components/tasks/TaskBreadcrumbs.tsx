@@ -4,8 +4,8 @@ import { useRouter } from 'next/navigation';
 
 import { useDeleteTask } from '@/common/api/tasks';
 import { useConfirm, useWorkspaceId } from '@/common/hooks';
-import { Project } from '@/common/types/projects';
-import { Task } from '@/common/types/tasks';
+import { type Project } from '@/common/types/projects';
+import { type Task } from '@/common/types/tasks';
 
 import ProjectAvatar from '../projects/ProjectAvatar';
 import { Button } from '../ui/button';

@@ -18,7 +18,7 @@ import {
 } from '@/common/schemas/workspaces';
 import { MemberRole } from '@/common/types/members';
 import { TaskStatus } from '@/common/types/tasks';
-import { Workspace } from '@/common/types/workspaces';
+import { type Workspace } from '@/common/types/workspaces';
 import { generateInviteCode, getMember } from '@/common/utils';
 
 const Workspaces = new Hono()

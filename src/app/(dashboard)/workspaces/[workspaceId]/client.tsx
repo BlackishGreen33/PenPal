@@ -23,9 +23,9 @@ import {
   useCreateTaskModal,
   useWorkspaceId,
 } from '@/common/hooks';
-import { Member } from '@/common/types/members';
-import { Project } from '@/common/types/projects';
-import { Task } from '@/common/types/tasks';
+import { type Member } from '@/common/types/members';
+import { type Project } from '@/common/types/projects';
+import { type Task } from '@/common/types/tasks';
 
 interface TaskListProps {
   data: Task[];

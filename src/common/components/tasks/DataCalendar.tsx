@@ -15,7 +15,7 @@ import 'react-big-calendar/lib/css/react-big-calendar.css';
 import '../../styles/data-calendar.scss';
 
 import { Button } from '@/common/components/ui/button';
-import { Task } from '@/common/types/tasks';
+import { type Task } from '@/common/types/tasks';
 
 import EventCard from './EventCard';
 

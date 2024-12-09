@@ -5,7 +5,7 @@ import { z } from 'zod';
 
 import { DATABASE_ID, FILES_ID } from '@/common/configs';
 import sessionMiddleware from '@/common/libs/session-middleware';
-import { File } from '@/common/types/files';
+import { type File } from '@/common/types/files';
 import { getMember } from '@/common/utils';
 
 const Files = new Hono()

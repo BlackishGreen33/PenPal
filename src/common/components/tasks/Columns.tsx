@@ -7,7 +7,7 @@ import MemberAvatar from '@/common/components/members/MemberAvatar';
 import ProjectAvatar from '@/common/components/projects/ProjectAvatar';
 import { Badge } from '@/common/components/ui/badge';
 import { Button } from '@/common/components/ui/button';
-import { Task } from '@/common/types/tasks';
+import { type Task } from '@/common/types/tasks';
 import { snakeCaseToTitleCase } from '@/common/utils';
 
 import TaskActions from './TaskActions';

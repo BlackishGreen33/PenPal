@@ -2,8 +2,8 @@ import { useRouter } from 'next/navigation';
 import * as React from 'react';
 
 import { useWorkspaceId } from '@/common/hooks';
-import { Member } from '@/common/types/members';
-import { Project } from '@/common/types/projects';
+import { type Member } from '@/common/types/members';
+import { type Project } from '@/common/types/projects';
 import { TaskStatus } from '@/common/types/tasks';
 import { cn } from '@/common/utils';
 

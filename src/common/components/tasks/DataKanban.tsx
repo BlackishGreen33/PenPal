@@ -6,7 +6,7 @@ import {
 } from '@hello-pangea/dnd';
 import { useCallback, useEffect, useState } from 'react';
 
-import { Task, TaskStatus } from '@/common/types/tasks';
+import { type Task, TaskStatus } from '@/common/types/tasks';
 
 import KanbanCard from './KanbanCard';
 import KanbanColumnHeader from './KanbanColumnHeader';

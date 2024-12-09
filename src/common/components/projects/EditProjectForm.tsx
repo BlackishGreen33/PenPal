@@ -29,7 +29,7 @@ import {
 import { Input } from '@/common/components/ui/input';
 import { useConfirm } from '@/common/hooks';
 import { updateProjectSchema } from '@/common/schemas/projects';
-import { Project } from '@/common/types/projects';
+import { type Project } from '@/common/types/projects';
 import { cn } from '@/common/utils';
 
 interface EditProjectFormProps {

@@ -29,7 +29,7 @@ import {
 import { Input } from '@/common/components/ui/input';
 import { useConfirm } from '@/common/hooks';
 import { updateWorkspaceSchema } from '@/common/schemas/workspaces';
-import { Workspace } from '@/common/types/workspaces';
+import { type Workspace } from '@/common/types/workspaces';
 import { cn } from '@/common/utils';
 
 import {
