@@ -1,17 +1,19 @@
 import { Send } from 'lucide-react';
 import { useRef } from 'react';
 
-// import { ChatContext } from './ChatContext';
+import useChatStoreWithMutation from '@/common/hooks/useStore';
+
 import { Button } from '../ui/button';
 import { Textarea } from '../ui/textarea';
 
 interface ChatInputProps {
+  fileId: string;
   isDisabled?: boolean;
 }
 
-const ChatInput: React.FC<ChatInputProps> = ({ isDisabled }) => {
-  // const { addMessage, handleInputChange, isLoading, message } =
-  //   useContext(ChatContext);
+const ChatInput: React.FC<ChatInputProps> = ({ fileId, isDisabled }) => {
+  const { addMessage, handleInputChange, isLoading, message } =
+    useChatStoreWithMutation(fileId);
 
   const textareaRef = useRef<HTMLTextAreaElement>(null);
 
@@ -24,14 +26,14 @@ const ChatInput: React.FC<ChatInputProps> = ({ isDisabled }) => {
               <Textarea
                 rows={1}
                 ref={textareaRef}
-                // maxRows={4}
+                maxRows={4}
                 autoFocus
-                // onChange={handleInputChange}
-                // value={message}
+                onChange={handleInputChange}
+                value={message}
                 onKeyDown={(e) => {
                   if (e.key === 'Enter' && !e.shiftKey) {
                     e.preventDefault();
-
+                    addMessage();
                     textareaRef.current?.focus();
                   }
                 }}
@@ -39,10 +41,11 @@ const ChatInput: React.FC<ChatInputProps> = ({ isDisabled }) => {
                 className="scrollbar-thumb-blue scrollbar-thumb-rounded scrollbar-track-blue-lighter scrollbar-w-2 scrolling-touch resize-none py-3 pr-12 text-base"
               />
               <Button
-                // disabled={isLoading || isDisabled}
+                disabled={isLoading || isDisabled}
                 className="absolute bottom-1.5 right-[8px]"
                 aria-label="send message"
                 onClick={() => {
+                  addMessage();
                   textareaRef.current?.focus();
                 }}
               >

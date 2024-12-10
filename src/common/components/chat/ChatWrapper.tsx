@@ -6,11 +6,9 @@ import Link from 'next/link';
 import { useGetUploadStatus } from '@/common/api/files';
 
 import ChatInput from './ChatInput';
-import { buttonVariants } from '../ui/button';
-
+import Messages from './Messages';
 // import { PLANS } from '@/config/stripe'
-// import { ChatContextProvider } from './ChatContext'
-// import Messages from './Messages'
+import { buttonVariants } from '../ui/button';
 
 interface ChatWrapperProps {
   fileId: string;
@@ -30,7 +28,7 @@ const ChatWrapper: React.FC<ChatWrapperProps> = ({ fileId }) => {
             <p className="text-sm text-zinc-500">我们正在准备您的文档</p>
           </div>
         </div>
-        <ChatInput isDisabled />
+        <ChatInput fileId={fileId} isDisabled />
       </div>
     );
 
@@ -44,7 +42,7 @@ const ChatWrapper: React.FC<ChatWrapperProps> = ({ fileId }) => {
             <p className="text-sm text-zinc-500">这不会花很长时间。</p>
           </div>
         </div>
-        <ChatInput isDisabled />
+        <ChatInput fileId={fileId} isDisabled />
       </div>
     );
 
@@ -78,19 +76,17 @@ const ChatWrapper: React.FC<ChatWrapperProps> = ({ fileId }) => {
             </Link>
           </div>
         </div>
-        <ChatInput isDisabled />
+        <ChatInput fileId={fileId} isDisabled />
       </div>
     );
 
   return (
-    // <ChatContextProvider fileId={fileId}>
     <div className="relative flex min-h-full flex-col justify-between gap-2 divide-y divide-zinc-200 bg-zinc-50">
       <div className="mb-28 flex flex-1 flex-col justify-between">
-        {/* <Messages fileId={fileId} /> */}
+        <Messages fileId={fileId} />
       </div>
-      <ChatInput />
+      <ChatInput fileId={fileId} />
     </div>
-    // </ChatContextProvider>
   );
 };
 

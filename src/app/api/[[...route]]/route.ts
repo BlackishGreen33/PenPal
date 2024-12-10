@@ -12,6 +12,7 @@ const routes = app
   .route('/projects', route.Projects)
   .route('/tasks', route.Tasks)
   .route('/files', route.Files)
+  .route('/messages', route.Messages)
   .route('/sentry-example-api', route.SentryExampleApi);
 
 export const GET = handle(app);

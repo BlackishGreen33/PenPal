@@ -1,6 +1,6 @@
-// import { PDFLoader } from 'langchain/document_loaders/fs/pdf'
-// import { OpenAIEmbeddings } from 'langchain/embeddings/openai'
-// import { PineconeStore } from 'langchain/vectorstores/pinecone'
+import { PDFLoader } from '@langchain/community/document_loaders/fs/pdf';
+import { OpenAIEmbeddings } from '@langchain/openai';
+import { PineconeStore } from '@langchain/pinecone';
 import { ID, Query } from 'node-appwrite';
 import { createUploadthing, type FileRouter } from 'uploadthing/next';
 
@@ -8,9 +8,9 @@ import { DATABASE_ID, FILES_ID } from '@/common/configs';
 import { getCurrent } from '@/common/libs/actions/auth.actions';
 import { getWorkspaces } from '@/common/libs/actions/workspaces.action';
 import { createAdminClient } from '@/common/libs/appwrite';
+import getPineconeClient from '@/common/libs/pinecone';
 import { type File } from '@/common/types/files';
 // import { PLANS } from '@/config/stripe'
-// import { getPineconeClient } from '@/common/libs/pinecone';
 // import { getUserSubscriptionPlan } from '@/common/libs/stripe'
 
 const f = createUploadthing();
@@ -76,11 +76,11 @@ const onUploadComplete = async ({
 
     const blob = await response.blob();
 
-    // const loader = new PDFLoader(blob);
+    const loader = new PDFLoader(blob);
 
-    // const pageLevelDocs = await loader.load();
+    const pageLevelDocs = await loader.load();
 
-    // const pagesAmt = pageLevelDocs.length;
+    const pagesAmt = pageLevelDocs.length;
 
     // const { subscriptionPlan } = metadata;
     // const { isSubscribed } = subscriptionPlan;
@@ -96,17 +96,20 @@ const onUploadComplete = async ({
     //   });
     // }
 
-    // const pinecone = await getPineconeClient();
-    // const pineconeIndex = pinecone.Index('PenPal');
+    const pinecone = await getPineconeClient();
+    const pineconeIndex = pinecone.Index('penpal');
 
-    // const embeddings = new OpenAIEmbeddings({
-    //   openAIApiKey: process.env.OPENAI_API_KEY,
-    // });
+    const embeddings = new OpenAIEmbeddings({
+      configuration: {
+        baseURL: process.env.OPENAI_API_URL,
+      },
+      openAIApiKey: process.env.OPENAI_API_KEY,
+    });
 
-    // await PineconeStore.fromDocuments(pageLevelDocs, embeddings, {
-    //   pineconeIndex,
-    //   namespace: createdFile?.id,
-    // });
+    await PineconeStore.fromDocuments(pageLevelDocs, embeddings, {
+      pineconeIndex,
+      namespace: createdFile?.id,
+    });
 
     await databases.updateDocument(
       DATABASE_ID,
