@@ -91,7 +91,7 @@ const onUploadComplete = async ({
     //   pagesAmt > PLANS.find((plan) => plan.name === 'Free')!.pagesPerPdf;
 
     // if ((isSubscribed && isProExceeded) || (!isSubscribed && isFreeExceeded)) {
-    //   await databases?.updateDocument(DATABASE_ID, FILES_ID, createdFile.id, {
+    //   await databases?.updateDocument(DATABASE_ID, FILES_ID, createdFile.$id, {
     //     uploadStatus: 'FAILED',
     //   });
     // }
@@ -108,7 +108,7 @@ const onUploadComplete = async ({
 
     await PineconeStore.fromDocuments(pageLevelDocs, embeddings, {
       pineconeIndex,
-      namespace: createdFile?.id,
+      namespace: createdFile?.$id,
     });
 
     await databases.updateDocument(

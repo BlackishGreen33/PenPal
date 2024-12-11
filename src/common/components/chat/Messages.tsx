@@ -1,9 +1,13 @@
-// import { useIntersection } from '@mantine/hooks';
-import { Loader2 } from 'lucide-react';
+import { useIntersection } from '@mantine/hooks';
+import { Loader2, MessageSquare } from 'lucide-react';
+import { useEffect, useRef } from 'react';
+import Skeleton from 'react-loading-skeleton';
 
+import { useGetFileMessages } from '@/common/api/messages';
+import { INFINITE_QUERY_LIMIT } from '@/common/constants';
 import useChatStoreWithMutation from '@/common/hooks/useStore';
 
-// import Message from './Message';
+import Message from './Message';
 
 interface MessagesProps {
   fileId: string;
@@ -12,23 +16,16 @@ interface MessagesProps {
 const Messages: React.FC<MessagesProps> = ({ fileId }) => {
   const { isLoading: isAiThinking } = useChatStoreWithMutation(fileId);
 
-  // const { data, isLoading, fetchNextPage } =
-  //   trpc.getFileMessages.useInfiniteQuery(
-  //     {
-  //       fileId,
-  //       limit: INFINITE_QUERY_LIMIT,
-  //     },
-  //     {
-  //       getNextPageParam: (lastPage) => lastPage?.nextCursor,
-  //       keepPreviousData: true,
-  //     }
-  //   );
+  const { data, isLoading, fetchNextPage } = useGetFileMessages({
+    fileId,
+    limit: INFINITE_QUERY_LIMIT.toString(),
+  });
 
-  // const messages = data?.pages.flatMap((page) => page.messages);
+  const messages = data?.pages.flatMap((page) => page.messages.documents);
 
   const loadingMessage = {
-    createdAt: new Date().toISOString(),
-    id: 'loading-message',
+    $creactAt: new Date().toISOString(),
+    $id: 'loading-message',
     isUserMessage: false,
     text: (
       <span className="flex h-full items-center justify-center">
@@ -37,27 +34,27 @@ const Messages: React.FC<MessagesProps> = ({ fileId }) => {
     ),
   };
 
-  // const combinedMessages = [
-  //   ...(isAiThinking ? [loadingMessage] : []),
-  //   ...(messages ?? []),
-  // ];
+  const combinedMessages = [
+    ...(isAiThinking ? [loadingMessage] : []),
+    ...(messages ?? []),
+  ];
 
-  // const lastMessageRef = useRef<HTMLDivElement>(null);
+  const lastMessageRef = useRef<HTMLDivElement>(null);
 
-  // const { ref, entry } = useIntersection({
-  //   root: lastMessageRef.current,
-  //   threshold: 1,
-  // });
+  const { ref, entry } = useIntersection({
+    root: lastMessageRef.current,
+    threshold: 1,
+  });
 
-  // useEffect(() => {
-  //   if (entry?.isIntersecting) {
-  //     fetchNextPage();
-  //   }
-  // }, [entry, fetchNextPage]);
+  useEffect(() => {
+    if (entry?.isIntersecting) {
+      fetchNextPage();
+    }
+  }, [entry, fetchNextPage]);
 
   return (
     <div className="scrollbar-thumb-blue scrollbar-thumb-rounded scrollbar-track-blue-lighter scrollbar-w-2 scrolling-touch flex max-h-[calc(100vh-3.5rem-7rem)] flex-1 flex-col-reverse gap-4 overflow-y-auto border-zinc-200 p-3">
-      {/* {combinedMessages && combinedMessages.length > 0 ? (
+      {combinedMessages && combinedMessages.length > 0 ? (
         combinedMessages.map((message, i) => {
           const isNextMessageSamePerson =
             combinedMessages[i - 1]?.isUserMessage ===
@@ -69,7 +66,7 @@ const Messages: React.FC<MessagesProps> = ({ fileId }) => {
                 ref={ref}
                 message={message}
                 isNextMessageSamePerson={isNextMessageSamePerson}
-                key={message.id}
+                key={message.$id}
               />
             );
           } else
@@ -77,7 +74,7 @@ const Messages: React.FC<MessagesProps> = ({ fileId }) => {
               <Message
                 message={message}
                 isNextMessageSamePerson={isNextMessageSamePerson}
-                key={message.id}
+                key={message.$id}
               />
             );
         })
@@ -96,7 +93,7 @@ const Messages: React.FC<MessagesProps> = ({ fileId }) => {
             询问您的第一个问题开始你的聊天吧！
           </p>
         </div>
-      )} */}
+      )}
     </div>
   );
 };

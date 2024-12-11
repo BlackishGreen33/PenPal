@@ -70,7 +70,6 @@ const useChatStoreWithMutation = (fileId: string) => {
 
       //       latestPage.messages = [
       //         {
-      //           createdAt: new Date().toISOString(),
       //           id: crypto.randomUUID(),
       //           text: message,
       //           isUserMessage: true,
@@ -119,7 +118,7 @@ const useChatStoreWithMutation = (fileId: string) => {
       //       (old) => {
       //         if (!old) return { pages: [], pageParams: [] };
       //         let isAiResponseCreated = old.pages.some((page) =>
-      //           page.messages.some((message) => message.id === 'ai-response')
+      //           page.messages.some((message) => message.$id === 'ai-response')
       //         );
       //         let updatedPages = old.pages.map((page) => {
       //           if (page === old.pages[0]) {
@@ -127,7 +126,6 @@ const useChatStoreWithMutation = (fileId: string) => {
       //             if (!isAiResponseCreated) {
       //               updatedMessages = [
       //                 {
-      //                   createdAt: new Date().toISOString(),
       //                   id: 'ai-response',
       //                   text: accResponse,
       //                   isUserMessage: false,
@@ -136,7 +134,7 @@ const useChatStoreWithMutation = (fileId: string) => {
       //               ];
       //             } else {
       //               updatedMessages = page.messages.map((message) => {
-      //                 if (message.id === 'ai-response') {
+      //                 if (message.$id === 'ai-response') {
       //                   return {
       //                     ...message,
       //                     text: accResponse,

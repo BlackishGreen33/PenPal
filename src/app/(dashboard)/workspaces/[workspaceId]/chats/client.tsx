@@ -73,8 +73,8 @@ const DashboardClient: React.FC = () => {
           {files.documents
             .sort(
               (a, b) =>
-                new Date(b.createdAt).getTime() -
-                new Date(a.createdAt).getTime()
+                new Date(b.$createdAt).getTime() -
+                new Date(a.$createdAt).getTime()
             )
             .map((file) => (
               <li
@@ -99,7 +99,7 @@ const DashboardClient: React.FC = () => {
                 <div className="mt-4 grid grid-cols-3 place-items-center gap-6 px-6 py-2 text-xs text-zinc-500">
                   <div className="flex items-center gap-2">
                     <Plus className="h-4 w-4" />
-                    {format(new Date(file.createdAt), 'MMM yyyy')}
+                    {format(new Date(file.$createdAt), 'MMM yyyy')}
                   </div>
                   <div className="flex items-center gap-2">
                     <MessageSquare className="h-4 w-4" />

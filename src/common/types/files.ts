@@ -13,7 +13,5 @@ export type File = Models.Document & {
   url: string;
   key: string;
   messageId: string;
-  createdAt: string;
-  updatedAt: string;
   userId: string;
 };

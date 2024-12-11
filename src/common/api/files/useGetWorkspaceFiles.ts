@@ -8,7 +8,7 @@ interface UseGetWorkspaceFilesProps {
 
 const useGetWorkspaceFiles = ({ workspaceId }: UseGetWorkspaceFilesProps) => {
   const query = useQuery({
-    queryKey: ['workspace', workspaceId],
+    queryKey: ['files', workspaceId],
     queryFn: async () => {
       const response = await client.api.files.$get({
         query: { workspaceId },
