@@ -42,7 +42,7 @@ const ChatInput: React.FC<ChatInputProps> = ({ fileId, isDisabled }) => {
               />
               <Button
                 disabled={isLoading || isDisabled}
-                className="absolute bottom-1.5 right-[8px]"
+                className="absolute bottom-1 right-[8px]"
                 aria-label="send message"
                 onClick={() => {
                   addMessage();

@@ -1,4 +1,4 @@
-import { useInfiniteQuery } from '@tanstack/react-query';
+import { useInfiniteQuery, useQueryClient } from '@tanstack/react-query';
 
 import client from '@/common/libs/rpc';
 
@@ -8,6 +8,7 @@ interface UseGetFileMessagesProps {
 }
 
 const useGetFileMessages = ({ fileId, limit }: UseGetFileMessagesProps) => {
+  const queryClient = useQueryClient();
   const query = useInfiniteQuery({
     queryKey: ['messages', fileId, limit],
     initialPageParam: '1',
@@ -28,7 +29,19 @@ const useGetFileMessages = ({ fileId, limit }: UseGetFileMessagesProps) => {
     placeholderData: (oldData) => oldData,
   });
 
-  return query;
+  const cancelQuery = () => {
+    query.refetch({ cancelRefetch: false });
+  };
+
+  const invalidateQuery = () => {
+    queryClient.invalidateQueries({ queryKey: ['messages', fileId, limit] });
+  };
+
+  return {
+    ...query,
+    cancel: cancelQuery,
+    invalidate: invalidateQuery,
+  };
 };
 
 export default useGetFileMessages;

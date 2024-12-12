@@ -59,7 +59,6 @@ const Messages: React.FC<MessagesProps> = ({ fileId }) => {
           const isNextMessageSamePerson =
             combinedMessages[i - 1]?.isUserMessage ===
             combinedMessages[i]?.isUserMessage;
-
           if (i === combinedMessages.length - 1) {
             return (
               <Message
