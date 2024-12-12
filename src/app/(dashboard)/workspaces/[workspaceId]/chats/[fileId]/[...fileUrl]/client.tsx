@@ -1,5 +1,6 @@
 'use client';
 
+import { UpstashDict, UpstashMessage } from '@upstash/rag-chat';
 import dynamic from 'next/dynamic';
 
 import { useGetWorkspaceFile } from '@/common/api/files';
@@ -8,13 +9,21 @@ import { PageError, PageLoader } from '@/common/components/elements';
 import { useFileId } from '@/common/hooks';
 // import { getUserSubscriptionPlan } from '@/lib/stripe';
 
+interface ChatClientProps {
+  sessionId: string;
+  initialMessages: UpstashMessage<UpstashDict>[];
+}
+
 const PdfRenderer = dynamic(
   () =>
     import('@/common/components/chat/PdfRenderer').then((mod) => mod.default),
   { ssr: false }
 );
 
-const ChatClient: React.FC = () => {
+const ChatClient: React.FC<ChatClientProps> = ({
+  sessionId,
+  initialMessages,
+}) => {
   const fileId = useFileId();
   const { data: file, isLoading } = useGetWorkspaceFile({
     fileId,
@@ -40,7 +49,10 @@ const ChatClient: React.FC = () => {
         </div>
         <div className="flex-[0.75] shrink-0 border-t border-gray-200 lg:w-96 lg:border-l lg:border-t-0">
           {/* <ChatWrapper isSubscribed={plan.isSubscribed} fileId={file.$id} /> */}
-          <ChatWrapper fileId={file.$id} />
+          <ChatWrapper
+            sessionId={sessionId}
+            initialMessages={initialMessages}
+          />
         </div>
       </div>
     </div>

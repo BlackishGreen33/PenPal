@@ -1,5 +1,7 @@
 'use client';
 
+import { NextUIProvider } from '@nextui-org/react';
+
 import QueryProvider from './QueryProvider';
 
 interface ProviderProps {
@@ -7,7 +9,9 @@ interface ProviderProps {
 }
 
 const Provider: React.FC<ProviderProps> = ({ children }) => (
-  <QueryProvider>{children}</QueryProvider>
+  <NextUIProvider>
+    <QueryProvider>{children}</QueryProvider>
+  </NextUIProvider>
 );
 
 export default Provider;

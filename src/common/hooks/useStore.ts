@@ -3,9 +3,9 @@ import { useRef, useState } from 'react';
 import { create } from 'zustand';
 
 import { useGetFileMessages } from '@/common/api/messages';
+import { INFINITE_QUERY_LIMIT } from '@/common/constants';
 
 import { useToast } from './useToast';
-import { INFINITE_QUERY_LIMIT } from '../constants';
 
 interface State {
   message: string;
