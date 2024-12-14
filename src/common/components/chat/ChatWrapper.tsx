@@ -95,6 +95,8 @@
 
 import { Message, useChat } from 'ai/react';
 
+import useUpdateScore from '@/common/api/scores/useUpdateScore';
+
 import ChatInput from './ChatInput';
 import Messages from './Messages';
 
@@ -107,12 +109,28 @@ const ChatWrapper: React.FC<ChatWrapperProps> = ({
   sessionId,
   initialMessages,
 }) => {
-  const { messages, handleInputChange, handleSubmit, input, setInput } =
-    useChat({
-      api: '/api/chat-stream',
-      body: { sessionId },
-      initialMessages,
+  const {
+    messages,
+    handleInputChange,
+    handleSubmit: chatSubmit,
+    input,
+    setInput,
+  } = useChat({
+    api: '/api/chat-stream',
+    body: { sessionId },
+    initialMessages,
+  });
+
+  const { mutate } = useUpdateScore();
+
+  const handleSubmit = () => {
+    chatSubmit();
+    mutate({
+      form: {
+        operator: 'sub',
+      },
     });
+  };
 
   return (
     <div className="relative flex min-h-[85vh] flex-col justify-between gap-2 divide-y divide-zinc-300 bg-zinc-100">

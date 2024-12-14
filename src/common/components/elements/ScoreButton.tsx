@@ -1,6 +1,7 @@
 'use client';
 
 import { BookPlus, Coins, Loader, MonitorPlay } from 'lucide-react';
+import Link from 'next/link';
 
 import { useGetScore } from '@/common/api/scores';
 import { DottedSeparator } from '@/common/components/elements';
@@ -50,10 +51,12 @@ const ScoreButton: React.FC = () => {
           </div>
         </div>
         <DottedSeparator className="mb-1" />
-        <DropdownMenuItem className="flex h-10 cursor-pointer items-center justify-center font-medium">
-          <MonitorPlay className="mr-2 size-4" />
-          观看广告增加积分
-        </DropdownMenuItem>
+        <Link href="/workspaces/ads">
+          <DropdownMenuItem className="flex h-10 cursor-pointer items-center justify-center font-medium">
+            <MonitorPlay className="mr-2 size-4" />
+            观看广告增加积分
+          </DropdownMenuItem>
+        </Link>
         <DropdownMenuItem className="flex h-10 cursor-pointer items-center justify-center font-medium text-amber-700">
           <BookPlus className="mr-2 size-4" />
           升级会员

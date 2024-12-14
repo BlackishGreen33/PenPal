@@ -28,6 +28,7 @@
     "@hono/trpc-server": "^0.3.4",
     "@hono/zod-validator": "^0.4.1",
     "@hookform/resolvers": "^3.9.1",
+    "@iframe-resizer/react": "^5.3.2",
     "@langchain/community": "^0.3.17",
     "@langchain/core": "^0.3.22",
     "@langchain/openai": "^0.3.14",
