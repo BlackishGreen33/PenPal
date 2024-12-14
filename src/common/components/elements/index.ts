@@ -6,5 +6,6 @@ export { default as MaxWidthWrapper } from './MaxWidthWrapper';
 export { default as PageError } from './PageError';
 export { default as PageLoader } from './PageLoader';
 export { default as ResponsiveModal } from './ResponsiveModal';
+export { default as ScoreButton } from './ScoreButton';
 export { default as UserButton } from './UserButton';
 export { default as WorkspaceSwitcher } from './WorkspaceSwitcher';

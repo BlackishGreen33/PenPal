@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 
-import { UserButton } from '@/common/components/elements';
+import { ScoreButton, UserButton } from '@/common/components/elements';
 
 interface StandloneLayoutProps {
   children: React.ReactNode;
@@ -14,7 +14,10 @@ const StandloneLayout: React.FC<StandloneLayoutProps> = ({ children }) => (
         <Link href="/workspaces">
           <Image src="/logo.svg" alt="Logo" height={56} width={152} />
         </Link>
-        <UserButton />
+        <div className="flex items-center gap-5">
+          <ScoreButton />
+          <UserButton />
+        </div>
       </nav>
       <div className="flex flex-col items-center justify-center py-4">
         {children}

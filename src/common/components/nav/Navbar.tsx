@@ -2,7 +2,7 @@
 
 import { usePathname } from 'next/navigation';
 
-import { UserButton } from '@/common/components/elements';
+import { ScoreButton, UserButton } from '@/common/components/elements';
 
 import MobileSidebar from './MobileSidebar';
 
@@ -40,7 +40,10 @@ const Navbar: React.FC = () => {
         <p className="text-muted-foreground">{description}</p>
       </div>
       <MobileSidebar />
-      <UserButton />
+      <div className="flex items-center gap-5">
+        <ScoreButton />
+        <UserButton />
+      </div>
     </nav>
   );
 };

@@ -13,5 +13,5 @@ export type File = Models.Document & {
   url: string;
   key: string;
   messageId: string;
-  userId: string;
+  workspaceId: string;
 };
