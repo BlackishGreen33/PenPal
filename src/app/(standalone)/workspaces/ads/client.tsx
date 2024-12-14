@@ -5,7 +5,7 @@ import { NextPage } from 'next';
 import { useRouter } from 'next/navigation';
 import { useEffect, useState } from 'react';
 
-import useUpdateScore from '@/common/api/scores/useUpdateScore';
+import { useUpdateScore } from '@/common/api/scores';
 import { PageLoader } from '@/common/components/elements';
 import { Button } from '@/common/components/ui/button';
 

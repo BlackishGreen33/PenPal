@@ -8,6 +8,7 @@ import { FcGoogle } from 'react-icons/fc';
 import { z } from 'zod';
 
 import { useRegister } from '@/common/api/auth';
+import useCreateScore from '@/common/api/scores/useCreateScore';
 import { DottedSeparator } from '@/common/components/elements';
 import { Button } from '@/common/components/ui/button';
 import {
@@ -29,7 +30,10 @@ import { signUpWithGithub, signUpWithGoogle } from '@/common/libs/oauth';
 import { registerSchema } from '@/common/schemas/auth';
 
 const SignUpCard: React.FC = () => {
-  const { mutate, isPending } = useRegister();
+  const { mutate: regist, isPending: isRegisterPending } = useRegister();
+  const { mutate: createScore, isPending: isScorePending } = useCreateScore();
+
+  const isPending = isRegisterPending || isScorePending;
 
   const form = useForm<z.infer<typeof registerSchema>>({
     resolver: zodResolver(registerSchema),
@@ -41,7 +45,8 @@ const SignUpCard: React.FC = () => {
   });
 
   const onSubmit = (values: z.infer<typeof registerSchema>) => {
-    mutate({ json: values });
+    regist({ json: values });
+    createScore({});
   };
 
   return (

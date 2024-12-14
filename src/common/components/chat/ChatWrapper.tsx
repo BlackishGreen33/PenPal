@@ -95,7 +95,7 @@
 
 import { Message, useChat } from 'ai/react';
 
-import useUpdateScore from '@/common/api/scores/useUpdateScore';
+import { useUpdateScore } from '@/common/api/scores';
 
 import ChatInput from './ChatInput';
 import Messages from './Messages';

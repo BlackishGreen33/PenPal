@@ -1,6 +1,6 @@
 import { zValidator } from '@hono/zod-validator';
 import { Hono } from 'hono';
-import { Query } from 'node-appwrite';
+import { ID, Query } from 'node-appwrite';
 
 import { DATABASE_ID, SCORES_ID } from '@/common/configs';
 import sessionMiddleware from '@/common/libs/session-middleware';
@@ -19,6 +19,23 @@ const Scores = new Hono()
     );
 
     return c.json({ data: scores.documents[0] });
+  })
+  .post('/', sessionMiddleware, async (c) => {
+    const user = c.get('user');
+    const databases = c.get('databases');
+
+    const score = await databases.createDocument(
+      DATABASE_ID,
+      SCORES_ID,
+      ID.unique(),
+      {
+        userId: user.$id,
+        score: '300',
+        freeCount: '10',
+      }
+    );
+
+    return c.json({ data: score });
   })
   .patch(
     '/',
