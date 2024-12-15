@@ -1,11 +1,13 @@
 import { z } from 'zod';
 
 export const createFileSchema = z.object({
-  key: z.string(),
   name: z.string().trim().min(1, '此为必填项'),
   workspaceId: z.string(),
-  url: z.string(),
-  uploadStatus: z.enum(['PROCESSING', 'SUCCESS', 'FAILED']),
+  key: z.string(),
+  file: z.union([
+    z.instanceof(File),
+    z.string().transform((value) => (value === '' ? undefined : value)),
+  ]),
 });
 
 export const updateFileSchema = z.object({

@@ -4,6 +4,7 @@ import { Cloud, File, Loader2 } from 'lucide-react';
 import { Dispatch, SetStateAction, useState } from 'react';
 import Dropzone from 'react-dropzone';
 
+import useCreateWorkspaceFile from '@/common/api/files/useCreateWorkspaceFile';
 import { Button } from '@/common/components/ui/button';
 import {
   Dialog,
@@ -11,32 +12,20 @@ import {
   DialogTrigger,
 } from '@/common/components/ui/dialog';
 import { Progress } from '@/common/components/ui/progress';
-import { useToast, useUploadThing } from '@/common/hooks';
+import { useToast, useUploadThing, useWorkspaceId } from '@/common/hooks';
 
 interface UploadDropzoneProps {
   setIsOpen: Dispatch<SetStateAction<boolean>>;
 }
 
-// const UploadDropzone: React.FC<{
-//   isSubscribed: boolean;
-// }> = ({ isSubscribed }) => {
 const UploadDropzone: React.FC<UploadDropzoneProps> = ({ setIsOpen }) => {
   const [isUploading, setIsUploading] = useState<boolean>(false);
   const [uploadProgress, setUploadProgress] = useState<number>(0);
   const { toast } = useToast();
 
-  // const { startUpload } = useUploadThing(
-  //   isSubscribed ? 'proPlanUploader' : 'freePlanUploader'
-  // );
   const { startUpload } = useUploadThing('freePlanUploader');
-
-  // const { mutate: startPolling } = trpc.getFile.useMutation({
-  //   onSuccess: (file) => {
-  //     router.push(`/dashboard/${file.$id}`);
-  //   },
-  //   retry: true,
-  //   retryDelay: 500,
-  // });
+  const { mutate } = useCreateWorkspaceFile();
+  const workspaceId = useWorkspaceId();
 
   const startSimulatedProgress = () => {
     setUploadProgress(0);
@@ -83,10 +72,31 @@ const UploadDropzone: React.FC<UploadDropzoneProps> = ({ setIsOpen }) => {
             variant: 'destructive',
           });
         }
-        clearInterval(progressInterval);
-        setUploadProgress(100);
 
-        setIsOpen(false);
+        mutate(
+          {
+            form: {
+              file: acceptedFile[0],
+              name: acceptedFile[0].name,
+              key,
+              workspaceId,
+            },
+          },
+          {
+            onSuccess: () => {
+              clearInterval(progressInterval);
+              setUploadProgress(100);
+              setIsOpen(false);
+            },
+            onError: () => {
+              toast({
+                title: '发生了一些错误',
+                description: '请稍后再试一遍',
+                variant: 'destructive',
+              });
+            },
+          }
+        );
       }}
     >
       {({ getRootProps, getInputProps, acceptedFiles }) => (
@@ -151,9 +161,6 @@ const UploadDropzone: React.FC<UploadDropzoneProps> = ({ setIsOpen }) => {
   );
 };
 
-// const UploadButton: React.FC<{ isSubscribed: boolean }> = ({
-//   isSubscribed,
-// }) => {
 const UploadButton: React.FC = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
 

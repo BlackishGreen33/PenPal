@@ -82,7 +82,7 @@ const DashboardClient: React.FC = () => {
                 className="col-span-1 divide-y divide-gray-200 rounded-lg bg-white shadow transition hover:shadow-lg"
               >
                 <Link
-                  href={`/workspaces/${workspaceId}/chats/${file.$id}/${file.url}`}
+                  href={`/workspaces/${workspaceId}/chats/${file.$id}/https://utfs.io/f/${file.key}`}
                   className="flex flex-col gap-2"
                 >
                   <div className="flex w-full items-center justify-between space-x-6 px-6 pt-6">
