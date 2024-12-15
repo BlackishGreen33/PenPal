@@ -1,3 +1,5 @@
+'use client';
+
 // import { useStatus } from '@liveblocks/react';
 // import { useMutation } from 'convex/react';
 import { LoaderIcon } from 'lucide-react';

@@ -1,3 +1,5 @@
+'use client';
+
 // import { useMutation, useStorage } from '@liveblocks/react';
 import { useRef, useState } from 'react';
 import { FaCaretDown } from 'react-icons/fa';

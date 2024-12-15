@@ -8,6 +8,7 @@ export { default as useEditTaskModal } from './useEditTaskModal';
 export { default as useFileId } from './useFileId';
 export { default as useInviteCode } from './useInviteCode';
 export { default as useProjectId } from './useProjectId';
+export { default as useSearchParam } from './useSearchParam';
 export { default as useTaskFilters } from './useTaskFilters';
 export { default as useTaskId } from './useTaskId';
 export { useToast } from './useToast';
