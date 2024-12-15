@@ -7,6 +7,8 @@ import {
   GoCheckCircle,
   GoCheckCircleFill,
   GoDependabot,
+  GoFileDirectory,
+  GoFileDirectoryFill,
   GoHome,
   GoHomeFill,
 } from 'react-icons/go';
@@ -26,6 +28,12 @@ const routes = [
     href: '/tasks',
     icon: GoCheckCircle,
     activeIcon: GoCheckCircleFill,
+  },
+  {
+    label: '云文档',
+    href: '/documents',
+    icon: GoFileDirectory,
+    activeIcon: GoFileDirectoryFill,
   },
   {
     label: 'AI 对话',

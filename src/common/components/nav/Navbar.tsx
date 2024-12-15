@@ -19,6 +19,10 @@ const pathnameMap = {
     title: '我的项目',
     description: '在此处查看您的项目',
   },
+  documents: {
+    title: '云文档',
+    description: '在此构建您的团队知识库',
+  },
 };
 
 const defaultMap = {
