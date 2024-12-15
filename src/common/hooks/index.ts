@@ -2,6 +2,7 @@ export { default as useConfirm } from './useConfirm';
 export { default as useCreateProjectModal } from './useCreateProjectModal';
 export { default as useCreateTaskModal } from './useCreateTaskModal';
 export { default as useCreateWorkspaceModal } from './useCreateWorkspaceModal';
+export { default as useDebounce } from './useDebounce';
 export { default as useEditorStore } from './useEditorStore';
 export { default as useEditTaskModal } from './useEditTaskModal';
 export { default as useFileId } from './useFileId';

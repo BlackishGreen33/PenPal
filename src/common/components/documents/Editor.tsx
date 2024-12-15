@@ -26,7 +26,7 @@ import {
   LineHeightExtension,
 } from '@/common/libs/extensions';
 
-// import { Ruler } from './ruler';
+import Ruler from './Ruler';
 // import { Threads } from './threads';
 
 interface EditorProps {
@@ -118,7 +118,7 @@ const Editor: React.FC<EditorProps> = ({ initialContent }) => {
 
   return (
     <div className="size-full overflow-x-auto bg-[#F9FBFD] px-4 print:overflow-visible print:bg-white print:p-0">
-      {/* <Ruler /> */}
+      <Ruler />
       <div className="mx-auto flex w-[816px] min-w-max justify-center py-4 print:w-full print:min-w-0 print:py-0">
         <EditorContent editor={editor} />
         {/*<Threads editor={editor} /> */}

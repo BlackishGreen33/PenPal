@@ -1,14 +1,10 @@
 'use client';
 
-import Editor from '@/common/components/documents/Editor';
-import Toolbar from '@/common/components/documents/Toolbar';
+import { Editor, Navbar, Toolbar } from '@/common/components/documents';
 
 // import { Preloaded, usePreloadedQuery } from "convex/react";
 
 // import { Room } from "./room";
-// import { Editor } from "./editor";
-// import { Navbar } from "./navbar";
-// import { Toolbar } from "./toolbar";
 // import { api } from "../../../../convex/_generated/api";
 
 // interface DocumentProps {
@@ -24,6 +20,7 @@ const DocumentClient: React.FC = () => {
     <div className="min-h-screen bg-[#F9FBFD]">
       <div className="fixed left-0 right-0 top-0 z-10 flex flex-col gap-y-2 bg-neutral-50 px-4 pt-2 print:hidden">
         {/* <Navbar data={document} /> */}
+        <Navbar />
         <Toolbar />
       </div>
       <div className="pt-[114px] print:pt-0">
