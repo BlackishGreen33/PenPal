@@ -1,8 +1,9 @@
 import { NextPage } from 'next';
 import { redirect } from 'next/navigation';
 
-import Editor from '@/common/components/documents/Editor';
 import { getCurrent } from '@/common/libs/actions/auth.actions';
+
+import DocumentClient from './client';
 // import { preloadQuery } from 'convex/nextjs';
 
 // import { api } from '../../../../convex/_generated/api';
@@ -33,7 +34,7 @@ const page: NextPage<PageProps> = async ({ params }) => {
   // );
 
   // return <Document preloadedDocument={preloadedDocument} />;
-  return <Editor />;
+  return <DocumentClient />;
 };
 
 export default page;

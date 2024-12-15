@@ -19,6 +19,7 @@ import { EditorContent, useEditor } from '@tiptap/react';
 import StarterKit from '@tiptap/starter-kit';
 import ImageResize from 'tiptap-extension-resize-image';
 
+import { LEFT_MARGIN_DEFAULT, RIGHT_MARGIN_DEFAULT } from '@/common/constants';
 import { useEditorStore } from '@/common/hooks';
 import {
   FontSizeExtension,
@@ -37,6 +38,8 @@ const Editor: React.FC<EditorProps> = ({ initialContent }) => {
   //   useStorage((root) => root.leftMargin) ?? LEFT_MARGIN_DEFAULT;
   // const rightMargin =
   //   useStorage((root) => root.rightMargin) ?? RIGHT_MARGIN_DEFAULT;
+  const leftMargin = LEFT_MARGIN_DEFAULT;
+  const rightMargin = RIGHT_MARGIN_DEFAULT;
 
   // const liveblocks = useLiveblocksExtension({
   //   initialContent,
@@ -73,9 +76,9 @@ const Editor: React.FC<EditorProps> = ({ initialContent }) => {
     },
     editorProps: {
       attributes: {
-        // style: `padding-left: ${leftMargin}px; padding-right: ${rightMargin}px;`,
+        style: `padding-left: ${leftMargin}px; padding-right: ${rightMargin}px;`,
         class:
-          'focus:outline-none print:border-0 bg-white border border-[#C7C7C7] flex flex-col min-h-[1054px] w-[816px] pt-10 pr-14 pb-10 cursor-text',
+          'focus:outline-none print:border-0 bg-white border flex flex-col min-h-[1054px] w-[816px] pt-10 pr-14 pb-10 cursor-text shadow-md',
       },
     },
     extensions: [
@@ -114,7 +117,7 @@ const Editor: React.FC<EditorProps> = ({ initialContent }) => {
   });
 
   return (
-    <div className="size-full overflow-x-auto px-4 print:overflow-visible print:bg-white print:p-0">
+    <div className="size-full overflow-x-auto bg-[#F9FBFD] px-4 print:overflow-visible print:bg-white print:p-0">
       {/* <Ruler /> */}
       <div className="mx-auto flex w-[816px] min-w-max justify-center py-4 print:w-full print:min-w-0 print:py-0">
         <EditorContent editor={editor} />
