@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.example.chat.Mapper.ChatMapper">
+
+    <!-- 根据 userId 和 chatName 创建对话，返回生成的 chatId -->
+    <insert id="createChat" parameterType="chat" useGeneratedKeys="true" keyProperty="chatId">
+        INSERT INTO chat(chatName, userId)
+        VALUES (#{chatName}, #{userId})
+    </insert>
+
+    <!-- 根据 chatId 删除对话 -->
+    <delete id="deleteChat" parameterType="int">
+        DELETE FROM chat WHERE chatId = #{chatId}
+    </delete>
+
+    <!-- 根据 chatId 修改对话名称 -->
+    <update id="updateChatName" parameterType="map">
+        UPDATE chat
+        SET chatName = #{newChatName}
+        WHERE chatId = #{chatId}
+    </update>
+
+</mapper>
+
