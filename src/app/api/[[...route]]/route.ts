@@ -13,6 +13,7 @@ const routes = app
   .route('/projects', route.Projects)
   .route('/tasks', route.Tasks)
   .route('/files', route.Files)
+  .route('/documents', route.Documents)
   .route('/messages', route.Messages)
   .route('/sentry-example-api', route.SentryExampleApi);
 

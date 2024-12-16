@@ -1,7 +1,5 @@
 'use client';
 
-// import { OrganizationSwitcher } from '@clerk/nextjs';
-// import { useMutation } from 'convex/react';
 import {
   BoldIcon,
   FileIcon,
@@ -25,6 +23,8 @@ import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import { BsFilePdf } from 'react-icons/bs';
 
+import { useCreateDocument } from '@/common/api/documents';
+import { UserButton } from '@/common/components/elements';
 // import { RemoveDialog } from '@/components/remove-dialog';
 // import { RenameDialog } from '@/components/rename-dialog';
 import {
@@ -39,37 +39,39 @@ import {
   MenubarSubTrigger,
   MenubarTrigger,
 } from '@/common/components/ui/menubar';
-import { useEditorStore } from '@/common/hooks';
+import { useEditorStore, useWorkspaceId } from '@/common/hooks';
+import { type Document } from '@/common/types/documents';
 
 import DocumentInput from './DocumentInput';
-import { UserButton } from '../elements';
 
 // import { Avatars } from './avatars';
-// import { DocumentInput } from './document-input';
 // import { Inbox } from './inbox';
-// import { api } from '../../../../convex/_generated/api';
-// import { Doc } from '../../../../convex/_generated/dataModel';
 
-// interface NavbarProps {
-//   data: Doc<'documents'>;
-// }
+interface NavbarProps {
+  data: Document;
+}
 
-// const Navbar:React.FC<NavbarProps> = ({ data }) => {
-const Navbar: React.FC = () => {
+const Navbar: React.FC<NavbarProps> = ({ data }) => {
   const router = useRouter();
   const { editor } = useEditorStore();
-  // const mutation = useMutation(api.documents.create);
+  const { mutate } = useCreateDocument();
+  const workspaceId = useWorkspaceId();
 
   const onNewDocument = () => {
-    // mutation({
-    //   title: 'Untitled document',
-    //   initialContent: '',
-    // })
-    //   .catch(() => toast.error('Something went wrong'))
-    //   .then((id) => {
-    //     toast.success('Document created');
-    //     router.push(`/documents/${id}`);
-    //   });
+    mutate(
+      {
+        form: {
+          title: 'Untitled document',
+          initialContent: '',
+          workspaceId,
+        },
+      },
+      {
+        onSuccess: ({ data }) => {
+          router.push(`/workspaces/${workspaceId}/documents/${data.$id}`);
+        },
+      }
+    );
   };
 
   const insertTable = ({ rows, cols }: { rows: number; cols: number }) => {
@@ -95,7 +97,7 @@ const Navbar: React.FC = () => {
     const blob = new Blob([JSON.stringify(content)], {
       type: 'application/json',
     });
-    // onDownload(blob, `${data.title}.json`);
+    onDownload(blob, `${data.title}.json`);
   };
 
   const onSaveHTML = () => {
@@ -105,7 +107,7 @@ const Navbar: React.FC = () => {
     const blob = new Blob([content], {
       type: 'text/html',
     });
-    // onDownload(blob, `${data.title}.html`);
+    onDownload(blob, `${data.title}.html`);
   };
 
   const onSaveText = () => {
@@ -115,7 +117,7 @@ const Navbar: React.FC = () => {
     const blob = new Blob([content], {
       type: 'text/plain',
     });
-    // onDownload(blob, `${data.title}.txt`);
+    onDownload(blob, `${data.title}.txt`);
   };
 
   return (
@@ -125,8 +127,7 @@ const Navbar: React.FC = () => {
           <Image src="/logo.svg" alt="Logo" width={36} height={36} />
         </Link>
         <div className="flex flex-col">
-          {/* <DocumentInput title={data.title} id={data._id} /> */}
-          <DocumentInput />
+          <DocumentInput title={data.title} id={data.$id} />
           <div className="flex">
             <Menubar className="h-auto border-none bg-transparent p-0 shadow-none">
               <MenubarMenu>
@@ -302,12 +303,6 @@ const Navbar: React.FC = () => {
       <div className="flex items-center gap-3 pl-6">
         {/* <Avatars />
         <Inbox /> */}
-        {/* <OrganizationSwitcher
-          afterCreateOrganizationUrl="/"
-          afterLeaveOrganizationUrl="/"
-          afterSelectOrganizationUrl="/"
-          afterSelectPersonalUrl="/"
-        />*/}
         <UserButton />
       </div>
     </nav>

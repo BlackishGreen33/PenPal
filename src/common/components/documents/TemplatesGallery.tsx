@@ -4,6 +4,7 @@
 import { useRouter } from 'next/navigation';
 import { useState } from 'react';
 
+import { useCreateDocument } from '@/common/api/documents';
 import {
   Carousel,
   CarouselContent,
@@ -12,26 +13,37 @@ import {
   CarouselPrevious,
 } from '@/common/components/ui/carousel';
 import { templates } from '@/common/constants';
+import { useWorkspaceId } from '@/common/hooks';
 import { cn } from '@/common/utils';
-
-// import { api } from "../../../convex/_generated/api";
 
 const TemplatesGallery: React.FC = () => {
   const router = useRouter();
-  // const create = useMutation(api.documents.create);
+  const { mutate } = useCreateDocument();
   const [isCreating, setIsCreating] = useState(false);
+  const workspaceId = useWorkspaceId();
 
   const onTemplateClick = (title: string, initialContent: string) => {
     setIsCreating(true);
-    // create({ title, initialContent })
-    //   .catch(() => toast.error("Something went wrong"))
-    //   .then((documentId) => {
-    //     toast.success("Document created")
-    //     router.push(`/documents/${documentId}`);
-    //   })
-    //   .finally(() => {
-    //     setIsCreating(false);
-    //   });
+    mutate(
+      {
+        form: {
+          title,
+          initialContent,
+          workspaceId,
+        },
+      },
+      {
+        onSuccess: ({ data }) => {
+          router.push(`/workspaces/${workspaceId}/documents/${data.$id}`);
+        },
+        onError: () => {
+          setIsCreating(false);
+        },
+        onSettled: () => {
+          setIsCreating(false);
+        },
+      }
+    );
   };
 
   return (

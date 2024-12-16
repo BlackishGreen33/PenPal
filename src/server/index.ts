@@ -1,4 +1,5 @@
 export { default as Auth } from './auth';
+export { default as Documents } from './documents';
 export { default as Files } from './files';
 export { default as Members } from './members';
 export { default as Messages } from './messages';

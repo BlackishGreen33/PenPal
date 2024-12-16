@@ -6,7 +6,7 @@ export const templates = [
   {
     id: 'blank',
     label: '空白文档',
-    imageUrl: '/blank-document.svg',
+    imageUrl: '/assets/blank-document.svg',
     initialContent: '',
   },
   {

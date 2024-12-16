@@ -1,17 +1,12 @@
 import { NextPage } from 'next';
 
-import { HomeNav, TemplatesGallery } from '@/common/components/documents';
-
-// import { useSearchParam } from '@/common/hooks';
+import {
+  DocumentsTable,
+  HomeNav,
+  TemplatesGallery,
+} from '@/common/components/documents';
 
 const page: NextPage = () => {
-  // const [search] = useSearchParam();
-  // const { results, status, loadMore } = usePaginatedQuery(
-  //   api.documents.get,
-  //   { search },
-  //   { initialNumItems: 5 }
-  // );
-
   return (
     <div className="flex min-h-screen flex-col">
       <div className="h-16 p-4">
@@ -19,11 +14,7 @@ const page: NextPage = () => {
       </div>
       <div className="mt-16">
         <TemplatesGallery />
-        {/*   <DocumentsTable
-          documents={results}
-          loadMore={loadMore}
-          status={status}
-        /> */}
+        <DocumentsTable />
       </div>
     </div>
   );

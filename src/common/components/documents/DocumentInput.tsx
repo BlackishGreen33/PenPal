@@ -11,16 +11,15 @@ import { useDebounce } from '@/common/hooks';
 // import { api } from '../../../../convex/_generated/api';
 // import { Id } from '../../../../convex/_generated/dataModel';
 
-// interface DocumentInputProps {
-//   // title: string;
-//   // id: Id<'documents'>;
-// }
+interface DocumentInputProps {
+  title: string;
+  id: string;
+}
 
-// const DocumentInput: React.FC<DocumentInputProps> = ({ title, id }) => {
-const DocumentInput: React.FC = () => {
+const DocumentInput: React.FC<DocumentInputProps> = ({ title, id }) => {
   // const status = useStatus();
 
-  // const [value, setValue] = useState(title);
+  const [value, setValue] = useState(title);
   const [isPending, setIsPending] = useState(false);
   const [isEditing, setIsEditing] = useState(false);
 
@@ -29,7 +28,7 @@ const DocumentInput: React.FC = () => {
   // const mutate = useMutation(api.documents.updateById);
 
   const debouncedUpdate = useDebounce((newValue: string) => {
-    // if (newValue === title) return;
+    if (newValue === title) return;
 
     setIsPending(true);
     // mutate({ id, title: newValue })
@@ -40,7 +39,7 @@ const DocumentInput: React.FC = () => {
 
   const onChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const newValue = e.target.value;
-    // setValue(newValue);
+    setValue(newValue);
     debouncedUpdate(newValue);
   };
 
@@ -66,11 +65,11 @@ const DocumentInput: React.FC = () => {
       {isEditing ? (
         <form onSubmit={handleSubmit} className="relative w-fit max-w-[50ch]">
           <span className="invisible whitespace-pre px-1.5 text-lg">
-            {/* {value || ' '} */}
+            {value || ' '}
           </span>
           <input
             ref={inputRef}
-            // value={value}
+            value={value}
             onChange={onChange}
             onBlur={() => setIsEditing(false)}
             className="absolute inset-0 truncate bg-transparent px-1.5 text-lg text-black"
@@ -86,7 +85,7 @@ const DocumentInput: React.FC = () => {
           }}
           className="cursor-pointer truncate px-1.5 text-lg"
         >
-          {/* {title} */}
+          {title}
         </span>
       )}
       {showError && <BsCloudSlash className="size-4" />}
