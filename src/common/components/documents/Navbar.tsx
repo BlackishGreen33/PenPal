@@ -25,8 +25,6 @@ import { BsFilePdf } from 'react-icons/bs';
 
 import { useCreateDocument } from '@/common/api/documents';
 import { UserButton } from '@/common/components/elements';
-// import { RemoveDialog } from '@/components/remove-dialog';
-// import { RenameDialog } from '@/components/rename-dialog';
 import {
   Menubar,
   MenubarContent,
@@ -42,6 +40,7 @@ import {
 import { useEditorStore, useWorkspaceId } from '@/common/hooks';
 import { type Document } from '@/common/types/documents';
 
+import { RemoveDialog, RenameDialog } from '.';
 import DocumentInput from './DocumentInput';
 
 // import { Avatars } from './avatars';
@@ -164,24 +163,24 @@ const Navbar: React.FC<NavbarProps> = ({ data }) => {
                     新文档
                   </MenubarItem>
                   <MenubarSeparator />
-                  {/* <RenameDialog documentId={data._id} initialTitle={data.title}> */}
-                  <MenubarItem
-                    onClick={(e) => e.stopPropagation()}
-                    onSelect={(e) => e.preventDefault()}
-                  >
-                    <FilePenIcon className="mr-2 size-4" />
-                    重新命名
-                  </MenubarItem>
-                  {/* </RenameDialog> */}
-                  {/* <RemoveDialog documentId={data._id}> */}
-                  <MenubarItem
-                    onClick={(e) => e.stopPropagation()}
-                    onSelect={(e) => e.preventDefault()}
-                  >
-                    <TrashIcon className="mr-2 size-4" />
-                    删除
-                  </MenubarItem>
-                  {/* </RemoveDialog> */}
+                  <RenameDialog documentId={data.$id} initialTitle={data.title}>
+                    <MenubarItem
+                      onClick={(e) => e.stopPropagation()}
+                      onSelect={(e) => e.preventDefault()}
+                    >
+                      <FilePenIcon className="mr-2 size-4" />
+                      重新命名
+                    </MenubarItem>
+                  </RenameDialog>
+                  <RemoveDialog documentId={data.$id}>
+                    <MenubarItem
+                      onClick={(e) => e.stopPropagation()}
+                      onSelect={(e) => e.preventDefault()}
+                    >
+                      <TrashIcon className="mr-2 size-4" />
+                      删除
+                    </MenubarItem>
+                  </RemoveDialog>
                   <MenubarSeparator />
                   <MenubarItem onClick={() => window.print()}>
                     <PrinterIcon className="mr-2 size-4" />

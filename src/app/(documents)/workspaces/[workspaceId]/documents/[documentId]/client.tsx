@@ -4,10 +4,7 @@ import { useGetDocument } from '@/common/api/documents';
 import { Editor, Navbar, Toolbar } from '@/common/components/documents';
 import { PageError, PageLoader } from '@/common/components/elements';
 
-// import { Preloaded, usePreloadedQuery } from "convex/react";
-
 // import { Room } from "./room";
-// import { api } from "../../../../convex/_generated/api";
 
 interface DocumentProps {
   documentId: string;

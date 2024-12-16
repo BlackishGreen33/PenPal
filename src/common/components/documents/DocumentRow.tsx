@@ -1,3 +1,5 @@
+'use client';
+
 import { format } from 'date-fns';
 import { Building2Icon, CircleUserIcon } from 'lucide-react';
 import { useRouter } from 'next/navigation';
@@ -7,7 +9,7 @@ import { TableCell, TableRow } from '@/common/components/ui/table';
 import { useWorkspaceId } from '@/common/hooks';
 import { type Document } from '@/common/types/documents';
 
-import DocumentMenu from './DocumentMenu';
+import { DocumentMenu } from '.';
 
 interface DocumentRowProps {
   document: Document;
@@ -41,7 +43,7 @@ const DocumentRow: React.FC<DocumentRowProps> = ({ document }) => {
       </TableCell>
       <TableCell className="flex justify-end">
         <DocumentMenu
-          documentId={document._id}
+          documentId={document.$id}
           title={document.title}
           onNewTab={() =>
             window.open(

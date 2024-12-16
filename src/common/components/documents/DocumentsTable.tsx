@@ -16,7 +16,7 @@ import {
 import { useWorkspaceId } from '@/common/hooks';
 import { type Document } from '@/common/types/documents';
 
-import DocumentRow from './DocumentRow';
+import { DocumentRow } from '.';
 
 const DocumentsTable: React.FC = () => {
   const [documents, setDocuments] = useState<Document[]>();
@@ -45,7 +45,7 @@ const DocumentsTable: React.FC = () => {
         <Table>
           <TableHeader>
             <TableRow className="border-none hover:bg-transparent">
-              <TableHead>名称</TableHead>
+              <TableHead className="whitespace-nowrap">名称</TableHead>
               <TableHead>&nbsp;</TableHead>
               <TableHead className="hidden md:table-cell">分享</TableHead>
               <TableHead className="hidden md:table-cell">创建于</TableHead>

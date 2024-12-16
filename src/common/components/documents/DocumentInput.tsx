@@ -1,15 +1,12 @@
 'use client';
 
 // import { useStatus } from '@liveblocks/react';
-// import { useMutation } from 'convex/react';
 import { LoaderIcon } from 'lucide-react';
 import { useRef, useState } from 'react';
 import { BsCloudCheck, BsCloudSlash } from 'react-icons/bs';
 
-import { useDebounce } from '@/common/hooks';
-
-// import { api } from '../../../../convex/_generated/api';
-// import { Id } from '../../../../convex/_generated/dataModel';
+import { useUpdateDocument } from '@/common/api/documents';
+import { useDebounce, useWorkspaceId } from '@/common/hooks';
 
 interface DocumentInputProps {
   title: string;
@@ -20,21 +17,23 @@ const DocumentInput: React.FC<DocumentInputProps> = ({ title, id }) => {
   // const status = useStatus();
 
   const [value, setValue] = useState(title);
-  const [isPending, setIsPending] = useState(false);
   const [isEditing, setIsEditing] = useState(false);
 
   const inputRef = useRef<HTMLInputElement>(null);
 
-  // const mutate = useMutation(api.documents.updateById);
+  const { mutate, isPending } = useUpdateDocument();
+  const workspaceId = useWorkspaceId();
 
   const debouncedUpdate = useDebounce((newValue: string) => {
     if (newValue === title) return;
 
-    setIsPending(true);
-    // mutate({ id, title: newValue })
-    //   .then(() => toast.success('Document updated'))
-    //   .catch(() => toast.error('Something went wrong'))
-    //   .finally(() => setIsPending(false));
+    mutate({
+      param: { documentId: id },
+      form: {
+        title,
+        workspaceId,
+      },
+    });
   });
 
   const onChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -46,14 +45,20 @@ const DocumentInput: React.FC<DocumentInputProps> = ({ title, id }) => {
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
-    setIsPending(true);
-    // mutate({ id, title: value })
-    //   .then(() => {
-    //     toast.success('Document updated');
-    //     setIsEditing(false);
-    //   })
-    //   .catch(() => toast.error('Something went wrong'))
-    //   .finally(() => setIsPending(false));
+    mutate(
+      {
+        param: { documentId: id },
+        form: {
+          title,
+          workspaceId,
+        },
+      },
+      {
+        onSuccess: () => {
+          setIsEditing(false);
+        },
+      }
+    );
   };
 
   const showLoader =

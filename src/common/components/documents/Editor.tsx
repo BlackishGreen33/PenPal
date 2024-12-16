@@ -26,7 +26,7 @@ import {
   LineHeightExtension,
 } from '@/common/libs/extensions';
 
-import Ruler from './Ruler';
+import { Ruler } from '.';
 // import { Threads } from './threads';
 
 interface EditorProps {

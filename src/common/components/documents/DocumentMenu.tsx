@@ -1,4 +1,9 @@
-import { ExternalLinkIcon, MoreVertical } from 'lucide-react';
+import {
+  ExternalLinkIcon,
+  FilePenIcon,
+  MoreVertical,
+  TrashIcon,
+} from 'lucide-react';
 
 import { Button } from '@/common/components/ui/button';
 import {
@@ -7,8 +12,8 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from '@/common/components/ui/dropdown-menu';
-// import { RemoveDialog } from '@/commmon/components/remove-dialog';
-// import { RenameDialog } from '@/common/components/rename-dialog';
+
+import { RemoveDialog, RenameDialog } from '.';
 
 interface DocumentMenuProps {
   documentId: string;
@@ -28,7 +33,7 @@ const DocumentMenu: React.FC<DocumentMenuProps> = ({
       </Button>
     </DropdownMenuTrigger>
     <DropdownMenuContent>
-      {/* <RenameDialog documentId={documentId} initialTitle={title}>
+      <RenameDialog documentId={documentId} initialTitle={title}>
         <DropdownMenuItem
           onSelect={(e) => e.preventDefault()}
           onClick={(e) => e.stopPropagation()}
@@ -45,7 +50,7 @@ const DocumentMenu: React.FC<DocumentMenuProps> = ({
           <TrashIcon className="mr-2 size-4" />
           删除
         </DropdownMenuItem>
-      </RemoveDialog> */}
+      </RemoveDialog>
       <DropdownMenuItem onClick={() => onNewTab(documentId)}>
         <ExternalLinkIcon className="mr-2 size-4" />
         在新分页中开启
