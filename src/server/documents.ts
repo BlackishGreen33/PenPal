@@ -1,6 +1,7 @@
 import { zValidator } from '@hono/zod-validator';
 import { Hono } from 'hono';
 import { ID, Query } from 'node-appwrite';
+import { z } from 'zod';
 
 import { DATABASE_ID, DOCUMENTS_ID } from '@/common/configs';
 import sessionMiddleware from '@/common/libs/session-middleware';
@@ -88,6 +89,28 @@ const Documents = new Hono()
 
     return c.json({ data: document });
   })
+  .get(
+    '/roomIds',
+    sessionMiddleware,
+    zValidator('query', z.object({ roomIds: z.string().array() })),
+    async (c) => {
+      const databases = c.get('databases');
+      const { roomIds } = c.req.valid('query');
+
+      const mergeDocuments: Document[] = [];
+
+      for (const roomId of roomIds) {
+        const documents = await databases.listDocuments<Document>(
+          DATABASE_ID,
+          DOCUMENTS_ID,
+          [Query.equal('roomId', roomId), Query.orderDesc('$createdAt')]
+        );
+        mergeDocuments.push(...documents.documents);
+      }
+
+      return c.json({ data: mergeDocuments });
+    }
+  )
   .post(
     '/',
     sessionMiddleware,
@@ -122,6 +145,57 @@ const Documents = new Hono()
       return c.json({ data: document });
     }
   )
+  // .post(
+  //   '/liveblocks-auth',
+  //   sessionMiddleware,
+  //   zValidator('form', z.object({ room: z.string(), workspaceId: z.string() })),
+  //   async (c) => {
+  //     const user = c.get('user');
+  //     const databases = c.get('databases');
+
+  //     const { room, workspaceId } = c.req.valid('form');
+  //     const documents = await databases.listDocuments<Document>(
+  //       DATABASE_ID,
+  //       DOCUMENTS_ID,
+  //       [Query.equal('roomId', room), Query.orderDesc('$createdAt')]
+  //     );
+  //     if (!documents) {
+  //       return c.json({ error: 'Unathorized' }, 401);
+  //     }
+  //     const document = documents.documents[0];
+
+  //     const isOwner = document.workspaceId === workspaceId;
+  //     if (!isOwner) {
+  //       return c.json({ error: 'Unauthorized' }, 401);
+  //     }
+
+  //     const member = await getMember({
+  //       databases,
+  //       workspaceId,
+  //       userId: user.$id,
+  //     });
+  //     if (!member) {
+  //       return c.json({ error: 'Unathorized' }, 401);
+  //     }
+
+  //     const name = user.name;
+  //     const session = liveblocks.prepareSession(user.$id, {
+  //       userInfo: {
+  //         name,
+  //         avatar: name
+  //           ? name.charAt(0).toUpperCase()
+  //           : (user.email.charAt(0).toUpperCase() ?? 'U'),
+  //         color: getUserColor(user.$id),
+  //         id: user.$id,
+  //         email: user.email,
+  //       },
+  //     });
+  //     session.allow(room, session.FULL_ACCESS);
+  //     const { body, status } = await session.authorize();
+
+  //     return c.json({ data: body }, status as StatusCode);
+  //   }
+  // )
   .patch(
     '/:documentId',
     sessionMiddleware,

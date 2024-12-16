@@ -1,6 +1,6 @@
 'use client';
 
-// import { useStatus } from '@liveblocks/react';
+import { useStatus } from '@liveblocks/react';
 import { LoaderIcon } from 'lucide-react';
 import { useRef, useState } from 'react';
 import { BsCloudCheck, BsCloudSlash } from 'react-icons/bs';
@@ -14,7 +14,7 @@ interface DocumentInputProps {
 }
 
 const DocumentInput: React.FC<DocumentInputProps> = ({ title, id }) => {
-  // const status = useStatus();
+  const status = useStatus();
 
   const [value, setValue] = useState(title);
   const [isEditing, setIsEditing] = useState(false);

@@ -2,6 +2,8 @@ import type { Metadata } from 'next';
 import { Inter as FontSans } from 'next/font/google';
 
 import '@/common/styles/globals.scss';
+import '@liveblocks/react-tiptap/styles.css';
+import '@liveblocks/react-ui/styles.css';
 import 'react-loading-skeleton/dist/skeleton.css';
 import 'simplebar-react/dist/simplebar.min.css';
 
@@ -24,6 +26,20 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const chatbotScript = `
+<script>
+window.embeddedChatbotConfig = {
+chatbotId: "yywnk94ZYc4X6DzPiNKFv",
+domain: "www.chatbase.co"
+}
+</script>
+<script
+src="https://www.chatbase.co/embed.min.js"
+chatbotId="yywnk94ZYc4X6DzPiNKFv"
+domain="www.chatbase.co"
+defer>
+</script>
+`;
   return (
     <html lang="en" suppressHydrationWarning>
       <body
@@ -33,6 +49,7 @@ export default function RootLayout({
           <Toaster />
           {children}
         </Provider>
+        <div dangerouslySetInnerHTML={{ __html: chatbotScript }} />
       </body>
     </html>
   );

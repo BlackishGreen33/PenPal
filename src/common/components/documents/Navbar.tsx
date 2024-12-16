@@ -40,11 +40,7 @@ import {
 import { useEditorStore, useWorkspaceId } from '@/common/hooks';
 import { type Document } from '@/common/types/documents';
 
-import { RemoveDialog, RenameDialog } from '.';
-import DocumentInput from './DocumentInput';
-
-// import { Avatars } from './avatars';
-// import { Inbox } from './inbox';
+import { Avatars, DocumentInput, RemoveDialog, RenameDialog } from '.';
 
 interface NavbarProps {
   data: Document;
@@ -300,8 +296,8 @@ const Navbar: React.FC<NavbarProps> = ({ data }) => {
         </div>
       </div>
       <div className="flex items-center gap-3 pl-6">
-        {/* <Avatars />
-        <Inbox /> */}
+        <Avatars />
+        {/* <Inbox /> */}
         <UserButton />
       </div>
     </nav>

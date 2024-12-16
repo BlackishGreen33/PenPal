@@ -1,5 +1,6 @@
 'use client';
 
+// import { useStorage } from '@liveblocks/react';
 // import { useLiveblocksExtension } from '@liveblocks/react-tiptap';
 import { Color } from '@tiptap/extension-color';
 import FontFamily from '@tiptap/extension-font-family';
@@ -27,7 +28,6 @@ import {
 } from '@/common/libs/extensions';
 
 import { Ruler } from '.';
-// import { Threads } from './threads';
 
 interface EditorProps {
   initialContent?: string | undefined;
@@ -121,7 +121,7 @@ const Editor: React.FC<EditorProps> = ({ initialContent }) => {
       <Ruler />
       <div className="mx-auto flex w-[816px] min-w-max justify-center py-4 print:w-full print:min-w-0 print:py-0">
         <EditorContent editor={editor} />
-        {/*<Threads editor={editor} /> */}
+        {/* <Threads editor={editor} /> */}
       </div>
     </div>
   );
