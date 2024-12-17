@@ -1,8 +1,8 @@
 <div align="center">
   <img width="130" src="https://github.com/BlackishGreen33/PenPal/blob/main/public/assets/images/logo.png" alt="PenPal Logo">
   <h1 align="center">PenPal</h1>
-  <h3>智能协作，书写未来</h3>
-  <a href="https://github.com/BlackishGreen33/PenPal"><strong>探索项目文档 »</strong></a>
+  <h3>Intelligent Collaboration, Writing the Future</h3>
+  <a href="https://github.com/BlackishGreen33/PenPal"><strong>Explore Project Documentation »</strong></a>
   <br />
   <br />
 
@@ -10,68 +10,124 @@
 ![language](https://img.shields.io/github/languages/top/BlackishGreen33/PenPal)
 ![last](https://img.shields.io/github/last-commit/BlackishGreen33/PenPal)
 
-<a href="" target="_blank">在线体验</a>
+<a href="https://penpal-livedocs.vercel.app/" target="_blank">Live Experience</a>
 ·
-<a href="https://github.com/BlackishGreen33/PenPal/issues">报告Bug</a>
+<a href="https://github.com/BlackishGreen33/PenPal/issues">Report a Bug</a>
 ·
-<a href="https://github.com/BlackishGreen33/PenPal/issues">提出新特性</a>
+<a href="https://github.com/BlackishGreen33/PenPal/issues">Request a Feature</a>
 
 </div>
 
-## 🔖 项目导览
+## 🔖 Project Overview
 
-### ✨ 現有功能
+[中文文檔](./README-zh.md) | [README in English](./README.md)
 
-- (待更新)
+### ✨ Existing Features
 
-### ✒️ 引用技術
+- Create custom team workspaces
+- Team member invitation and permission management (including `Owner`, `Administrator`, and `General Member`)
+- Create projects and assign tasks
+- Task flow and task management panel
+- Build a team document library and real-time collaborative editing
+- Use existing documents and AI intelligent retrieval Q&A in the document library
+- Point system and comment system
 
-- **框架**: [Next.js](https://nextjs.org)
-- **样式**: [Tailwind CSS](https://www.tailwindcss.cn/)
-- (待更新)
+### ✒️ Technologies Used
 
-### 📋 提交规范
+- **Development Framework**: [Next.js](https://nextjs.org/)
+- **Frontend Framework**: [React](https://react.dev/)
+- **Styling Framework**: [Tailwind CSS](https://tailwindcss.com/)
+- **Component Library**: [shadcn/ui](https://ui.shadcn.com/)
+- **State Management**: [React Query](https://tanstack.com/query/latest/docs/framework/react/overview) & [zustand](https://zustand-demo.pmnd.rs/)
+- **Text Editing**: [liveblocks](https://liveblocks.io/) & [Tiptap](https://tiptap.dev/)
+- **Backend Framework**: [Hono](https://hono.dev/)
+- **Primary Database**: [Appwrite](https://appwrite.io/)
+- **File Storage**: [uploadthing](https://uploadthing.com/)
+- **Key-Value Database**: [upstash](https://upstash.com/)
+- **Vector Database**: [upstash](https://upstash.com/)
+- **Comment System**: [giscus](https://giscus.app/)
 
-- 🎉 init：项目初始化
-- ✨ feat：新增功能（feature）
-- 🐞 fix：修复bug
-- 📃 docs：文档修改
-- 🌈 style：代码样式修改，不影响原代码逻辑
-- ✅ test：测试相关的改动
-- 🔨 refactor：代码重构
-- 🔧 chore：建制过程或辅助工具的变动
+### 📋 Commit Conventions
 
-### 🎯 相容环境
+- 🎉 init: Project initialization
+- ✨ feat: New features (feature)
+- 🐞 fix: Bug fixes
+- 📃 docs: Documentation changes
+- 🌈 style: Code style changes, no logic changes
+- ✅ test: Test-related changes
+- 🔨 refactor: Code refactoring
+- 🔧 chore: Changes in build processes or auxiliary tools
 
-- 现代浏览器（Chrome >= 64, Edge >= 79, Firefox >= 78, Safari >= 12）
+### 🎯 Compatible Environments
 
-### 💻 本地调试
+- Modern browsers (Chrome >= 64, Edge >= 79, Firefox >= 78, Safari >= 12)
+- Project build environment (Node.js >= 18)
 
-记得先配置环境变量：
+### 💻 Local Debugging
+
+Remember to configure environment variables first:
 
 ```env
-NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=
-CLERK_SECRET_KEY=
+NEXT_PUBLIC_APP_URL=
 
-NEXT_PUBLIC_CLERK_SIGN_IN_URL=
-NEXT_PUBLIC_CLERK_SIGN_UP_URL=
+NEXT_PUBLIC_APPWRITE_ENDPOINT=
+NEXT_PUBLIC_APPWRITE_PROJECT=
 
+NEXT_PUBLIC_APPWRITE_DATABASE_ID=
+NEXT_PUBLIC_APPWRITE_WORKSPACES_ID=
+NEXT_PUBLIC_APPWRITE_MEMBERS_ID=
+NEXT_PUBLIC_APPWRITE_PROJECTS_ID=
+NEXT_PUBLIC_APPWRITE_TASKS_ID=
+NEXT_PUBLIC_APPWRITE_USERS_ID=
+NEXT_PUBLIC_APPWRITE_FILES_ID=
+NEXT_PUBLIC_APPWRITE_MESSAGES_ID=
+NEXT_PUBLIC_APPWRITE_SCORES_ID=
+NEXT_PUBLIC_APPWRITE_DOCUMENTS_ID=
+NEXT_PUBLIC_APPWRITE_IMAGES_BUCKET_ID=
+NEXT_PUBLIC_APPWRITE_FILES_BUCKET_ID=
+
+NEXT_APPWRITE_KEY=
+
+UPLOADTHING_TOKEN=
+
+UPSTASH_REDIS_REST_URL=
+UPSTASH_REDIS_REST_TOKEN=
+
+UPSTASH_VECTOR_REST_URL=
+UPSTASH_VECTOR_REST_TOKEN=
+
+QSTASH_URL=
+QSTASH_TOKEN=
+
+QSTASH_CURRENT_SIGNING_KEY=
+QSTASH_NEXT_SIGNING_KEY=
+
+LIVEBLOCKS_PUBLIC_KEY=
 LIVEBLOCKS_SECRET_KEY=
-
-SENTRY_AUTH_TOKEN=
 ```
 
-接着拉取代码和安装依赖：
+Pull the code and switch to the project directory:
 
 ```bash
 $ git clone https://github.com/BlackishGreen33/PenPal.git
 $ cd PenPal
+```
+
+Install dependencies:
+
+```bash
 $ bun install
 $ bun run dev
 ```
 
-### 📝 授权
+Start your debugging journey!
 
-上述文件皆以 MIT 许可授权
+```bash
+$ bun run dev
+```
 
-> 详细之授权请参考 [LICENSE](LICENSE) 文件
+### 📝 Licensing
+
+All the above files are licensed under the MIT License.
+
+> For detailed licensing, please refer to the [LICENSE](LICENSE) file.
