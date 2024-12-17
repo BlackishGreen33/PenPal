@@ -12,7 +12,7 @@ const StandloneLayout: React.FC<StandloneLayoutProps> = ({ children }) => (
     <div className="mx-auto max-w-screen-2xl p-4">
       <nav className="flex h-[73px] items-center justify-between">
         <Link href="/workspaces">
-          <Image src="/logo.svg" alt="Logo" height={56} width={152} />
+          <Image src="/logo-mini.svg" alt="Logo" height={56} width={152} />
         </Link>
         <div className="flex items-center gap-5">
           <ScoreButton />

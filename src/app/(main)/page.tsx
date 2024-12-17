@@ -9,7 +9,7 @@ import { Button, buttonVariants } from '@/common/components/ui/button';
 const HomePage: NextPage = () => (
   <>
     <nav className="flex items-center justify-between px-10 pt-5">
-      <Image src="/logo.svg" alt="logo" width={152} height={56} />
+      <Image src="/logo-full.svg" alt="logo" width={152} height={56} />
       <div className="flex gap-2">
         <Button variant="secondary">
           <Link href="/price">升级</Link>
