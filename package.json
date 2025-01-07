@@ -93,7 +93,7 @@
     "hono": "^4.6.9",
     "jsm-editor": "^0.0.12",
     "langchain": "^0.3.6",
-    "lexical": "^0.19.0",
+    "lexical": "^0.23.0",
     "lucide-react": "^0.456.0",
     "nanoid": "^5.0.8",
     "next": "15.0.2",
