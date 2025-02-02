@@ -34,7 +34,7 @@ importers:
         version: 5.3.2(react-dom@19.0.0-rc-603e6108-20241029(react@19.0.0-rc-603e6108-20241029))(react@19.0.0-rc-603e6108-20241029)
       '@langchain/community':
         specifier: ^0.3.17
-        version: 0.3.19(@browserbasehq/sdk@2.0.0(encoding@0.1.13))(@browserbasehq/stagehand@1.6.0(@playwright/test@1.49.1)(deepmerge@4.3.1)(dotenv@16.4.7)(encoding@0.1.13)(openai@4.76.3(encoding@0.1.13)(zod@3.24.1))(zod@3.24.1))(@ibm-cloud/watsonx-ai@1.3.0)(@langchain/anthropic@0.2.18(encoding@0.1.13)(openai@4.76.3(encoding@0.1.13)(zod@3.24.1)))(@langchain/core@0.3.24(openai@4.76.3(encoding@0.1.13)(zod@3.24.1)))(@langchain/mistralai@0.0.28(encoding@0.1.13)(openai@4.76.3(encoding@0.1.13)(zod@3.24.1)))(@pinecone-database/pinecone@4.0.0)(@upstash/ratelimit@2.0.5(@upstash/redis@1.34.3))(@upstash/redis@1.34.3)(@upstash/vector@1.1.7)(axios@1.7.4)(cheerio@1.0.0)(crypto-js@4.2.0)(d3-dsv@3.0.1)(encoding@0.1.13)(html-to-text@9.0.5)(ibm-cloud-sdk-core@5.1.0)(ignore@5.3.2)(jsonwebtoken@9.0.2)(lodash@4.17.21)(openai@4.76.3(encoding@0.1.13)(zod@3.24.1))(pdf-parse@1.1.1)(playwright@1.49.1)
+        version: 0.3.19(@browserbasehq/sdk@2.2.0(encoding@0.1.13))(@browserbasehq/stagehand@1.6.0(@playwright/test@1.49.1)(deepmerge@4.3.1)(dotenv@16.4.7)(encoding@0.1.13)(openai@4.76.3(encoding@0.1.13)(zod@3.24.1))(zod@3.24.1))(@ibm-cloud/watsonx-ai@1.3.0)(@langchain/anthropic@0.2.18(encoding@0.1.13)(openai@4.76.3(encoding@0.1.13)(zod@3.24.1)))(@langchain/core@0.3.24(openai@4.76.3(encoding@0.1.13)(zod@3.24.1)))(@langchain/mistralai@0.0.28(encoding@0.1.13)(openai@4.76.3(encoding@0.1.13)(zod@3.24.1)))(@pinecone-database/pinecone@4.0.0)(@upstash/ratelimit@2.0.5(@upstash/redis@1.34.3))(@upstash/redis@1.34.3)(@upstash/vector@1.1.7)(axios@1.7.4)(cheerio@1.0.0)(crypto-js@4.2.0)(d3-dsv@3.0.1)(encoding@0.1.13)(html-to-text@9.0.5)(ibm-cloud-sdk-core@5.1.0)(ignore@5.3.2)(jsonwebtoken@9.0.2)(lodash@4.17.21)(openai@4.76.3(encoding@0.1.13)(zod@3.24.1))(pdf-parse@1.1.1)(playwright@1.49.1)
       '@langchain/core':
         specifier: ^0.3.22
         version: 0.3.24(openai@4.76.3(encoding@0.1.13)(zod@3.24.1))
@@ -67,7 +67,7 @@ importers:
         version: 2.14.0(react@19.0.0-rc-603e6108-20241029)
       '@liveblocks/react-lexical':
         specifier: ^2.12.2
-        version: 2.14.0(@lexical/react@0.19.0(react-dom@19.0.0-rc-603e6108-20241029(react@19.0.0-rc-603e6108-20241029))(react@19.0.0-rc-603e6108-20241029)(yjs@13.6.20))(@lexical/utils@0.19.0)(@lexical/yjs@0.19.0(yjs@13.6.20))(@types/react-dom@18.3.5(@types/react@18.3.17))(@types/react@18.3.17)(lexical@0.19.0)(react-dom@19.0.0-rc-603e6108-20241029(react@19.0.0-rc-603e6108-20241029))(react@19.0.0-rc-603e6108-20241029)
+        version: 2.14.0(@lexical/react@0.19.0(react-dom@19.0.0-rc-603e6108-20241029(react@19.0.0-rc-603e6108-20241029))(react@19.0.0-rc-603e6108-20241029)(yjs@13.6.20))(@lexical/utils@0.19.0)(@lexical/yjs@0.19.0(yjs@13.6.20))(@types/react-dom@18.3.5(@types/react@18.3.17))(@types/react@18.3.17)(lexical@0.23.1)(react-dom@19.0.0-rc-603e6108-20241029(react@19.0.0-rc-603e6108-20241029))(react@19.0.0-rc-603e6108-20241029)
       '@liveblocks/react-tiptap':
         specifier: ^2.12.2
         version: 2.14.0(n2ouelim5tsxho2zv7fb5r6fuu)
@@ -193,7 +193,7 @@ importers:
         version: 7.1.3(next@15.0.2(@babel/core@7.26.0)(@opentelemetry/api@1.9.0)(@playwright/test@1.49.1)(babel-plugin-react-compiler@19.0.0-beta-6fc168f-20241025)(react-dom@19.0.0-rc-603e6108-20241029(react@19.0.0-rc-603e6108-20241029))(react@19.0.0-rc-603e6108-20241029)(sass@1.83.0))(react@19.0.0-rc-603e6108-20241029)(uploadthing@7.4.1(next@15.0.2(@babel/core@7.26.0)(@opentelemetry/api@1.9.0)(@playwright/test@1.49.1)(babel-plugin-react-compiler@19.0.0-beta-6fc168f-20241025)(react-dom@19.0.0-rc-603e6108-20241029(react@19.0.0-rc-603e6108-20241029))(react@19.0.0-rc-603e6108-20241029)(sass@1.83.0))(tailwindcss@3.4.16))
       '@upstash/rag-chat':
         specifier: ^2.0.3
-        version: 2.0.3(@browserbasehq/sdk@2.0.0(encoding@0.1.13))(@browserbasehq/stagehand@1.6.0(@playwright/test@1.49.1)(deepmerge@4.3.1)(dotenv@16.4.7)(encoding@0.1.13)(openai@4.76.3(encoding@0.1.13)(zod@3.24.1))(zod@3.24.1))(@ibm-cloud/watsonx-ai@1.3.0)(@langchain/openai@0.3.14(@langchain/core@0.3.24(openai@4.76.3(encoding@0.1.13)(zod@3.24.1)))(encoding@0.1.13))(@pinecone-database/pinecone@4.0.0)(@upstash/ratelimit@2.0.5(@upstash/redis@1.34.3))(@upstash/redis@1.34.3)(@upstash/vector@1.1.7)(axios@1.7.4)(crypto-js@4.2.0)(encoding@0.1.13)(fast-xml-parser@4.5.1)(ibm-cloud-sdk-core@5.1.0)(ignore@5.3.2)(jsonwebtoken@9.0.2)(lodash@4.17.21)(openai@4.76.3(encoding@0.1.13)(zod@3.24.1))(playwright@1.49.1)(react-dom@19.0.0-rc-603e6108-20241029(react@19.0.0-rc-603e6108-20241029))(react@19.0.0-rc-603e6108-20241029)(sswr@2.1.0(svelte@5.14.1))(svelte@5.14.1)(vue@3.5.13(typescript@5.7.2))(zod@3.24.1)
+        version: 2.0.3(@browserbasehq/sdk@2.2.0(encoding@0.1.13))(@browserbasehq/stagehand@1.6.0(@playwright/test@1.49.1)(deepmerge@4.3.1)(dotenv@16.4.7)(encoding@0.1.13)(openai@4.76.3(encoding@0.1.13)(zod@3.24.1))(zod@3.24.1))(@ibm-cloud/watsonx-ai@1.3.0)(@langchain/openai@0.3.14(@langchain/core@0.3.24(openai@4.76.3(encoding@0.1.13)(zod@3.24.1)))(encoding@0.1.13))(@pinecone-database/pinecone@4.0.0)(@upstash/ratelimit@2.0.5(@upstash/redis@1.34.3))(@upstash/redis@1.34.3)(@upstash/vector@1.1.7)(axios@1.7.4)(crypto-js@4.2.0)(encoding@0.1.13)(fast-xml-parser@4.5.1)(ibm-cloud-sdk-core@5.1.0)(ignore@5.3.2)(jsonwebtoken@9.0.2)(lodash@4.17.21)(openai@4.76.3(encoding@0.1.13)(zod@3.24.1))(playwright@1.49.1)(react-dom@19.0.0-rc-603e6108-20241029(react@19.0.0-rc-603e6108-20241029))(react@19.0.0-rc-603e6108-20241029)(sswr@2.1.0(svelte@5.14.1))(svelte@5.14.1)(vue@3.5.13(typescript@5.7.2))(zod@3.24.1)
       '@upstash/redis':
         specifier: ^1.34.3
         version: 1.34.3
@@ -220,13 +220,13 @@ importers:
         version: 4.6.14
       jsm-editor:
         specifier: ^0.0.12
-        version: 0.0.12(@lexical/react@0.19.0(react-dom@19.0.0-rc-603e6108-20241029(react@19.0.0-rc-603e6108-20241029))(react@19.0.0-rc-603e6108-20241029)(yjs@13.6.20))(@lexical/rich-text@0.19.0)(@lexical/selection@0.19.0)(@lexical/utils@0.19.0)(@types/react@18.3.17)(lexical@0.19.0)
+        version: 0.0.12(@lexical/react@0.19.0(react-dom@19.0.0-rc-603e6108-20241029(react@19.0.0-rc-603e6108-20241029))(react@19.0.0-rc-603e6108-20241029)(yjs@13.6.20))(@lexical/rich-text@0.19.0)(@lexical/selection@0.19.0)(@lexical/utils@0.19.0)(@types/react@18.3.17)(lexical@0.23.1)
       langchain:
         specifier: ^0.3.6
         version: 0.3.7(@langchain/anthropic@0.2.18(encoding@0.1.13)(openai@4.76.3(encoding@0.1.13)(zod@3.24.1)))(@langchain/core@0.3.24(openai@4.76.3(encoding@0.1.13)(zod@3.24.1)))(@langchain/mistralai@0.0.28(encoding@0.1.13)(openai@4.76.3(encoding@0.1.13)(zod@3.24.1)))(axios@1.7.4)(cheerio@1.0.0)(encoding@0.1.13)(openai@4.76.3(encoding@0.1.13)(zod@3.24.1))
       lexical:
-        specifier: ^0.19.0
-        version: 0.19.0
+        specifier: ^0.23.1
+        version: 0.23.1
       lucide-react:
         specifier: ^0.456.0
         version: 0.456.0(react@19.0.0-rc-603e6108-20241029)
@@ -578,6 +578,11 @@ packages:
     engines: {node: '>=6.0.0'}
     hasBin: true
 
+  '@babel/parser@7.26.7':
+    resolution: {integrity: sha512-kEvgGGgEjRUutvdVvZhbn/BxVt+5VSpwXz1j3WYXQbXDo8KzFOPNG2GQbdAiNq8g6wn1yKk7C/qrke03a84V+w==}
+    engines: {node: '>=6.0.0'}
+    hasBin: true
+
   '@babel/runtime@7.26.0':
     resolution: {integrity: sha512-FDSOghenHTiToteC/QRlv2q3DhPZ/oOXTBoirfWNx1Cx3TMVcGWQtMMmQcSvb/JjpNeGzx8Pq/b4fKEJuWm1sw==}
     engines: {node: '>=6.9.0'}
@@ -594,8 +599,12 @@ packages:
     resolution: {integrity: sha512-vN5p+1kl59GVKMvTHt55NzzmYVxprfJD+ql7U9NFIfKCBkYE55LYtS+WtPlaYOyzydrKI8Nezd+aZextrd+FMA==}
     engines: {node: '>=6.9.0'}
 
-  '@browserbasehq/sdk@2.0.0':
-    resolution: {integrity: sha512-BdPlZyn0dpXlL70gNK4acpqWIRB+edo2z0/GalQdWghRq8iQjySd9fVIF3evKH1p2wCYekZJRK6tm29YfXB67g==}
+  '@babel/types@7.26.7':
+    resolution: {integrity: sha512-t8kDRGrKXyp6+tjUh7hw2RLyclsW4TRoRvRHtSyAX9Bb5ldlFh+90YAYY6awRXrlB4G5G2izNeGySpATlFzmOg==}
+    engines: {node: '>=6.9.0'}
+
+  '@browserbasehq/sdk@2.2.0':
+    resolution: {integrity: sha512-CWusIff7KenGfMwg/kNnrdOi+1JUIYpj8ZtEciuEUOEQVp3BEYqbaXk4FxCoQPvyO0h4eUVE5Banc9b3GQU01Q==}
 
   '@browserbasehq/stagehand@1.6.0':
     resolution: {integrity: sha512-seDmCtokkCf+5xaJ2IOjxcNAGm5PrOR8m+hgtDuMxfByE9o1pQdFYtNkjDFfI9oBbIB2EF3RQJTxkQHT9s6QRA==}
@@ -1531,6 +1540,7 @@ packages:
 
   '@nextui-org/accordion@2.2.5':
     resolution: {integrity: sha512-u7OXe6W+4JO1REbfC/zyO2B0/bGav6GL17VJa1qp8lT6uQMt3Cn7+vUe28XpIkeTnJv+WMkzWYs2+V/moYq1oQ==}
+    deprecated: This package has been deprecated. Please use @heroui/accordion instead.
     peerDependencies:
       '@nextui-org/system': '>=2.4.0'
       '@nextui-org/theme': '>=2.4.0'
@@ -1540,6 +1550,7 @@ packages:
 
   '@nextui-org/alert@2.2.7':
     resolution: {integrity: sha512-HOIroKCa3z6hE58lAgF+JS8vsNFblOXcuMJwB+92t19q+jkoDCgo7pkPVqi4Hm4MRY2GpUQp+iAGZklA2P4n4Q==}
+    deprecated: This package has been deprecated. Please use @heroui/alert instead.
     peerDependencies:
       '@nextui-org/system': '>=2.4.0'
       '@nextui-org/theme': '>=2.4.0'
@@ -1554,6 +1565,7 @@ packages:
 
   '@nextui-org/autocomplete@2.3.7':
     resolution: {integrity: sha512-bfGM59cKgDQCkKS9TR5zGD3aMNiHD1jLDh9uUciW0ij51CoqRBgvinIjOgocwHDJ0y5GbvijNK9djfYV9RYpSg==}
+    deprecated: This package has been deprecated. Please use @heroui/autocomplete instead.
     peerDependencies:
       '@nextui-org/system': '>=2.4.0'
       '@nextui-org/theme': '>=2.4.0'
@@ -1563,6 +1575,7 @@ packages:
 
   '@nextui-org/avatar@2.2.4':
     resolution: {integrity: sha512-YXEStFlK0/tMK31vzdEMvIYfUUGpHqqmwY1HA17dfKw0iL5UWMWK2lqN+QvBzfQfPTtbvDPW0ZcmyjOYHzx7Aw==}
+    deprecated: This package has been deprecated. Please use @heroui/avatar instead.
     peerDependencies:
       '@nextui-org/system': '>=2.4.0'
       '@nextui-org/theme': '>=2.4.0'
@@ -1571,6 +1584,7 @@ packages:
 
   '@nextui-org/badge@2.2.3':
     resolution: {integrity: sha512-Q1OYR3Kt1VReo/vmNESXea/sIgdQTTav4PgHfESAk6PD9UkBNmT8Xbil1E2glAbglSU3WpqL/uOKEpQANpHVzw==}
+    deprecated: This package has been deprecated. Please use @heroui/badge instead.
     peerDependencies:
       '@nextui-org/system': '>=2.4.0'
       '@nextui-org/theme': '>=2.4.0'
@@ -1579,6 +1593,7 @@ packages:
 
   '@nextui-org/breadcrumbs@2.2.4':
     resolution: {integrity: sha512-C+UyoYt1VFosD3leOrU1C3EsauUmjg+ZJEDCsO8WOlxvo2McEx0jqz9VmAqHCWrsIkPyZGxLfaiuhU8+T2AA6Q==}
+    deprecated: This package has been deprecated. Please use @heroui/breadcrumbs instead.
     peerDependencies:
       '@nextui-org/system': '>=2.4.0'
       '@nextui-org/theme': '>=2.4.0'
@@ -1587,6 +1602,7 @@ packages:
 
   '@nextui-org/button@2.2.7':
     resolution: {integrity: sha512-3o7uAD7nFAUKJkg2PZ5ktJR8qqMrjQgzewXBWfz62RWya/uTFXzqwljy0JYGwq3tfvbmBzA1GGsAZdj5wUEymw==}
+    deprecated: This package has been deprecated. Please use @heroui/button instead.
     peerDependencies:
       '@nextui-org/system': '>=2.4.0'
       '@nextui-org/theme': '>=2.4.0'
@@ -1596,6 +1612,7 @@ packages:
 
   '@nextui-org/calendar@2.2.7':
     resolution: {integrity: sha512-eZ4rmBFqJjmqg0n9F0QlfdfKQgZi4Z63kY0j6NCJ0f7fVtV61GHLNoZjVaaL1HDaMgcH3B7hVUvKtQOgKyzpkw==}
+    deprecated: This package has been deprecated. Please use @heroui/calendar instead.
     peerDependencies:
       '@nextui-org/system': '>=2.4.0'
       '@nextui-org/theme': '>=2.4.0'
@@ -1605,6 +1622,7 @@ packages:
 
   '@nextui-org/card@2.2.7':
     resolution: {integrity: sha512-66GB3+Zw6T1LD2JVMSypSvp8zeiWxb7r+00SmRdN13vf5twUepC1HkfRGOLs0yTqjiSRBSnA0veXl9z23dszbw==}
+    deprecated: This package has been deprecated. Please use @heroui/card instead.
     peerDependencies:
       '@nextui-org/system': '>=2.4.0'
       '@nextui-org/theme': '>=2.4.0'
@@ -1614,6 +1632,7 @@ packages:
 
   '@nextui-org/checkbox@2.3.6':
     resolution: {integrity: sha512-QiJuRNllmRACf2rDrA6/hT8o46PjC3P6ttzJxz1OeUH6ME8MUY+EyH0S+C4C+cWoBv4UC2JS5S5QXalQ0WSViw==}
+    deprecated: This package has been deprecated. Please use @heroui/checkbox instead.
     peerDependencies:
       '@nextui-org/system': '>=2.4.0'
       '@nextui-org/theme': '>=2.4.0'
@@ -1622,6 +1641,7 @@ packages:
 
   '@nextui-org/chip@2.2.4':
     resolution: {integrity: sha512-7fii39lPei8o/3TwdmB8e8W/ZS0FdsQxSHQKXDQpB4meS3Q7CC9dxV1MtwiniE3SXOnSQY7ChvGmu6wkGRFOOA==}
+    deprecated: This package has been deprecated. Please use @heroui/chip instead.
     peerDependencies:
       '@nextui-org/system': '>=2.4.0'
       '@nextui-org/theme': '>=2.4.0'
@@ -1630,6 +1650,7 @@ packages:
 
   '@nextui-org/code@2.2.4':
     resolution: {integrity: sha512-p39bvfI/8sPbau5v+JHZG4CVirVeXCrHXm25qpbwPhgm2TxcuPftuoJb5JQNF4x0j0ONLaHnz7Ilr/Ai2vo12w==}
+    deprecated: This package has been deprecated. Please use @heroui/code instead.
     peerDependencies:
       '@nextui-org/theme': '>=2.4.0'
       react: '>=18 || >=19.0.0-rc.0'
@@ -1637,6 +1658,7 @@ packages:
 
   '@nextui-org/date-input@2.3.6':
     resolution: {integrity: sha512-xLgDXAtyrgX1LbGOw3egKV2armcNeNQAnsdycTjy5nxDkcU6PqtJ7G3Oe28/MW7l0qTxUT7/JNnrbKCtxiap/w==}
+    deprecated: This package has been deprecated. Please use @heroui/date-input instead.
     peerDependencies:
       '@nextui-org/system': '>=2.4.0'
       '@nextui-org/theme': '>=2.4.0'
@@ -1645,6 +1667,7 @@ packages:
 
   '@nextui-org/date-picker@2.3.7':
     resolution: {integrity: sha512-AgUMw+pvlB6d5+LXQMZDxZhjzNFtCP/ONIZlK+kH/+X6N1JL5s7avfK0TSlFfV1x8yng6xtWBNl1vjy/ymLHpA==}
+    deprecated: This package has been deprecated. Please use @heroui/date-picker instead.
     peerDependencies:
       '@nextui-org/system': '>=2.4.0'
       '@nextui-org/theme': '>=2.4.0'
@@ -1654,6 +1677,7 @@ packages:
 
   '@nextui-org/divider@2.2.4':
     resolution: {integrity: sha512-fjFeHS9x4I1TgMBKS3uuBP9XXTV+I71+Wj5jJzTf5c0bqqvTQpL3WsrfuxIT0Tfmi5gpPRafSeTBt5vOPCkdgA==}
+    deprecated: This package has been deprecated. Please use @heroui/divider instead.
     peerDependencies:
       '@nextui-org/theme': '>=2.4.0'
       react: '>=18 || >=19.0.0-rc.0'
@@ -1666,6 +1690,7 @@ packages:
 
   '@nextui-org/drawer@2.2.5':
     resolution: {integrity: sha512-T3J1B/IX+ZPdllsNZbGoKry/jPKlniRyFGEfvY/yPpR88sEwDMMkAZVosZAx5Q+2KOiweq2jia+diGlFz+D59Q==}
+    deprecated: This package has been deprecated. Please use @heroui/drawer instead.
     peerDependencies:
       '@nextui-org/system': '>=2.4.0'
       '@nextui-org/theme': '>=2.4.0'
@@ -1674,6 +1699,7 @@ packages:
 
   '@nextui-org/dropdown@2.3.7':
     resolution: {integrity: sha512-7AWurG9ImHqpJzrhlZLtEbEdBTSze7wzaz1dXLiupdfkE8NV3KVT/2sBv+WqlddlMWxEedEiaGrZWhvODOkkdQ==}
+    deprecated: This package has been deprecated. Please use @heroui/dropdown instead.
     peerDependencies:
       '@nextui-org/system': '>=2.4.0'
       '@nextui-org/theme': '>=2.4.0'
@@ -1683,6 +1709,7 @@ packages:
 
   '@nextui-org/form@2.1.6':
     resolution: {integrity: sha512-bQ4TkmHcuAEvu2UKoRIYXwvZmjaAxhY8sFYqaX9Ma1Jis1tHeu9ScxhFXDKBN1q7RiNoRdWU6o9lBcFrvHEB6w==}
+    deprecated: This package has been deprecated. Please use @heroui/form instead.
     peerDependencies:
       '@nextui-org/system': '>=2.4.0'
       '@nextui-org/theme': '>=2.4.0'
@@ -1698,6 +1725,7 @@ packages:
 
   '@nextui-org/image@2.2.3':
     resolution: {integrity: sha512-erd+c7uA4FRoOOdwS6di97VVJSBbs8mXv9cOY2kZHU830e2//TKlNaE4nC7xR9ApFEAtfXjoRzSyUCIlyXmD9Q==}
+    deprecated: This package has been deprecated. Please use @heroui/image instead.
     peerDependencies:
       '@nextui-org/system': '>=2.4.0'
       '@nextui-org/theme': '>=2.4.0'
@@ -1706,6 +1734,7 @@ packages:
 
   '@nextui-org/input-otp@2.1.6':
     resolution: {integrity: sha512-I1f3qJy63N1s+RfyACGs5OYbMvb8glsBaarJ6qrMxjY1k54AIRf0gFGHvR6uDKIDZhUBzGDXo7KvXxJbvkdnHg==}
+    deprecated: This package has been deprecated. Please use @heroui/input-otp instead.
     peerDependencies:
       '@nextui-org/system': '>=2.4.0'
       '@nextui-org/theme': '>=2.4.0'
@@ -1714,6 +1743,7 @@ packages:
 
   '@nextui-org/input@2.4.6':
     resolution: {integrity: sha512-HuDwTarQ6N13CrXNkX/CmvxhdojjI+K5REaB7q9wkkOIs955+0zmdhuZkkt5vfQCmnDes7pY+73vt47NLA8Tqg==}
+    deprecated: This package has been deprecated. Please use @heroui/input instead.
     peerDependencies:
       '@nextui-org/system': '>=2.4.0'
       '@nextui-org/theme': '>=2.4.0'
@@ -1722,6 +1752,7 @@ packages:
 
   '@nextui-org/kbd@2.2.4':
     resolution: {integrity: sha512-hggGQPTiQ2EwU67kdz/dVW6DS4KcMRgbm0ak+3qfHePfvteCHtuCPyI6CgOhymGpQuVoDTYLzKUBXuu5ow65Og==}
+    deprecated: This package has been deprecated. Please use @heroui/kbd instead.
     peerDependencies:
       '@nextui-org/theme': '>=2.4.0'
       react: '>=18 || >=19.0.0-rc.0'
@@ -1729,6 +1760,7 @@ packages:
 
   '@nextui-org/link@2.2.5':
     resolution: {integrity: sha512-ZYDr9lZEmcXLP+fWgiYJi0sabkfCGCWWMdLUiC7fDWyXxLRmCD0AyA0UGP6FMfPAFI96YvUDQEs8HrbNGVXLIQ==}
+    deprecated: This package has been deprecated. Please use @heroui/link instead.
     peerDependencies:
       '@nextui-org/system': '>=2.4.0'
       '@nextui-org/theme': '>=2.4.0'
@@ -1737,6 +1769,7 @@ packages:
 
   '@nextui-org/listbox@2.3.7':
     resolution: {integrity: sha512-U6YDqGGeuRwQg73Im0iJ6s/Ry+phOq+OXWE3PHxqNMaL6UyoEIWyitsf8Va1/VeCjAL2Ad5sdMo29jh+lZh8fA==}
+    deprecated: This package has been deprecated. Please use @heroui/listbox instead.
     peerDependencies:
       '@nextui-org/system': '>=2.4.0'
       '@nextui-org/theme': '>=2.4.0'
@@ -1745,6 +1778,7 @@ packages:
 
   '@nextui-org/menu@2.2.7':
     resolution: {integrity: sha512-VWj11/Deti07eVH6YM2d+PdAONbrP5CtawCHCo13xDy6szvcSdFxNzLtcZzCpPVQ2BN35RM5Fon/VSXr1LGVgw==}
+    deprecated: This package has been deprecated. Please use @heroui/menu instead.
     peerDependencies:
       '@nextui-org/system': '>=2.4.0'
       '@nextui-org/theme': '>=2.4.0'
@@ -1753,6 +1787,7 @@ packages:
 
   '@nextui-org/modal@2.2.5':
     resolution: {integrity: sha512-Zp4YqLPBYyiIGcCofVQCZ7kqFXk/k+vAFZ/eulbK0lGpxCQeCZDgdXW+a4jsjVz4MXBMrZoPU90plKpr4BeVxA==}
+    deprecated: This package has been deprecated. Please use @heroui/modal instead.
     peerDependencies:
       '@nextui-org/system': '>=2.4.0'
       '@nextui-org/theme': '>=2.4.0'
@@ -1762,6 +1797,7 @@ packages:
 
   '@nextui-org/navbar@2.2.5':
     resolution: {integrity: sha512-nyFoq3i/Ru8nHKWxJLuQb2/N4wLuv9wa5C/4Hio99mMaSTlhN+dxa+vtlJBwlyxPr6/eTR1fBkgbi/ZZ1VBdkA==}
+    deprecated: This package has been deprecated. Please use @heroui/navbar instead.
     peerDependencies:
       '@nextui-org/system': '>=2.4.0'
       '@nextui-org/theme': '>=2.4.0'
@@ -1771,6 +1807,7 @@ packages:
 
   '@nextui-org/pagination@2.2.6':
     resolution: {integrity: sha512-JD467tBam5EQse34Q/bm8sf4LSFze4atZkCGZNZZP6rAcoNMpxXOJxVoo5DWflqYeaukInYYueyOarxnXn54HA==}
+    deprecated: This package has been deprecated. Please use @heroui/pagination instead.
     peerDependencies:
       '@nextui-org/system': '>=2.4.0'
       '@nextui-org/theme': '>=2.4.0'
@@ -1779,6 +1816,7 @@ packages:
 
   '@nextui-org/popover@2.3.7':
     resolution: {integrity: sha512-mntRQXrQt/fnNU5V8aQ/awnWEwTWfZCmPIOSYQWa8+r+5puZlICSR8m8N72jLr/6VBd7wX0Scv6XjGvrehheiQ==}
+    deprecated: This package has been deprecated. Please use @heroui/popover instead.
     peerDependencies:
       '@nextui-org/system': '>=2.4.0'
       '@nextui-org/theme': '>=2.4.0'
@@ -1788,6 +1826,7 @@ packages:
 
   '@nextui-org/progress@2.2.4':
     resolution: {integrity: sha512-2XwzIEwUvgVLvGHq2Neo3UFyzSm/FKFj55LUGCWFQ+SiZ1JRnMZDXUOCnIzZwhDmnfCL1TOp2a0EHj05ewxwsw==}
+    deprecated: This package has been deprecated. Please use @heroui/progress instead.
     peerDependencies:
       '@nextui-org/system': '>=2.4.0'
       '@nextui-org/theme': '>=2.4.0'
@@ -1796,6 +1835,7 @@ packages:
 
   '@nextui-org/radio@2.3.6':
     resolution: {integrity: sha512-zBr1LESZu8VrZZ1xj8tMdRd7HTXFfDPYeyqcxaNpqOI/ZZNHLpvoSxta9aKxDf3TbLFCt5WQz70S25DCGsljUQ==}
+    deprecated: This package has been deprecated. Please use @heroui/radio instead.
     peerDependencies:
       '@nextui-org/system': '>=2.4.0'
       '@nextui-org/theme': '>=2.4.0'
@@ -1814,6 +1854,7 @@ packages:
 
   '@nextui-org/react@2.6.8':
     resolution: {integrity: sha512-w6skiTItbrzjvHl+v4bHCYNkPjPpFz0UPM/s4vZZmaky6sxihguq+mdCcSe/qkXdhmSn7b+aY9E0ygQaMvibvw==}
+    deprecated: This package has been deprecated. Please use @heroui/react instead.
     peerDependencies:
       framer-motion: '>=11.5.6 || >=12.0.0-alpha.1'
       react: '>=18 || >=19.0.0-rc.0'
@@ -1821,6 +1862,7 @@ packages:
 
   '@nextui-org/ripple@2.2.5':
     resolution: {integrity: sha512-GNYcRbVrUtdkbHKyFGRb0W8dyudH6hYY6YxYtlE5I82YwN1FovLvTRajDBbd3Bh2qNIcyUoFlmbt4h/6mM8uOQ==}
+    deprecated: This package has been deprecated. Please use @heroui/ripple instead.
     peerDependencies:
       '@nextui-org/system': '>=2.4.0'
       '@nextui-org/theme': '>=2.4.0'
@@ -1830,6 +1872,7 @@ packages:
 
   '@nextui-org/scroll-shadow@2.3.3':
     resolution: {integrity: sha512-sI68rEt/CLEVhM+TPdk1QM7h9j4bK6oWaY4xYKCOC4UtMTUMaCdWt5kqHKwX+xr4iQTPBjMCGTduGSoG9RvBgQ==}
+    deprecated: This package has been deprecated. Please use @heroui/scroll-shadow instead.
     peerDependencies:
       '@nextui-org/system': '>=2.4.0'
       '@nextui-org/theme': '>=2.4.0'
@@ -1838,6 +1881,7 @@ packages:
 
   '@nextui-org/select@2.4.7':
     resolution: {integrity: sha512-MpplLt7kWVownuvX9wQMruy9wL3Rt2GcVUteRd6wriNwj/pP3wY7OnXOgih1aNWtbVM2+PpCpgummgau2AdaAg==}
+    deprecated: This package has been deprecated. Please use @heroui/select instead.
     peerDependencies:
       '@nextui-org/system': '>=2.4.0'
       '@nextui-org/theme': '>=2.4.0'
@@ -1855,6 +1899,7 @@ packages:
 
   '@nextui-org/skeleton@2.2.3':
     resolution: {integrity: sha512-G12blc41mCZBjOObteyqhQr4MZhEKgZGhJMVYVXr5yw+HiS9jY1LJIBPLOxs8PFo2GcYj9JVQN6rru8W9Eqxmg==}
+    deprecated: This package has been deprecated. Please use @heroui/skeleton instead.
     peerDependencies:
       '@nextui-org/system': '>=2.4.0'
       '@nextui-org/theme': '>=2.4.0'
@@ -1863,6 +1908,7 @@ packages:
 
   '@nextui-org/slider@2.4.5':
     resolution: {integrity: sha512-vQXcV+Zri5+5Yfug89ffcY33XgzEP91ObsLy2r9we0H784SwQYgjk41OzAPs7gkFAnWGP1TW22jALJh3S82+YA==}
+    deprecated: This package has been deprecated. Please use @heroui/slider instead.
     peerDependencies:
       '@nextui-org/system': '>=2.4.0'
       '@nextui-org/theme': '>=2.4.0'
@@ -1871,6 +1917,7 @@ packages:
 
   '@nextui-org/snippet@2.2.8':
     resolution: {integrity: sha512-zawFPrTAPi2HHxn+k9OLRvE3JoRa0YzdtIdcplAujv4T5g4zz4H+cfOKJKA6c6sCmhYHM5yBBv6q8EubmuzgTA==}
+    deprecated: This package has been deprecated. Please use @heroui/snippet instead.
     peerDependencies:
       '@nextui-org/system': '>=2.4.0'
       '@nextui-org/theme': '>=2.4.0'
@@ -1880,6 +1927,7 @@ packages:
 
   '@nextui-org/spacer@2.2.4':
     resolution: {integrity: sha512-RMkC2O3I+W6qwsax5Dge8CzF2tJIDxOiC84yiQxfwRHWVe1qPXbLRu1nM5lbvjAI/4aS9NegUQ3aYnFqZwvojQ==}
+    deprecated: This package has been deprecated. Please use @heroui/spacer instead.
     peerDependencies:
       '@nextui-org/theme': '>=2.4.0'
       react: '>=18 || >=19.0.0-rc.0'
@@ -1887,6 +1935,7 @@ packages:
 
   '@nextui-org/spinner@2.2.4':
     resolution: {integrity: sha512-QdCRD64+fjWmi5byO9sR3D4xbkFNh9cB01KnoR1/u7+7m/WWNFOhUkYbdkB2e53oQlNXxh0Mw02U346tC8B+5g==}
+    deprecated: This package has been deprecated. Please use @heroui/spinner instead.
     peerDependencies:
       '@nextui-org/theme': '>=2.4.0'
       react: '>=18 || >=19.0.0-rc.0'
@@ -1894,6 +1943,7 @@ packages:
 
   '@nextui-org/switch@2.2.6':
     resolution: {integrity: sha512-YlFOvc/WnkQeldTvtTUVF7KXx8LUz6sSJJoP+xhJZtPZcfcyQlApRTvc9LpVG+eyqfLWY9ng4n85BDR2rHzoOQ==}
+    deprecated: This package has been deprecated. Please use @heroui/switch instead.
     peerDependencies:
       '@nextui-org/system': '>=2.4.0'
       '@nextui-org/theme': '>=2.4.0'
@@ -1915,6 +1965,7 @@ packages:
 
   '@nextui-org/table@2.2.6':
     resolution: {integrity: sha512-0XZaxcsYMkIcWRbTGq9cW51pWHL6czdKUHAlj1tkRPXEcRbuUxkOWVccsz83pn2vyb56ftDA4nm1qeivcO+PkA==}
+    deprecated: This package has been deprecated. Please use @heroui/table instead.
     peerDependencies:
       '@nextui-org/system': '>=2.4.0'
       '@nextui-org/theme': '>=2.4.0'
@@ -1923,6 +1974,7 @@ packages:
 
   '@nextui-org/tabs@2.2.5':
     resolution: {integrity: sha512-lEQVO1iwnYv75+tIwwVVyUZlg2FyA9RPdXJXZWIJkCYP8xMUzPe3KFKvZkaT4UFny+typIW0pMpRrP8gJSubWg==}
+    deprecated: This package has been deprecated. Please use @heroui/tabs instead.
     peerDependencies:
       '@nextui-org/system': '>=2.4.0'
       '@nextui-org/theme': '>=2.4.0'
@@ -1937,6 +1989,7 @@ packages:
 
   '@nextui-org/tooltip@2.2.5':
     resolution: {integrity: sha512-6P28S2p18uNpLHIi7trrHImtrkaxpWBimtqf3u+NZc33dYG44iBV4BfuOvp1TCFwCW+Dv5k1XLK+AMr54o1FYw==}
+    deprecated: This package has been deprecated. Please use @heroui/tooltip instead.
     peerDependencies:
       '@nextui-org/system': '>=2.4.0'
       '@nextui-org/theme': '>=2.4.0'
@@ -2043,6 +2096,7 @@ packages:
 
   '@nextui-org/user@2.2.4':
     resolution: {integrity: sha512-dQVYSm26h9KzDqWjuKablBlDaa+IO8KKQXSvT84BFMPGBN8UY8FXZGeeopNmWHeF6hJBkK1Jn4HU+2K8GKo99Q==}
+    deprecated: This package has been deprecated. Please use @heroui/user instead.
     peerDependencies:
       '@nextui-org/system': '>=2.4.0'
       '@nextui-org/theme': '>=2.4.0'
@@ -3797,8 +3851,14 @@ packages:
   '@types/node@18.19.68':
     resolution: {integrity: sha512-QGtpFH1vB99ZmTa63K4/FU8twThj4fuVSBkGddTp7uIL/cuoLWIUSL2RcOaigBhfR+hg5pgGkBnkoOxrTVBMKw==}
 
+  '@types/node@18.19.74':
+    resolution: {integrity: sha512-HMwEkkifei3L605gFdV+/UwtpxP6JSzM+xFk2Ia6DNFSwSVBRh9qp5Tgf4lNFOMfPVuU0WnkcWpXZpgn5ufO4A==}
+
   '@types/node@22.10.2':
     resolution: {integrity: sha512-Xxr6BBRCAOQixvonOye19wnzyDiUtTeqldOOmj3CkeblonbccA12PFwlufvRdrpjXxqnmUaeiU5EOA+7s5diUQ==}
+
+  '@types/node@22.13.0':
+    resolution: {integrity: sha512-ClIbNe36lawluuvq3+YYhnIN2CELi+6q8NpnM7PYp4hBn/TatfboPgVSm2rwKRfnV2M+Ty9GWDFI64KEe+kysA==}
 
   '@types/pg-pool@2.0.6':
     resolution: {integrity: sha512-TaAUE5rq2VQYxab5Ts7WZhKNmuN78Q6PiFonTDdpbx8a1H0M1vhy3rhiMjl+e2iHmogyMw7jZF4FrE6eJUy5HQ==}
@@ -4066,6 +4126,10 @@ packages:
     resolution: {integrity: sha512-5GG/5IbQQpC9FpkRGsSvZI5QYeSCzlJHdpBQntCsuTOxhKD8lqKhrleg2Yi7yvMIf82Ycmmqln9U8V9qwEiJew==}
     engines: {node: '>= 8.0.0'}
 
+  agentkeepalive@4.6.0:
+    resolution: {integrity: sha512-kja8j7PjmncONqaTsB8fQ+wE2mSU2DJ9D4XKoJ5PFWIdRMa6SLSN1ff4mOr4jCbfRSsxR4keIiySJU0N9T5hIQ==}
+    engines: {node: '>= 8.0.0'}
+
   ai@3.4.33:
     resolution: {integrity: sha512-plBlrVZKwPoRTmM8+D1sJac9Bq8eaa2jiZlHLZIWekKWI1yMWYZvCCEezY9ASPwRhULYDJB2VhKOBUUeg3S5JQ==}
     engines: {node: '>=18'}
@@ -4270,6 +4334,11 @@ packages:
     engines: {node: ^6 || ^7 || ^8 || ^9 || ^10 || ^11 || ^12 || >=13.7}
     hasBin: true
 
+  browserslist@4.24.4:
+    resolution: {integrity: sha512-KDi1Ny1gSePi1vm0q4oxSF8b4DR44GF4BbmS2YdhPLOEqd8pDviZOGH/GsmRwoWJ2+5Lr085X7naowMwKHDG1A==}
+    engines: {node: ^6 || ^7 || ^8 || ^9 || ^10 || ^11 || ^12 || >=13.7}
+    hasBin: true
+
   buffer-equal-constant-time@1.0.1:
     resolution: {integrity: sha512-zRpUiDwd/xk6ADqPMATG8vc9VPrkck7T07OIx0gnjmJAnHnTVXNQG3vfvWNuiZIkwu9KrKdA1iJKfsfTVxE6NA==}
 
@@ -4306,6 +4375,9 @@ packages:
 
   caniuse-lite@1.0.30001689:
     resolution: {integrity: sha512-CmeR2VBycfa+5/jOfnp/NpWPGd06nf1XYiefUvhXFfZE4GkRc9jv+eGPS4nT558WS/8lYCzV8SlANCIPvbWP1g==}
+
+  caniuse-lite@1.0.30001696:
+    resolution: {integrity: sha512-pDCPkvzfa39ehJtJ+OwGT/2yvT2SbjfHhiIW2LWOAcMQ7BzwxT/XuyUp4OTOd0XFWA6BKw0JalnBHgSi5DGJBQ==}
 
   canvas@2.11.2:
     resolution: {integrity: sha512-ItanGBMrmRV7Py2Z+Xhs7cT+FNt5K0vPL4p9EZ/UX/Mu7hFbkxSjKF2KVtPwX7UYWp7dRKnrTvReflgrItJbdw==}
@@ -4698,6 +4770,9 @@ packages:
   electron-to-chromium@1.5.74:
     resolution: {integrity: sha512-ck3//9RC+6oss/1Bh9tiAVFy5vfSKbRHAFh7Z3/eTRkEqJeWgymloShB17Vg3Z4nmDNp35vAd1BZ6CMW4Wt6Iw==}
 
+  electron-to-chromium@1.5.90:
+    resolution: {integrity: sha512-C3PN4aydfW91Natdyd449Kw+BzhLmof6tzy5W1pFC5SpQxVXT+oyiyOG9AgYYSN9OdA/ik3YkCrpwqI8ug5Tug==}
+
   embla-carousel-react@8.5.1:
     resolution: {integrity: sha512-z9Y0K84BJvhChXgqn2CFYbfEi6AwEr+FFVVKm/MqbTQ2zIzO1VQri6w67LcfpVF0AjbhwVMywDZqY4alYkjW5w==}
     peerDependencies:
@@ -4730,6 +4805,10 @@ packages:
     resolution: {integrity: sha512-LMHl3dXhTcfv8gM4kEzIUeTQ+7fpdA0l2tUf34BddXPkz2A5xJ5L/Pchd5BL6rdccM9QGvu0sWZzK1Z1t4wwyg==}
     engines: {node: '>=10.13.0'}
 
+  enhanced-resolve@5.18.0:
+    resolution: {integrity: sha512-0/r0MySGYG8YqlayBZ6MuCfECmHFdJ5qyPh8s8wa5Hnm6SaFLSK1VYCbj+NKp090Nm1caZhD+QTnmxO7esYGyQ==}
+    engines: {node: '>=10.13.0'}
+
   entities@4.5.0:
     resolution: {integrity: sha512-V0hjH4dGPh9Ao5p0MoRY6BVqtwCjhz6vI5LT8AJ55H+4g9/4vbHx1I54fS0XuclLhDHArPQCiMjDxjaL8fPxhw==}
     engines: {node: '>=0.12'}
@@ -4757,8 +4836,8 @@ packages:
     resolution: {integrity: sha512-tpxqxncxnpw3c93u8n3VOzACmRFoVmWJqbWXvX/JfKbkhBw1oslgPrUfeSt2psuqyEJFD6N/9lg5i7bsKpoq+Q==}
     engines: {node: '>= 0.4'}
 
-  es-module-lexer@1.5.4:
-    resolution: {integrity: sha512-MVNK56NiMrOwitFB7cqDwq0CQutbw+0BvLshJSse0MUNU+y1FC3bUS/AQg7oUng+/wKrrki7JfmwtVHkVfPLlw==}
+  es-module-lexer@1.6.0:
+    resolution: {integrity: sha512-qqnD1yMU6tk/jnaMosogGySTZP8YtUgAffA9nMN+E/rjxcfRQ6IEk7IiozUjgxKoFHBGjTLnrHB/YC45r/59EQ==}
 
   es-object-atoms@1.0.0:
     resolution: {integrity: sha512-MZ4iQ6JwHOBQjahnjwaC1ZtIBH+2ohjamzAO3oaHcXYup7qxjF2fixyH+Q71voWHeOkI2q/TnJao/KfXYIZWbw==}
@@ -4899,8 +4978,8 @@ packages:
     deprecated: This version is no longer supported. Please see https://eslint.org/version-support for other options.
     hasBin: true
 
-  esm-env@1.2.1:
-    resolution: {integrity: sha512-U9JedYYjCnadUlXk7e1Kr+aENQhtUaoaV9+gZm1T8LC/YBAPJx3NSPIAurFOC0U5vrdSevnUJS2/wUVxGwPhng==}
+  esm-env@1.2.2:
+    resolution: {integrity: sha512-Epxrv+Nr/CaL4ZcFGPJIYLWFom+YeV1DqMLHJoEd9SYRxNbaFruBwfEX/kkHUJf55j2+TUbmDcmuilbP1TmXHA==}
 
   espree@9.6.1:
     resolution: {integrity: sha512-oruZaFkjorTpF32kDSI5/75ViwGeZginGGy2NoOSg3Q9bnwlnmDm4HLnkl0RE3n+njDXR037aY1+x58Z/zFdwQ==}
@@ -4910,8 +4989,8 @@ packages:
     resolution: {integrity: sha512-ca9pw9fomFcKPvFLXhBKUK90ZvGibiGOvRJNbjljY7s7uq/5YO4BOzcYtJqExdx99rF6aAcnRxHmcUHcz6sQsg==}
     engines: {node: '>=0.10'}
 
-  esrap@1.2.3:
-    resolution: {integrity: sha512-ZlQmCCK+n7SGoqo7DnfKaP1sJZa49P01/dXzmjCASSo04p72w8EksT2NMK8CEX8DhKsfJXANioIw8VyHNsBfvQ==}
+  esrap@1.4.3:
+    resolution: {integrity: sha512-Xddc1RsoFJ4z9nR7W7BFaEPIp4UXoeQ0+077UdWLxbafMQFyU79sQJMk7kxNgRwQ9/aVgaKacCHC2pUACGwmYw==}
 
   esrecurse@4.3.0:
     resolution: {integrity: sha512-KmfKL3b6G+RXvP8N1vr3Tq1kL/oCFgn2NYXEtqP8/L3pKapUA4G8cFVaoF3SU323CD4XypR/ffioHmkti6/Tag==}
@@ -4998,8 +5077,8 @@ packages:
   fast-shallow-equal@1.0.0:
     resolution: {integrity: sha512-HPtaa38cPgWvaCFmRNhlc6NG7pv6NUHqjPgVAkWGoB9mQMwYB27/K0CvOM5Czy+qpT3e8XJ6Q4aPAnzpNpzNaw==}
 
-  fast-uri@3.0.3:
-    resolution: {integrity: sha512-aLrHthzCjH5He4Z2H9YZ+v6Ujb9ocRuW6ZzkJQOrTxleEijANq4v1TsaPaVG1PZcuurEzrLcWRyYBYXD5cEiaw==}
+  fast-uri@3.0.6:
+    resolution: {integrity: sha512-Atfo14OibSv5wAp4VWNsFYE1AchQRTv9cBGWET4pZWHzYshFSS9NQI6I57rdKn9croWVMbYFbLhJ+yJvmZIIHw==}
 
   fast-xml-parser@4.5.1:
     resolution: {integrity: sha512-y655CeyUQ+jj7KBbYMc4FG01V8ZQqjN+gDYGJ50RtfsUB8iG9AmwmwoAgeKLJdmueKKMrH1RJ7yXHTSoczdv5w==}
@@ -5883,6 +5962,9 @@ packages:
   lexical@0.19.0:
     resolution: {integrity: sha512-WmdFtYFBqudaEvH+BnnmGAe7ZLGgPhl1R6QyrKcAHciAITZcfFHgwFqc81qXa46wY9IBPh88X9PxIHj/Z6/IGg==}
 
+  lexical@0.23.1:
+    resolution: {integrity: sha512-iuS72HcAYUemsCRQCm4XZzkGhZb8a9KagW+ee2TFfkkf9f3ZpUYSrobMpjYVZRkgMOx7Zk5VCPMxm1nouJTfnQ==}
+
   lib0@0.2.99:
     resolution: {integrity: sha512-vwztYuUf1uf/1zQxfzRfO5yzfNKhTtgOByCruuiQQxWQXnPb8Itaube5ylofcV0oM0aKal9Mv+S1s1Ky0UYP1w==}
     engines: {node: '>=16'}
@@ -6200,11 +6282,11 @@ packages:
   moment@2.30.1:
     resolution: {integrity: sha512-uEmtNhbDOrWPFS+hdjFCBfy9f2YoyzRpwcl+DqpC6taX21FzsTLQVbMV/W7PzNSX6x/bhC1zA3c2UQ5NzH6how==}
 
-  motion-dom@11.14.3:
-    resolution: {integrity: sha512-lW+D2wBy5vxLJi6aCP0xyxTxlTfiu+b+zcpVbGVFUxotwThqhdpPRSmX8xztAgtZMPMeU0WGVn/k1w4I+TbPqA==}
+  motion-dom@11.18.1:
+    resolution: {integrity: sha512-g76KvA001z+atjfxczdRtw/RXOM3OMSdd1f4DL77qCTF/+avrRJiawSG4yDibEQ215sr9kpinSlX2pCTJ9zbhw==}
 
-  motion-utils@11.14.3:
-    resolution: {integrity: sha512-Xg+8xnqIJTpr0L/cidfTTBFkvRw26ZtGGuIhA94J9PQ2p4mEa06Xx7QVYZH0BP+EpMSaDlu+q0I0mmvwADPsaQ==}
+  motion-utils@11.18.1:
+    resolution: {integrity: sha512-49Kt+HKjtbJKLtgO/LKj9Ld+6vw9BjH5d9sc40R/kVyH8GLAXgT42M2NnuPcJNuA3s9ZfZBUcwIgpmZWGEE+hA==}
 
   ms@2.1.3:
     resolution: {integrity: sha512-6FlzubTLZG3J2a/NVCAleEhjzq5oxgHyaCU9yYXvcLsvoVaHJq/s5xXI6/XXP6tz7R9xAOtHnSO/tXtF3WRTlA==}
@@ -6614,10 +6696,6 @@ packages:
 
   postcss@8.4.31:
     resolution: {integrity: sha512-PS08Iboia9mts/2ygV3eLpY5ghnUcfLV/EXTOW1E2qYxJKGGBUtNjN76FYHnMs36RmARn41bC0AZmn+rR0OVpQ==}
-    engines: {node: ^10 || ^12 || >=14}
-
-  postcss@8.4.49:
-    resolution: {integrity: sha512-OCVPnIObs4N29kxTjzLfUryOkvZEq+pf8jTF0lg8E7uETuWHA+v7j3c/xJmiqpX450191LlmZfUKkXxkTry7nA==}
     engines: {node: ^10 || ^12 || >=14}
 
   postcss@8.5.1:
@@ -7186,6 +7264,11 @@ packages:
     engines: {node: '>=10'}
     hasBin: true
 
+  semver@7.7.0:
+    resolution: {integrity: sha512-DrfFnPzblFmNrIZzg5RzHegbiRWg7KMR7btwi2yjHwx06zsUbO5g613sVwEV7FTwmzJu+Io0lJe2GJ3LxqpvBQ==}
+    engines: {node: '>=10'}
+    hasBin: true
+
   serialize-javascript@6.0.2:
     resolution: {integrity: sha512-Saa1xPByTTq2gdeFZYLLo+RFE35NHZkAbqZeWNd3BpzppeVisAqpDjcp8dyf6uIvEqJRd46jemmyA4iFIeVk8g==}
 
@@ -7714,6 +7797,12 @@ packages:
     peerDependencies:
       browserslist: '>= 4.21.0'
 
+  update-browserslist-db@1.1.2:
+    resolution: {integrity: sha512-PPypAm5qvlD7XMZC3BujecnaOxwhrtoFR+Dqkk5Aa/6DssiH0ibKoketaj9w8LP7Bont1rYeoV5plxD7RTEPRg==}
+    hasBin: true
+    peerDependencies:
+      browserslist: '>= 4.21.0'
+
   uploadthing@7.4.1:
     resolution: {integrity: sha512-an/ENGUJ06Rg9eI2/bWOUsm+6iDlufDRggUsw6HR4mqhNa/aqLHj5KrWP1CuVHP70fXMCsSM+BgVm00y5wt6wg==}
     engines: {node: '>=18.13.0'}
@@ -8148,10 +8237,10 @@ snapshots:
 
   '@anthropic-ai/sdk@0.27.3(encoding@0.1.13)':
     dependencies:
-      '@types/node': 18.19.68
+      '@types/node': 18.19.74
       '@types/node-fetch': 2.6.12
       abort-controller: 3.0.0
-      agentkeepalive: 4.5.0
+      agentkeepalive: 4.6.0
       form-data-encoder: 1.7.2
       formdata-node: 4.4.1
       node-fetch: 2.7.0(encoding@0.1.13)
@@ -8233,6 +8322,10 @@ snapshots:
     dependencies:
       '@babel/types': 7.26.3
 
+  '@babel/parser@7.26.7':
+    dependencies:
+      '@babel/types': 7.26.7
+
   '@babel/runtime@7.26.0':
     dependencies:
       regenerator-runtime: 0.14.1
@@ -8260,12 +8353,17 @@ snapshots:
       '@babel/helper-string-parser': 7.25.9
       '@babel/helper-validator-identifier': 7.25.9
 
-  '@browserbasehq/sdk@2.0.0(encoding@0.1.13)':
+  '@babel/types@7.26.7':
     dependencies:
-      '@types/node': 18.19.68
+      '@babel/helper-string-parser': 7.25.9
+      '@babel/helper-validator-identifier': 7.25.9
+
+  '@browserbasehq/sdk@2.2.0(encoding@0.1.13)':
+    dependencies:
+      '@types/node': 18.19.74
       '@types/node-fetch': 2.6.12
       abort-controller: 3.0.0
-      agentkeepalive: 4.5.0
+      agentkeepalive: 4.6.0
       form-data-encoder: 1.7.2
       formdata-node: 4.4.1
       node-fetch: 2.7.0(encoding@0.1.13)
@@ -8275,7 +8373,7 @@ snapshots:
   '@browserbasehq/stagehand@1.6.0(@playwright/test@1.49.1)(deepmerge@4.3.1)(dotenv@16.4.7)(encoding@0.1.13)(openai@4.76.3(encoding@0.1.13)(zod@3.24.1))(zod@3.24.1)':
     dependencies:
       '@anthropic-ai/sdk': 0.27.3(encoding@0.1.13)
-      '@browserbasehq/sdk': 2.0.0(encoding@0.1.13)
+      '@browserbasehq/sdk': 2.2.0(encoding@0.1.13)
       '@playwright/test': 1.49.1
       deepmerge: 4.3.1
       dotenv: 16.4.7
@@ -8413,7 +8511,7 @@ snapshots:
 
   '@ibm-cloud/watsonx-ai@1.3.0':
     dependencies:
-      '@types/node': 18.19.68
+      '@types/node': 18.19.74
       extend: 3.0.2
       ibm-cloud-sdk-core: 5.1.0
     transitivePeerDependencies:
@@ -8568,7 +8666,7 @@ snapshots:
       - encoding
       - openai
 
-  '@langchain/community@0.3.19(@browserbasehq/sdk@2.0.0(encoding@0.1.13))(@browserbasehq/stagehand@1.6.0(@playwright/test@1.49.1)(deepmerge@4.3.1)(dotenv@16.4.7)(encoding@0.1.13)(openai@4.76.3(encoding@0.1.13)(zod@3.24.1))(zod@3.24.1))(@ibm-cloud/watsonx-ai@1.3.0)(@langchain/anthropic@0.2.18(encoding@0.1.13)(openai@4.76.3(encoding@0.1.13)(zod@3.24.1)))(@langchain/core@0.2.36(openai@4.76.3(encoding@0.1.13)(zod@3.24.1)))(@langchain/mistralai@0.0.28(encoding@0.1.13)(openai@4.76.3(encoding@0.1.13)(zod@3.24.1)))(@pinecone-database/pinecone@4.0.0)(@upstash/ratelimit@2.0.5(@upstash/redis@1.34.3))(@upstash/redis@1.34.3)(@upstash/vector@1.1.7)(axios@1.7.4)(cheerio@1.0.0)(crypto-js@4.2.0)(d3-dsv@3.0.1)(encoding@0.1.13)(html-to-text@9.0.5)(ibm-cloud-sdk-core@5.1.0)(ignore@5.3.2)(jsonwebtoken@9.0.2)(lodash@4.17.21)(openai@4.76.3(encoding@0.1.13)(zod@3.24.1))(pdf-parse@1.1.1)(playwright@1.49.1)':
+  '@langchain/community@0.3.19(@browserbasehq/sdk@2.2.0(encoding@0.1.13))(@browserbasehq/stagehand@1.6.0(@playwright/test@1.49.1)(deepmerge@4.3.1)(dotenv@16.4.7)(encoding@0.1.13)(openai@4.76.3(encoding@0.1.13)(zod@3.24.1))(zod@3.24.1))(@ibm-cloud/watsonx-ai@1.3.0)(@langchain/anthropic@0.2.18(encoding@0.1.13)(openai@4.76.3(encoding@0.1.13)(zod@3.24.1)))(@langchain/core@0.2.36(openai@4.76.3(encoding@0.1.13)(zod@3.24.1)))(@langchain/mistralai@0.0.28(encoding@0.1.13)(openai@4.76.3(encoding@0.1.13)(zod@3.24.1)))(@pinecone-database/pinecone@4.0.0)(@upstash/ratelimit@2.0.5(@upstash/redis@1.34.3))(@upstash/redis@1.34.3)(@upstash/vector@1.1.7)(axios@1.7.4)(cheerio@1.0.0)(crypto-js@4.2.0)(d3-dsv@3.0.1)(encoding@0.1.13)(html-to-text@9.0.5)(ibm-cloud-sdk-core@5.1.0)(ignore@5.3.2)(jsonwebtoken@9.0.2)(lodash@4.17.21)(openai@4.76.3(encoding@0.1.13)(zod@3.24.1))(pdf-parse@1.1.1)(playwright@1.49.1)':
     dependencies:
       '@browserbasehq/stagehand': 1.6.0(@playwright/test@1.49.1)(deepmerge@4.3.1)(dotenv@16.4.7)(encoding@0.1.13)(openai@4.76.3(encoding@0.1.13)(zod@3.24.1))(zod@3.24.1)
       '@ibm-cloud/watsonx-ai': 1.3.0
@@ -8586,7 +8684,7 @@ snapshots:
       zod: 3.24.1
       zod-to-json-schema: 3.24.1(zod@3.24.1)
     optionalDependencies:
-      '@browserbasehq/sdk': 2.0.0(encoding@0.1.13)
+      '@browserbasehq/sdk': 2.2.0(encoding@0.1.13)
       '@pinecone-database/pinecone': 4.0.0
       '@upstash/ratelimit': 2.0.5(@upstash/redis@1.34.3)
       '@upstash/redis': 1.34.3
@@ -8614,7 +8712,7 @@ snapshots:
       - handlebars
       - peggy
 
-  '@langchain/community@0.3.19(@browserbasehq/sdk@2.0.0(encoding@0.1.13))(@browserbasehq/stagehand@1.6.0(@playwright/test@1.49.1)(deepmerge@4.3.1)(dotenv@16.4.7)(encoding@0.1.13)(openai@4.76.3(encoding@0.1.13)(zod@3.24.1))(zod@3.24.1))(@ibm-cloud/watsonx-ai@1.3.0)(@langchain/anthropic@0.2.18(encoding@0.1.13)(openai@4.76.3(encoding@0.1.13)(zod@3.24.1)))(@langchain/core@0.3.24(openai@4.76.3(encoding@0.1.13)(zod@3.24.1)))(@langchain/mistralai@0.0.28(encoding@0.1.13)(openai@4.76.3(encoding@0.1.13)(zod@3.24.1)))(@pinecone-database/pinecone@4.0.0)(@upstash/ratelimit@2.0.5(@upstash/redis@1.34.3))(@upstash/redis@1.34.3)(@upstash/vector@1.1.7)(axios@1.7.4)(cheerio@1.0.0)(crypto-js@4.2.0)(d3-dsv@3.0.1)(encoding@0.1.13)(html-to-text@9.0.5)(ibm-cloud-sdk-core@5.1.0)(ignore@5.3.2)(jsonwebtoken@9.0.2)(lodash@4.17.21)(openai@4.76.3(encoding@0.1.13)(zod@3.24.1))(pdf-parse@1.1.1)(playwright@1.49.1)':
+  '@langchain/community@0.3.19(@browserbasehq/sdk@2.2.0(encoding@0.1.13))(@browserbasehq/stagehand@1.6.0(@playwright/test@1.49.1)(deepmerge@4.3.1)(dotenv@16.4.7)(encoding@0.1.13)(openai@4.76.3(encoding@0.1.13)(zod@3.24.1))(zod@3.24.1))(@ibm-cloud/watsonx-ai@1.3.0)(@langchain/anthropic@0.2.18(encoding@0.1.13)(openai@4.76.3(encoding@0.1.13)(zod@3.24.1)))(@langchain/core@0.3.24(openai@4.76.3(encoding@0.1.13)(zod@3.24.1)))(@langchain/mistralai@0.0.28(encoding@0.1.13)(openai@4.76.3(encoding@0.1.13)(zod@3.24.1)))(@pinecone-database/pinecone@4.0.0)(@upstash/ratelimit@2.0.5(@upstash/redis@1.34.3))(@upstash/redis@1.34.3)(@upstash/vector@1.1.7)(axios@1.7.4)(cheerio@1.0.0)(crypto-js@4.2.0)(d3-dsv@3.0.1)(encoding@0.1.13)(html-to-text@9.0.5)(ibm-cloud-sdk-core@5.1.0)(ignore@5.3.2)(jsonwebtoken@9.0.2)(lodash@4.17.21)(openai@4.76.3(encoding@0.1.13)(zod@3.24.1))(pdf-parse@1.1.1)(playwright@1.49.1)':
     dependencies:
       '@browserbasehq/stagehand': 1.6.0(@playwright/test@1.49.1)(deepmerge@4.3.1)(dotenv@16.4.7)(encoding@0.1.13)(openai@4.76.3(encoding@0.1.13)(zod@3.24.1))(zod@3.24.1)
       '@ibm-cloud/watsonx-ai': 1.3.0
@@ -8632,7 +8730,7 @@ snapshots:
       zod: 3.24.1
       zod-to-json-schema: 3.24.1(zod@3.24.1)
     optionalDependencies:
-      '@browserbasehq/sdk': 2.0.0(encoding@0.1.13)
+      '@browserbasehq/sdk': 2.2.0(encoding@0.1.13)
       '@pinecone-database/pinecone': 4.0.0
       '@upstash/ratelimit': 2.0.5(@upstash/redis@1.34.3)
       '@upstash/redis': 1.34.3
@@ -8926,7 +9024,7 @@ snapshots:
     transitivePeerDependencies:
       - encoding
 
-  '@liveblocks/react-lexical@2.14.0(@lexical/react@0.19.0(react-dom@19.0.0-rc-603e6108-20241029(react@19.0.0-rc-603e6108-20241029))(react@19.0.0-rc-603e6108-20241029)(yjs@13.6.20))(@lexical/utils@0.19.0)(@lexical/yjs@0.19.0(yjs@13.6.20))(@types/react-dom@18.3.5(@types/react@18.3.17))(@types/react@18.3.17)(lexical@0.19.0)(react-dom@19.0.0-rc-603e6108-20241029(react@19.0.0-rc-603e6108-20241029))(react@19.0.0-rc-603e6108-20241029)':
+  '@liveblocks/react-lexical@2.14.0(@lexical/react@0.19.0(react-dom@19.0.0-rc-603e6108-20241029(react@19.0.0-rc-603e6108-20241029))(react@19.0.0-rc-603e6108-20241029)(yjs@13.6.20))(@lexical/utils@0.19.0)(@lexical/yjs@0.19.0(yjs@13.6.20))(@types/react-dom@18.3.5(@types/react@18.3.17))(@types/react@18.3.17)(lexical@0.23.1)(react-dom@19.0.0-rc-603e6108-20241029(react@19.0.0-rc-603e6108-20241029))(react@19.0.0-rc-603e6108-20241029)':
     dependencies:
       '@floating-ui/react-dom': 2.1.2(react-dom@19.0.0-rc-603e6108-20241029(react@19.0.0-rc-603e6108-20241029))(react@19.0.0-rc-603e6108-20241029)
       '@lexical/react': 0.19.0(react-dom@19.0.0-rc-603e6108-20241029(react@19.0.0-rc-603e6108-20241029))(react@19.0.0-rc-603e6108-20241029)(yjs@13.6.20)
@@ -8937,7 +9035,7 @@ snapshots:
       '@liveblocks/react': 2.14.0(react@19.0.0-rc-603e6108-20241029)
       '@liveblocks/react-ui': 2.14.0(@types/react-dom@18.3.5(@types/react@18.3.17))(@types/react@18.3.17)(react-dom@19.0.0-rc-603e6108-20241029(react@19.0.0-rc-603e6108-20241029))(react@19.0.0-rc-603e6108-20241029)
       '@liveblocks/yjs': 2.14.0(yjs@13.6.20)
-      lexical: 0.19.0
+      lexical: 0.23.1
       react: 19.0.0-rc-603e6108-20241029
       react-dom: 19.0.0-rc-603e6108-20241029(react@19.0.0-rc-603e6108-20241029)
       use-sync-external-store: 1.4.0(react@19.0.0-rc-603e6108-20241029)
@@ -12313,7 +12411,15 @@ snapshots:
     dependencies:
       undici-types: 5.26.5
 
+  '@types/node@18.19.74':
+    dependencies:
+      undici-types: 5.26.5
+
   '@types/node@22.10.2':
+    dependencies:
+      undici-types: 6.20.0
+
+  '@types/node@22.13.0':
     dependencies:
       undici-types: 6.20.0
 
@@ -12471,11 +12577,11 @@ snapshots:
     dependencies:
       '@upstash/redis': 1.34.3
 
-  '@upstash/rag-chat@2.0.3(@browserbasehq/sdk@2.0.0(encoding@0.1.13))(@browserbasehq/stagehand@1.6.0(@playwright/test@1.49.1)(deepmerge@4.3.1)(dotenv@16.4.7)(encoding@0.1.13)(openai@4.76.3(encoding@0.1.13)(zod@3.24.1))(zod@3.24.1))(@ibm-cloud/watsonx-ai@1.3.0)(@langchain/openai@0.3.14(@langchain/core@0.3.24(openai@4.76.3(encoding@0.1.13)(zod@3.24.1)))(encoding@0.1.13))(@pinecone-database/pinecone@4.0.0)(@upstash/ratelimit@2.0.5(@upstash/redis@1.34.3))(@upstash/redis@1.34.3)(@upstash/vector@1.1.7)(axios@1.7.4)(crypto-js@4.2.0)(encoding@0.1.13)(fast-xml-parser@4.5.1)(ibm-cloud-sdk-core@5.1.0)(ignore@5.3.2)(jsonwebtoken@9.0.2)(lodash@4.17.21)(openai@4.76.3(encoding@0.1.13)(zod@3.24.1))(playwright@1.49.1)(react-dom@19.0.0-rc-603e6108-20241029(react@19.0.0-rc-603e6108-20241029))(react@19.0.0-rc-603e6108-20241029)(sswr@2.1.0(svelte@5.14.1))(svelte@5.14.1)(vue@3.5.13(typescript@5.7.2))(zod@3.24.1)':
+  '@upstash/rag-chat@2.0.3(@browserbasehq/sdk@2.2.0(encoding@0.1.13))(@browserbasehq/stagehand@1.6.0(@playwright/test@1.49.1)(deepmerge@4.3.1)(dotenv@16.4.7)(encoding@0.1.13)(openai@4.76.3(encoding@0.1.13)(zod@3.24.1))(zod@3.24.1))(@ibm-cloud/watsonx-ai@1.3.0)(@langchain/openai@0.3.14(@langchain/core@0.3.24(openai@4.76.3(encoding@0.1.13)(zod@3.24.1)))(encoding@0.1.13))(@pinecone-database/pinecone@4.0.0)(@upstash/ratelimit@2.0.5(@upstash/redis@1.34.3))(@upstash/redis@1.34.3)(@upstash/vector@1.1.7)(axios@1.7.4)(crypto-js@4.2.0)(encoding@0.1.13)(fast-xml-parser@4.5.1)(ibm-cloud-sdk-core@5.1.0)(ignore@5.3.2)(jsonwebtoken@9.0.2)(lodash@4.17.21)(openai@4.76.3(encoding@0.1.13)(zod@3.24.1))(playwright@1.49.1)(react-dom@19.0.0-rc-603e6108-20241029(react@19.0.0-rc-603e6108-20241029))(react@19.0.0-rc-603e6108-20241029)(sswr@2.1.0(svelte@5.14.1))(svelte@5.14.1)(vue@3.5.13(typescript@5.7.2))(zod@3.24.1)':
     dependencies:
       '@ai-sdk/openai': 0.0.44(zod@3.24.1)
       '@langchain/anthropic': 0.2.18(encoding@0.1.13)(openai@4.76.3(encoding@0.1.13)(zod@3.24.1))
-      '@langchain/community': 0.3.19(@browserbasehq/sdk@2.0.0(encoding@0.1.13))(@browserbasehq/stagehand@1.6.0(@playwright/test@1.49.1)(deepmerge@4.3.1)(dotenv@16.4.7)(encoding@0.1.13)(openai@4.76.3(encoding@0.1.13)(zod@3.24.1))(zod@3.24.1))(@ibm-cloud/watsonx-ai@1.3.0)(@langchain/anthropic@0.2.18(encoding@0.1.13)(openai@4.76.3(encoding@0.1.13)(zod@3.24.1)))(@langchain/core@0.2.36(openai@4.76.3(encoding@0.1.13)(zod@3.24.1)))(@langchain/mistralai@0.0.28(encoding@0.1.13)(openai@4.76.3(encoding@0.1.13)(zod@3.24.1)))(@pinecone-database/pinecone@4.0.0)(@upstash/ratelimit@2.0.5(@upstash/redis@1.34.3))(@upstash/redis@1.34.3)(@upstash/vector@1.1.7)(axios@1.7.4)(cheerio@1.0.0)(crypto-js@4.2.0)(d3-dsv@3.0.1)(encoding@0.1.13)(html-to-text@9.0.5)(ibm-cloud-sdk-core@5.1.0)(ignore@5.3.2)(jsonwebtoken@9.0.2)(lodash@4.17.21)(openai@4.76.3(encoding@0.1.13)(zod@3.24.1))(pdf-parse@1.1.1)(playwright@1.49.1)
+      '@langchain/community': 0.3.19(@browserbasehq/sdk@2.2.0(encoding@0.1.13))(@browserbasehq/stagehand@1.6.0(@playwright/test@1.49.1)(deepmerge@4.3.1)(dotenv@16.4.7)(encoding@0.1.13)(openai@4.76.3(encoding@0.1.13)(zod@3.24.1))(zod@3.24.1))(@ibm-cloud/watsonx-ai@1.3.0)(@langchain/anthropic@0.2.18(encoding@0.1.13)(openai@4.76.3(encoding@0.1.13)(zod@3.24.1)))(@langchain/core@0.2.36(openai@4.76.3(encoding@0.1.13)(zod@3.24.1)))(@langchain/mistralai@0.0.28(encoding@0.1.13)(openai@4.76.3(encoding@0.1.13)(zod@3.24.1)))(@pinecone-database/pinecone@4.0.0)(@upstash/ratelimit@2.0.5(@upstash/redis@1.34.3))(@upstash/redis@1.34.3)(@upstash/vector@1.1.7)(axios@1.7.4)(cheerio@1.0.0)(crypto-js@4.2.0)(d3-dsv@3.0.1)(encoding@0.1.13)(html-to-text@9.0.5)(ibm-cloud-sdk-core@5.1.0)(ignore@5.3.2)(jsonwebtoken@9.0.2)(lodash@4.17.21)(openai@4.76.3(encoding@0.1.13)(zod@3.24.1))(pdf-parse@1.1.1)(playwright@1.49.1)
       '@langchain/core': 0.2.36(openai@4.76.3(encoding@0.1.13)(zod@3.24.1))
       '@langchain/mistralai': 0.0.28(encoding@0.1.13)(openai@4.76.3(encoding@0.1.13)(zod@3.24.1))
       '@langchain/openai': 0.3.14(@langchain/core@0.3.24(openai@4.76.3(encoding@0.1.13)(zod@3.24.1)))(encoding@0.1.13)
@@ -12486,7 +12592,7 @@ snapshots:
       cheerio: 1.0.0
       d3-dsv: 3.0.1
       html-to-text: 9.0.5
-      langchain: 0.2.20(@browserbasehq/sdk@2.0.0(encoding@0.1.13))(@langchain/anthropic@0.2.18(encoding@0.1.13)(openai@4.76.3(encoding@0.1.13)(zod@3.24.1)))(@langchain/mistralai@0.0.28(encoding@0.1.13)(openai@4.76.3(encoding@0.1.13)(zod@3.24.1)))(@pinecone-database/pinecone@4.0.0)(axios@1.7.4)(cheerio@1.0.0)(d3-dsv@3.0.1)(encoding@0.1.13)(fast-xml-parser@4.5.1)(html-to-text@9.0.5)(ignore@5.3.2)(openai@4.76.3(encoding@0.1.13)(zod@3.24.1))(pdf-parse@1.1.1)(playwright@1.49.1)
+      langchain: 0.2.20(@browserbasehq/sdk@2.2.0(encoding@0.1.13))(@langchain/anthropic@0.2.18(encoding@0.1.13)(openai@4.76.3(encoding@0.1.13)(zod@3.24.1)))(@langchain/mistralai@0.0.28(encoding@0.1.13)(openai@4.76.3(encoding@0.1.13)(zod@3.24.1)))(@pinecone-database/pinecone@4.0.0)(axios@1.7.4)(cheerio@1.0.0)(d3-dsv@3.0.1)(encoding@0.1.13)(fast-xml-parser@4.5.1)(html-to-text@9.0.5)(ignore@5.3.2)(openai@4.76.3(encoding@0.1.13)(zod@3.24.1))(pdf-parse@1.1.1)(playwright@1.49.1)
       langsmith: 0.1.68(openai@4.76.3(encoding@0.1.13)(zod@3.24.1))
       nanoid: 5.0.9
       pdf-parse: 1.1.1
@@ -12645,7 +12751,7 @@ snapshots:
 
   '@vue/compiler-core@3.5.13':
     dependencies:
-      '@babel/parser': 7.26.3
+      '@babel/parser': 7.26.7
       '@vue/shared': 3.5.13
       entities: 4.5.0
       estree-walker: 2.0.2
@@ -12658,14 +12764,14 @@ snapshots:
 
   '@vue/compiler-sfc@3.5.13':
     dependencies:
-      '@babel/parser': 7.26.3
+      '@babel/parser': 7.26.7
       '@vue/compiler-core': 3.5.13
       '@vue/compiler-dom': 3.5.13
       '@vue/compiler-ssr': 3.5.13
       '@vue/shared': 3.5.13
       estree-walker: 2.0.2
       magic-string: 0.30.17
-      postcss: 8.4.49
+      postcss: 8.5.1
       source-map-js: 1.2.1
 
   '@vue/compiler-ssr@3.5.13':
@@ -12810,6 +12916,10 @@ snapshots:
     dependencies:
       humanize-ms: 1.2.1
 
+  agentkeepalive@4.6.0:
+    dependencies:
+      humanize-ms: 1.2.1
+
   ai@3.4.33(openai@4.76.3(encoding@0.1.13)(zod@3.24.1))(react@19.0.0-rc-603e6108-20241029)(sswr@2.1.0(svelte@5.14.1))(svelte@5.14.1)(vue@3.5.13(typescript@5.7.2))(zod@3.24.1):
     dependencies:
       '@ai-sdk/provider': 0.0.26
@@ -12871,7 +12981,7 @@ snapshots:
   ajv@8.17.1:
     dependencies:
       fast-deep-equal: 3.1.3
-      fast-uri: 3.0.3
+      fast-uri: 3.0.6
       json-schema-traverse: 1.0.0
       require-from-string: 2.0.2
 
@@ -13039,6 +13149,13 @@ snapshots:
       node-releases: 2.0.19
       update-browserslist-db: 1.1.1(browserslist@4.24.3)
 
+  browserslist@4.24.4:
+    dependencies:
+      caniuse-lite: 1.0.30001696
+      electron-to-chromium: 1.5.90
+      node-releases: 2.0.19
+      update-browserslist-db: 1.1.2(browserslist@4.24.4)
+
   buffer-equal-constant-time@1.0.1: {}
 
   buffer-from@1.1.2: {}
@@ -13071,6 +13188,8 @@ snapshots:
   camelcase@6.3.0: {}
 
   caniuse-lite@1.0.30001689: {}
+
+  caniuse-lite@1.0.30001696: {}
 
   canvas@2.11.2(encoding@0.1.13):
     dependencies:
@@ -13452,6 +13571,8 @@ snapshots:
 
   electron-to-chromium@1.5.74: {}
 
+  electron-to-chromium@1.5.90: {}
+
   embla-carousel-react@8.5.1(react@19.0.0-rc-603e6108-20241029):
     dependencies:
       embla-carousel: 8.5.1
@@ -13480,6 +13601,11 @@ snapshots:
       iconv-lite: 0.6.3
 
   enhanced-resolve@5.17.1:
+    dependencies:
+      graceful-fs: 4.2.11
+      tapable: 2.2.1
+
+  enhanced-resolve@5.18.0:
     dependencies:
       graceful-fs: 4.2.11
       tapable: 2.2.1
@@ -13565,7 +13691,7 @@ snapshots:
       iterator.prototype: 1.1.4
       safe-array-concat: 1.1.3
 
-  es-module-lexer@1.5.4: {}
+  es-module-lexer@1.6.0: {}
 
   es-object-atoms@1.0.0:
     dependencies:
@@ -13791,7 +13917,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  esm-env@1.2.1: {}
+  esm-env@1.2.2: {}
 
   espree@9.6.1:
     dependencies:
@@ -13803,10 +13929,9 @@ snapshots:
     dependencies:
       estraverse: 5.3.0
 
-  esrap@1.2.3:
+  esrap@1.4.3:
     dependencies:
       '@jridgewell/sourcemap-codec': 1.5.0
-      '@types/estree': 1.0.6
 
   esrecurse@4.3.0:
     dependencies:
@@ -13882,7 +14007,7 @@ snapshots:
 
   fast-shallow-equal@1.0.0: {}
 
-  fast-uri@3.0.3: {}
+  fast-uri@3.0.6: {}
 
   fast-xml-parser@4.5.1:
     dependencies:
@@ -13967,8 +14092,8 @@ snapshots:
 
   framer-motion@11.15.0(react-dom@19.0.0-rc-603e6108-20241029(react@19.0.0-rc-603e6108-20241029))(react@19.0.0-rc-603e6108-20241029):
     dependencies:
-      motion-dom: 11.14.3
-      motion-utils: 11.14.3
+      motion-dom: 11.18.1
+      motion-utils: 11.18.1
       tslib: 2.8.1
     optionalDependencies:
       react: 19.0.0-rc-603e6108-20241029
@@ -14220,7 +14345,7 @@ snapshots:
       isstream: 0.1.2
       jsonwebtoken: 9.0.2
       mime-types: 2.1.35
-      retry-axios: 2.6.0(axios@1.7.4(debug@4.4.0))
+      retry-axios: 2.6.0(axios@1.7.4)
       tough-cookie: 4.1.4
     transitivePeerDependencies:
       - supports-color
@@ -14460,7 +14585,7 @@ snapshots:
 
   jest-worker@27.5.1:
     dependencies:
-      '@types/node': 22.10.2
+      '@types/node': 22.13.0
       merge-stream: 2.0.0
       supports-color: 8.1.1
 
@@ -14482,7 +14607,7 @@ snapshots:
 
   jsesc@3.1.0: {}
 
-  jsm-editor@0.0.12(@lexical/react@0.19.0(react-dom@19.0.0-rc-603e6108-20241029(react@19.0.0-rc-603e6108-20241029))(react@19.0.0-rc-603e6108-20241029)(yjs@13.6.20))(@lexical/rich-text@0.19.0)(@lexical/selection@0.19.0)(@lexical/utils@0.19.0)(@types/react@18.3.17)(lexical@0.19.0):
+  jsm-editor@0.0.12(@lexical/react@0.19.0(react-dom@19.0.0-rc-603e6108-20241029(react@19.0.0-rc-603e6108-20241029))(react@19.0.0-rc-603e6108-20241029)(yjs@13.6.20))(@lexical/rich-text@0.19.0)(@lexical/selection@0.19.0)(@lexical/utils@0.19.0)(@types/react@18.3.17)(lexical@0.23.1):
     dependencies:
       '@lexical/react': 0.19.0(react-dom@19.0.0-rc-603e6108-20241029(react@19.0.0-rc-603e6108-20241029))(react@19.0.0-rc-603e6108-20241029)(yjs@13.6.20)
       '@lexical/rich-text': 0.19.0
@@ -14490,7 +14615,7 @@ snapshots:
       '@lexical/utils': 0.19.0
       '@types/react-dom': 18.3.5(@types/react@18.3.17)
       fs-extra: 10.1.0
-      lexical: 0.19.0
+      lexical: 0.23.1
       react: 18.3.1
       react-dom: 18.3.1(react@18.3.1)
       yargs: 17.7.2
@@ -14540,7 +14665,7 @@ snapshots:
       lodash.isstring: 4.0.1
       lodash.once: 4.1.1
       ms: 2.1.3
-      semver: 7.6.3
+      semver: 7.7.0
 
   jsx-ast-utils@3.3.5:
     dependencies:
@@ -14564,7 +14689,7 @@ snapshots:
     dependencies:
       json-buffer: 3.0.1
 
-  langchain@0.2.20(@browserbasehq/sdk@2.0.0(encoding@0.1.13))(@langchain/anthropic@0.2.18(encoding@0.1.13)(openai@4.76.3(encoding@0.1.13)(zod@3.24.1)))(@langchain/mistralai@0.0.28(encoding@0.1.13)(openai@4.76.3(encoding@0.1.13)(zod@3.24.1)))(@pinecone-database/pinecone@4.0.0)(axios@1.7.4)(cheerio@1.0.0)(d3-dsv@3.0.1)(encoding@0.1.13)(fast-xml-parser@4.5.1)(html-to-text@9.0.5)(ignore@5.3.2)(openai@4.76.3(encoding@0.1.13)(zod@3.24.1))(pdf-parse@1.1.1)(playwright@1.49.1):
+  langchain@0.2.20(@browserbasehq/sdk@2.2.0(encoding@0.1.13))(@langchain/anthropic@0.2.18(encoding@0.1.13)(openai@4.76.3(encoding@0.1.13)(zod@3.24.1)))(@langchain/mistralai@0.0.28(encoding@0.1.13)(openai@4.76.3(encoding@0.1.13)(zod@3.24.1)))(@pinecone-database/pinecone@4.0.0)(axios@1.7.4)(cheerio@1.0.0)(d3-dsv@3.0.1)(encoding@0.1.13)(fast-xml-parser@4.5.1)(html-to-text@9.0.5)(ignore@5.3.2)(openai@4.76.3(encoding@0.1.13)(zod@3.24.1))(pdf-parse@1.1.1)(playwright@1.49.1):
     dependencies:
       '@langchain/core': 0.2.36(openai@4.76.3(encoding@0.1.13)(zod@3.24.1))
       '@langchain/openai': 0.2.11(encoding@0.1.13)
@@ -14581,7 +14706,7 @@ snapshots:
       zod: 3.24.1
       zod-to-json-schema: 3.24.1(zod@3.24.1)
     optionalDependencies:
-      '@browserbasehq/sdk': 2.0.0(encoding@0.1.13)
+      '@browserbasehq/sdk': 2.2.0(encoding@0.1.13)
       '@langchain/anthropic': 0.2.18(encoding@0.1.13)(openai@4.76.3(encoding@0.1.13)(zod@3.24.1))
       '@langchain/mistralai': 0.0.28(encoding@0.1.13)(openai@4.76.3(encoding@0.1.13)(zod@3.24.1))
       '@pinecone-database/pinecone': 4.0.0
@@ -14681,6 +14806,8 @@ snapshots:
       type-check: 0.4.0
 
   lexical@0.19.0: {}
+
+  lexical@0.23.1: {}
 
   lib0@0.2.99:
     dependencies:
@@ -15119,9 +15246,11 @@ snapshots:
 
   moment@2.30.1: {}
 
-  motion-dom@11.14.3: {}
+  motion-dom@11.18.1:
+    dependencies:
+      motion-utils: 11.18.1
 
-  motion-utils@11.14.3: {}
+  motion-utils@11.18.1: {}
 
   ms@2.1.3: {}
 
@@ -15541,12 +15670,6 @@ snapshots:
   postcss-value-parser@4.2.0: {}
 
   postcss@8.4.31:
-    dependencies:
-      nanoid: 3.3.8
-      picocolors: 1.1.1
-      source-map-js: 1.2.1
-
-  postcss@8.4.49:
     dependencies:
       nanoid: 3.3.8
       picocolors: 1.1.1
@@ -16073,7 +16196,7 @@ snapshots:
       onetime: 7.0.0
       signal-exit: 4.1.0
 
-  retry-axios@2.6.0(axios@1.7.4(debug@4.4.0)):
+  retry-axios@2.6.0(axios@1.7.4):
     dependencies:
       axios: 1.7.4(debug@4.4.0)
 
@@ -16167,6 +16290,8 @@ snapshots:
   semver@6.3.1: {}
 
   semver@7.6.3: {}
+
+  semver@7.7.0: {}
 
   serialize-javascript@6.0.2:
     dependencies:
@@ -16522,8 +16647,8 @@ snapshots:
       acorn-typescript: 1.4.13(acorn@8.14.0)
       aria-query: 5.3.2
       axobject-query: 4.1.0
-      esm-env: 1.2.1
-      esrap: 1.2.3
+      esm-env: 1.2.2
+      esrap: 1.4.3
       is-reference: 3.0.3
       locate-character: 3.0.0
       magic-string: 0.30.17
@@ -16806,6 +16931,12 @@ snapshots:
       escalade: 3.2.0
       picocolors: 1.1.1
 
+  update-browserslist-db@1.1.2(browserslist@4.24.4):
+    dependencies:
+      browserslist: 4.24.4
+      escalade: 3.2.0
+      picocolors: 1.1.1
+
   uploadthing@7.4.1(next@15.0.2(@babel/core@7.26.0)(@opentelemetry/api@1.9.0)(@playwright/test@1.49.1)(babel-plugin-react-compiler@19.0.0-beta-6fc168f-20241025)(react-dom@19.0.0-rc-603e6108-20241029(react@19.0.0-rc-603e6108-20241029))(react@19.0.0-rc-603e6108-20241029)(sass@1.83.0))(tailwindcss@3.4.16):
     dependencies:
       '@effect/platform': 0.70.7(effect@3.11.5)
@@ -16947,10 +17078,10 @@ snapshots:
       '@webassemblyjs/wasm-edit': 1.14.1
       '@webassemblyjs/wasm-parser': 1.14.1
       acorn: 8.14.0
-      browserslist: 4.24.3
+      browserslist: 4.24.4
       chrome-trace-event: 1.0.4
-      enhanced-resolve: 5.17.1
-      es-module-lexer: 1.5.4
+      enhanced-resolve: 5.18.0
+      es-module-lexer: 1.6.0
       eslint-scope: 5.1.1
       events: 3.3.0
       glob-to-regexp: 0.4.1
