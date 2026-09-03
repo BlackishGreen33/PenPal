@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { type JSX, useState } from 'react';
 
 import { ResponsiveModal } from '@/common/components/elements';
 import { Button, type ButtonProps } from '@/common/components/ui/button';

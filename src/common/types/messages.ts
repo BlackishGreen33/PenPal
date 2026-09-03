@@ -1,4 +1,5 @@
 import { Models } from 'node-appwrite';
+import type { JSX } from 'react';
 
 export type Message = Models.Document & {
   text: string;
