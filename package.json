@@ -66,6 +66,7 @@
     "@tiptap/extension-color": "^2.10.3",
     "@tiptap/extension-font-family": "^2.10.3",
     "@tiptap/extension-highlight": "^2.10.3",
+    "@tiptap/extension-image": "^2.10.3",
     "@tiptap/extension-link": "^2.10.3",
     "@tiptap/extension-table": "^2.10.3",
     "@tiptap/extension-table-cell": "^2.10.3",
@@ -96,17 +97,16 @@
     "lexical": "^0.19.0",
     "lucide-react": "^0.456.0",
     "nanoid": "^5.0.8",
-    "next": "15.0.7",
-    "next-comments": "^1.0.0",
+    "next": "15.5.25",
     "next-themes": "^0.4.3",
     "node-appwrite": "^14.1.0",
     "nuqs": "^2.2.2",
     "pdf-parse": "^1.1.1",
-    "react": "19.0.0-rc-603e6108-20241029",
+    "react": "19.0.0",
     "react-big-calendar": "^1.16.3",
     "react-color": "^2.19.3",
     "react-day-picker": "8.10.1",
-    "react-dom": "19.0.0-rc-603e6108-20241029",
+    "react-dom": "19.0.0",
     "react-dropzone": "^14.3.5",
     "react-hook-form": "^7.53.2",
     "react-icons": "^5.3.0",
@@ -132,10 +132,10 @@
   },
   "devDependencies": {
     "@types/node": "^22.9.0",
-    "@types/react": "^18.3.12",
+    "@types/react": "^19.0.0",
     "@types/react-big-calendar": "^1.16.0",
     "@types/react-color": "^3.0.13",
-    "@types/react-dom": "^18.3.1",
+    "@types/react-dom": "^19.0.0",
     "@typescript-eslint/eslint-plugin": "^8.13.0",
     "eslint": "^8.57.1",
     "eslint-config-next": "15.0.3",
@@ -150,5 +150,8 @@
     "prettier-plugin-tailwindcss": "^0.6.8",
     "tailwindcss": "^3.4.15",
     "typescript": "^5.6.3"
+  },
+  "overrides": {
+    "next": "15.5.25"
   }
 }
