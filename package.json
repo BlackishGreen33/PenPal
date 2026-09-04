@@ -30,7 +30,7 @@
     "@hono/zod-validator": "^0.4.1",
     "@hookform/resolvers": "^3.9.1",
     "@iframe-resizer/react": "^5.3.2",
-    "@langchain/community": "^0.3.17",
+    "@langchain/community": "^1.1.29",
     "@langchain/core": "^0.3.22",
     "@langchain/openai": "^0.3.14",
     "@langchain/pinecone": "^0.1.3",
